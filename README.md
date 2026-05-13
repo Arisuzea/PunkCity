@@ -33,7 +33,7 @@
 
 Most playthroughs let you become a legend overnight. PunkCity pushes back. Your body has needs. Your reputation has weight. The story won't drag you along, it waits for you to earn the right to be part of it. The city is indifferent, the streets are dangerous, and every cold decision you make will follow you.
 
-This is not a power fantasy. It's a survival story. Slow down, feel the world, and grow with it.
+This is no power fantasy, you'll create no montage nor any highlight reels. You'll suffer and you'll be content.
 
 **What you're getting into:**
 
