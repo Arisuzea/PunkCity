@@ -114,14 +114,14 @@ This is no power fantasy, you'll create no montage nor any highlight reels. You'
 2. Launch Wabbajack, go to **Browse Modlists**, and search for **PunkCity**.
 
 3. Set your install paths:
-   - **Installation:** e.g. `D:\Wabbajack\PunkCity`
-   - **Downloads:** e.g. `D:\Wabbajack\downloads`
+   - **Installation:** e.g. `D:\Modlists\PunkCity`
+   - **Downloads:** e.g. `D:\Modlists\downloads`
 
    > ⚠️ Both paths must be on the **same drive** as your Cyberpunk install, and **not** inside the game directory or `Program Files`.
 
 4. Hit **Install** and let Wabbajack handle the rest.
 
-5. Once complete, open the install folder and launch `ModOrganizer.exe`.
+5. Once complete, open the install folder and launch `PunkCity.exe`.
 
 6. Confirm the profile is set to **PunkCity**, then hit **Run**.
 
