@@ -1,7 +1,7 @@
 ![PunkCity Header](PunkCity_header.png)
 
 > *Night City doesn't respect you. It doesn't see you as anybody.*
-> *Survival is not a right — it's a privilege. Earn your place, or become another body on the street.*
+> *Survival is not a right it's a privilege. Earn your place, or become another body on the street.*
 
 ---
 
@@ -40,7 +40,7 @@ This is not a power fantasy. It's a survival story. Slow down, feel the world, a
 - A **survival layer** that makes your body a resource you have to manage
 - A **paced experience** that rewards immersion over rushing
 - A **reputation system** where senseless violence has real costs
-- *(More systems being added — check back as the list develops)*
+- *(More systems being added, check back as the list develops)*
 
 ---
 
@@ -72,7 +72,7 @@ This is not a power fantasy. It's a survival story. Slow down, feel the world, a
 
 1. Perform a [clean install](https://support.cdprojektred.com/en/cyberpunk/pc/sp-technical/issue/2233/how-do-i-perform-a-clean-install-of-the-game) of *Cyberpunk 2077*. Install it **outside of `Program Files`**.
 
-2. Install the [Visual C++ Redistributables (All-in-One)](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/) — extract and run `install_all.bat`.
+2. Install the [Visual C++ Redistributables (All-in-One)](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/), extract and run `install_all.bat` as administrator (for full automation).
 
 3. Disable Steam auto-updates for Cyberpunk 2077:
    <details>
@@ -89,7 +89,7 @@ This is not a power fantasy. It's a survival story. Slow down, feel the world, a
 
 5. Install [REDmod](https://store.steampowered.com/app/2060310/Cyberpunk_2077_REDmod/) if you haven't already.
 
-6. Update your GPU drivers — [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) or [AMD Adrenalin](https://www.amd.com/en/support/download/drivers.html).
+6. Update your GPU drivers [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) or [AMD Adrenalin](https://www.amd.com/en/support/download/drivers.html).
 
 7. Install the [.NET Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) (latest version).
 
@@ -147,7 +147,7 @@ If you're using Windows Defender, add your PunkCity install folder as an exclusi
 
 </details>
 
-Disable all overlays — Steam, Discord, GPU software, Xbox Game Bar — before launching.
+Disable all overlays from Steam, Discord, GPU software, and Xbox Game Bar before launching.
 
 ---
 
@@ -157,7 +157,7 @@ These are the pillars that define how PunkCity plays. They are designed to work 
 
 ---
 
-### 🩸 [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300) — Survival
+### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
 
 The foundation of everything. Dark Future turns Night City into an environment you have to actively survive in.
 
@@ -170,7 +170,7 @@ No matter how cromed up, your character is a person not a machine. Treat yoursel
 
 ---
 
-### ⏳ [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290) — Pacing
+### [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
 
 Night City rewards those who actually live in it.
 
@@ -182,7 +182,7 @@ There is no rush. The story will wait. Use that time.
 
 ---
 
-### ⚠️ [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014) — Reputation Has Teeth
+### [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
 
 Night City is a meat grinder, but being a butcher has consequences.
 
