@@ -37,9 +37,9 @@ This is not a power fantasy. It's a survival story. Slow down, feel the world, a
 
 **What you're getting into:**
 
-- A **survival layer** that makes your body a resource you have to manage
+- **Survival mechanics** that makes your body a resource you have to manage
 - A **paced experience** that rewards immersion over rushing
-- A **reputation system** where senseless violence has real costs
+- True **reputation system** where senseless violence has real costs
 - *(More systems being added, check back as the list develops)*
 
 ---
