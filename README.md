@@ -159,10 +159,8 @@ These systems define how **PunkCity** plays.
 They’re designed to work together, so removing major components will change the intended experience.
 
 For the full mod list:
+- [Load Order Library](https://loadorderlibrary.com/lists/punkcity-2)
 
-https://loadorderlibrary.com/lists/punkcity-2
-
----
 
 ## [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
 
@@ -176,7 +174,6 @@ The backbone of PunkCity’s survival systems.
 
 Chrome won’t save you from burnout.
 
----
 
 ## [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
 
@@ -195,7 +192,6 @@ Main jobs and side quests are also paced more naturally.
 
 Calls and texts take time, giving you space to explore, run gigs, and actually live in Night City between major story moments.
 
----
 
 ## [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
 
