@@ -6,7 +6,7 @@
 ---
 
 > [!IMPORTANT]
-> - PunkCity is built for **Cyberpunk 2077**. Phantom Liberty DLC is **strongly recommended**.
+> - PunkCity is built for **Cyberpunk 2077 2.31**. Phantom Liberty DLC is **MANDATORY**.
 > - This list is currently in active development. Expect additions and changes between versions.
 
 > [!WARNING]
