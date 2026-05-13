@@ -155,6 +155,9 @@ Disable all overlays from Steam, Discord, GPU software, and Xbox Game Bar before
 
 These are the pillars that define how PunkCity plays. They are designed to work together. Removing or replacing any of them will break the intended experience. To get more information, please click the hyperlinks to their mod pages.
 
+---
+
+## Immersion
 
 ### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
 
