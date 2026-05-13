@@ -14,7 +14,7 @@
 
 ---
 
-![Contents Header](Conents_header.png)
+![Contents Header](Contents_header.png)
 
 - [What Is This?](#what-is-this)
 - [System Requirements](#system-requirements)
