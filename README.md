@@ -14,9 +14,9 @@
 
 ---
 
-![Contents Header](Contents_header.png)
+## Table of Contents
 
-- [What Is This?](#what-is-this)
+- [About](#what-is-this)
 - [System Requirements](#system-requirements)
 - [Preinstallation](#preinstallation)
 - [Installation](#installation)
@@ -27,7 +27,7 @@
 
 ---
 
-![About Header](About_header.png)
+## About
 
 **PunkCity** is a Wabbajack modlist for *Cyberpunk 2077* built around one idea: **the city owes you nothing**.
 
@@ -155,7 +155,6 @@ Disable all overlays from Steam, Discord, GPU software, and Xbox Game Bar before
 
 These are the pillars that define how PunkCity plays. They are designed to work together. Removing or replacing any of them will break the intended experience. To get more information, please click the hyperlinks to their mod pages.
 
----
 
 ### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
 
@@ -168,7 +167,6 @@ The foundation of everything. Dark Future turns Night City into an environment y
 
 No matter how cromed up, your character is a person not a machine. Treat yourself like one.
 
----
 
 ### [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
 
@@ -180,7 +178,6 @@ This overhaul reframes the journey from a frantic sprint to a calculated climb. 
 
 There is no rush. The story will wait. Use that time.
 
----
 
 ### [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
 
