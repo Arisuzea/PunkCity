@@ -14,7 +14,7 @@
 
 ---
 
-## Table of Contents
+![Contents Header](Conents_header.png)
 
 - [What Is This?](#what-is-this)
 - [System Requirements](#system-requirements)
@@ -27,7 +27,7 @@
 
 ---
 
-## What Is This?
+![About Header](About_header.png)
 
 **PunkCity** is a Wabbajack modlist for *Cyberpunk 2077* built around one idea: **the city owes you nothing**.
 
