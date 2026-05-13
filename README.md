@@ -28,31 +28,29 @@
 
 ---
 
-# About
+## About
 
-**PunkCity** is a Wabbajack modlist for *Cyberpunk 2077* built around one idea:
+**PunkCity** is a Wabbajack modlist for *Cyberpunk 2077* built around one idea: **the city owes you nothing**.
 
-**the city owes you nothing.**
+Most playthroughs let you become a legend overnight. PunkCity pushes back. Your body has needs. Your reputation has weight. The story won't drag you along, it waits for you to earn the right to be part of it. The city is indifferent, the streets are dangerous, and every cold decision you make will follow you.
 
-You won’t become a Night City legend overnight. Your body has needs, your reputation matters, and progression takes time. The story won’t carry you—you need to earn your place in it.
-
-This list is built for players who want slower progression, harsher consequences, and a version of Night City that feels far less forgiving.
+This is no power fantasy, you'll create no montage nor any highlight reels. You'll suffer and you'll be content.
 
 **What you're getting into:**
 
-- **Survival systems** that force you to manage your needs
-- A **slower progression curve** built around immersion
-- A **reputation system** where violence has consequences
-- *(More systems are being added as development continues)*
+- **Survival mechanics** that makes your body a resource you have to manage
+- A **paced experience** that rewards immersion over rushing
+- True **reputation system** where senseless violence has real costs
+- *(More systems being added, check back as the list develops)*
 
 ---
 
-# System Requirements
+## System Requirements
 
 > [!WARNING]
-> - You need an **official, fully updated** copy of *Cyberpunk 2077*
-> - An **SSD is required.** Do not attempt to run this from an HDD
-> - Only **Windows 10/11** is supported
+> - You need an **official, fully updated** copy of *Cyberpunk 2077*.
+> - An **SSD is required.** Do not attempt to run this from an HDD.
+> - Only **Windows 10/11** is supported.
 
 *Minimum specs and recommended hardware will be listed here as the list is finalized.*
 
@@ -69,218 +67,88 @@ This list is built for players who want slower progression, harsher consequences
 
 ---
 
-# Preinstallation
+## Preinstallation
 
 > The steps below assume you're using the **Steam** version of the game.
 
-### 1. Clean Install Cyberpunk 2077
+1. Perform a [clean install](https://support.cdprojektred.com/en/cyberpunk/pc/sp-technical/issue/2233/how-do-i-perform-a-clean-install-of-the-game) of *Cyberpunk 2077*. Install it **outside of `Program Files`**.
 
-Perform a [clean install](https://support.cdprojektred.com/en/cyberpunk/pc/sp-technical/issue/2233/how-do-i-perform-a-clean-install-of-the-game) of *Cyberpunk 2077*.
+2. Install the [Visual C++ Redistributables (All-in-One)](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/), extract and run `install_all.bat` as administrator (for full automation).
 
-Install it **outside of `Program Files`.**
+3. Disable Steam auto-updates for Cyberpunk 2077:
+   <details>
+   <summary>How to disable auto-updates</summary>
 
----
+   1. Right-click *Cyberpunk 2077* in your Steam Library → **Properties**
+   2. Go to the **Updates** tab
+   3. Set Automatic Updates to **"Only update this game when I launch it"**
+   4. From now on, **only launch through Mod Organizer 2**
 
-### 2. Install Visual C++ Redistributables
+   </details>
 
-Install the [Visual C++ Redistributables (All-in-One)](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
+4. Make sure all official DLC is installed.
 
-Extract the archive and run:
+5. Install [REDmod](https://store.steampowered.com/app/2060310/Cyberpunk_2077_REDmod/) if you haven't already.
 
-`install_all.bat`
+6. Update your GPU drivers [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) or [AMD Adrenalin](https://www.amd.com/en/support/download/drivers.html).
 
-Run it as administrator for full automation.
+7. Install the [.NET Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) (latest version).
 
----
-
-### 3. Disable Steam Auto Updates
-
-Right-click *Cyberpunk 2077* in your Steam Library → **Properties**
-
-Go to the **Updates** tab
-
-Set Automatic Updates to:
-
-`Only update this game when I launch it`
-
-From now on:
-
-**Only launch through Mod Organizer 2**
-
-<details>
-<summary>Need help?</summary>
-
-1. Right-click Cyberpunk 2077 in Steam
-2. Select **Properties**
-3. Open **Updates**
-4. Change automatic updates
-
-</details>
+8. Install the [DirectX End-User Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=35).
 
 ---
 
-### 4. Install All Official DLC
-
-Make sure all official DLC is installed.
+**Before moving on**, confirm that Steam shows both **Cyberpunk 2077: REDmod** and **Cyberpunk 2077: Phantom Liberty** as installed.
 
 ---
 
-### 5. Install REDmod
+## Installation
 
-Install [REDmod](https://store.steampowered.com/app/2060310/Cyberpunk_2077_REDmod/) if you haven't already.
+*Wabbajack gallery listing coming soon. Installation steps will be filled in here once the list is published.*
 
----
+### Quick Overview
 
-### 6. Update GPU Drivers
+1. Download [Wabbajack](https://www.wabbajack.org) and place it somewhere outside your Cyberpunk folder and outside `Program Files`.
+   > Example: `D:\Wabbajack`
 
-- [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/)
-- [AMD Adrenalin](https://www.amd.com/en/support/download/drivers.html)
+2. Launch Wabbajack, go to **Browse Modlists**, and search for **PunkCity**.
 
----
+3. Set your install paths:
+   - **Installation:** e.g. `D:\Wabbajack\PunkCity`
+   - **Downloads:** e.g. `D:\Wabbajack\downloads`
 
-### 7. Install .NET Runtime
+   > ⚠️ Both paths must be on the **same drive** as your Cyberpunk install, and **not** inside the game directory or `Program Files`.
 
-Install the latest [.NET Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+4. Hit **Install** and let Wabbajack handle the rest.
 
----
+5. Once complete, open the install folder and launch `ModOrganizer.exe`.
 
-### 8. Install DirectX Runtime
-
-Install the [DirectX End-User Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=35)
-
----
-
-Before continuing, confirm that Steam shows both:
-
-- **Cyberpunk 2077: Phantom Liberty**
-- **Cyberpunk 2077: REDmod**
-
-as installed.
+6. Confirm the profile is set to **PunkCity**, then hit **Run**.
 
 ---
 
-# Installation
+## Post-Installation
 
-*Wabbajack gallery listing coming soon. Full installation instructions will be added once the list is published.*
-
-## Quick Overview
-
-### 1. Download Wabbajack
-
-Download [Wabbajack](https://www.wabbajack.org)
-
-Place it somewhere outside:
-
-- Your Cyberpunk folder
-- `Program Files`
-
-Example:
-
-`D:\Wabbajack`
-
----
-
-### 2. Search for PunkCity
-
-Launch Wabbajack
-
-Go to:
-
-**Browse Modlists**
-
-Search for:
-
-**PunkCity**
-
----
-
-### 3. Set Install Paths
-
-Set your install paths:
-
-- **Installation:** `D:\Wabbajack\PunkCity`
-- **Downloads:** `D:\Wabbajack\downloads`
-
-> ⚠️ Both paths must be on the **same drive** as your Cyberpunk install.
->
-> Do **not** place them inside:
-> - your game folder
-> - `Program Files`
-
----
-
-### 4. Install
-
-Click:
-
-**Install**
-
-Let Wabbajack finish the process.
-
----
-
-### 5. Launch MO2
-
-Open your install folder and launch:
-
-`ModOrganizer.exe`
-
----
-
-### 6. Launch the Game
-
-Confirm the profile is set to:
-
-**PunkCity**
-
-Click:
-
-**Run**
-
----
-
-# Post-Installation
-
-## Antivirus
+### Antivirus
 
 > [!WARNING]
-> Third-party antivirus software (BitDefender, Norton, Webroot, etc.) can interfere with MO2’s Virtual File System.
+> Third-party antivirus software (BitDefender, Norton, Webroot, etc.) can interfere with MO2's Virtual File System. If you're experiencing issues, you may need to disable or remove it. Windows Defender with sensible browsing habits is sufficient.
 
-If you run into issues:
-
-- disable it temporarily
-- or whitelist your install folder
-
-Windows Defender is usually enough.
-
-### Windows Defender Exclusion
+If you're using Windows Defender, add your PunkCity install folder as an exclusion:
 
 <details>
-<summary>How to add an exclusion</summary>
+<summary>How to add a Windows Defender exclusion</summary>
 
 1. Open **Windows Security**
 2. Go to **Virus & threat protection**
 3. Click **Manage settings**
-4. Scroll to **Exclusions**
-5. Select **Add or remove exclusions**
-6. Add your PunkCity installation folder
-
-Optional:
-- `ModOrganizer.exe`
-- `Cyberpunk2077.exe`
+4. Scroll to **Exclusions** → **Add or remove exclusions**
+5. Add your PunkCity installation folder
+6. Optionally also exclude `ModOrganizer.exe` and `Cyberpunk2077.exe`
 
 </details>
 
----
-
-## Disable Overlays
-
-Disable overlays before launching:
-
-- Steam Overlay
-- Discord Overlay
-- GPU software overlays
-- Xbox Game Bar
+Disable all overlays from Steam, Discord, GPU software, and Xbox Game Bar before launching.
 
 ---
 
