@@ -21,7 +21,7 @@
 - [Preinstallation](#preinstallation)
 - [Installation](#installation)
 - [Post-Installation](#post-installation)
-- [Gameplay Info](#gameplay-info)
+- [Gameplay](#gameplay)
 - [Updating the Modlist](#updating-the-modlist)
 - [Known Issues](#known-issues)
 
@@ -151,7 +151,7 @@ Disable all overlays from Steam, Discord, GPU software, and Xbox Game Bar before
 
 ---
 
-# Gameplay Info
+# Gameplay
 
 These are the pillars that define how **PunkCity** plays. They are designed to work together; removing or replacing any of them will break the intended experience.
 
