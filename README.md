@@ -151,41 +151,32 @@ Disable all overlays from Steam, Discord, GPU software, and Xbox Game Bar before
 
 ---
 
-## Core Mods
+# Core Mods
 
-These are the pillars that define how PunkCity plays. They are designed to work together. Removing or replacing any of them will break the intended experience. To get more information, please click the hyperlinks to their mod pages.
+These are the pillars that define how **PunkCity** plays. They are designed to work together; removing or replacing any of them will break the intended experience.
 
-## Immersion Mods
-### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
+## • Immersion Mods
 
-The foundation of everything. Dark Future turns Night City into an environment you have to actively survive in.
+* ### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
 
-- You must **eat, drink, and sleep** to stay functional
-- A **Nerve meter** drains based on your needs state and drains over time faster in combat, applying escalating debuffs as it falls
-- Some quest stages **lock the Nerve meter**, trapping you in situations you can't simply walk away from
-- The lower your Nerve, the more your body betrays you
+The foundation of the survival experience. It reminds you that no matter how chromed up you are, you’re still human.
+* **Survival Mechanics:** Active requirements for eating, drinking, and sleeping.
+* **Nerve System:** A dynamic meter that drains over time (faster in combat), applying escalating debuffs.
+* **Quest Integration:** Certain story beats lock your Nerve meter, forcing you to endure high-pressure situations.
 
-No matter how cromed up, your character is a person not a machine. Treat yourself like one.
+* ### [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
 
+Reframes the game from a frantic sprint to a calculated climb by pacing the narrative.
+* **Social Pass System:** Services, Ripperdocs, and apartments are gated behind your Street Cred.
+* **Narrative Pacing:** Quests "breathe" with realistic delays, giving you time to build your reputation between major jobs.
+* **Living World:** Forces you to actually exist in Night City rather than just teleporting between waypoints.
 
-### [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
+* ### [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
 
-Night City rewards those who actually live in it.
-
-Under the weight of corporate "urban control," the city has implemented the Social Pass, a system designed to gatekeep services from the unworthy. In this world, you are a nobody until your Street Cred says otherwise. Ripperdocs will turn you away, clubs will demand exorbitant entry fees, and even apartments are locked behind the reputation you’ve yet to earn.
-
-This overhaul reframes the journey from a frantic sprint to a calculated climb. Main jobs and side quests no longer pile up; instead, they breathe. You’ll wait for texts while characters handle their own lives, giving you the time and the necessity to build your name in the streets before the next door opens.
-
-There is no rush. The story will wait. Use that time.
-
-
-### [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
-
-Night City is a meat grinder, but being a butcher has consequences.
-
-If Take a Breather makes your reputation hard to earn, Pariah makes it easy to lose. This isn't just about losing Street Cred; it’s about how the city perceives a monster. Every witnessed civilian death—and especially every cold-blooded execution shatters the public's trust. If you aren't careful, the fear will spread until the police attack on sight and the streets clear at the mere sound of your boots.
-
-Choose your path: be respected, or be feared.
+A consequence system that tracks the "monster" you become.
+* **Reputation Loss:** Witnessed civilian deaths and executions shatter public trust.
+* **Heat System:** High infamy causes police to attack on sight and civilians to flee your presence.
+* **Moral Choice:** Forces a decision between being a respected mercenary or a feared butcher.
 
 ---
 
