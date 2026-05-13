@@ -160,23 +160,23 @@ These are the pillars that define how **PunkCity** plays. They are designed to w
 * ### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
 
 The foundation of the survival experience. It reminds you that no matter how chromed up you are, you’re still human.
-* **Survival Mechanics:** Active requirements for eating, drinking, and sleeping.
-* **Nerve System:** A dynamic meter that drains over time (faster in combat), applying escalating debuffs.
-* **Quest Integration:** Certain story beats lock your Nerve meter, forcing you to endure high-pressure situations.
+** **Survival Mechanics:** Active requirements for eating, drinking, and sleeping.
+** **Nerve System:** A dynamic meter that drains over time (faster in combat), applying escalating debuffs.
+** **Quest Integration:** Certain story beats lock your Nerve meter, forcing you to endure high-pressure situations.
 
 * ### [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
 
 Reframes the game from a frantic sprint to a calculated climb by pacing the narrative.
-* **Social Pass System:** Services, Ripperdocs, and apartments are gated behind your Street Cred.
-* **Narrative Pacing:** Quests "breathe" with realistic delays, giving you time to build your reputation between major jobs.
-* **Living World:** Forces you to actually exist in Night City rather than just teleporting between waypoints.
+** **Social Pass System:** Services, Ripperdocs, and apartments are gated behind your Street Cred.
+** **Narrative Pacing:** Quests "breathe" with realistic delays, giving you time to build your reputation between major jobs.
+** **Living World:** Forces you to actually exist in Night City rather than just teleporting between waypoints.
 
 * ### [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
 
 A consequence system that tracks the "monster" you become.
-* **Reputation Loss:** Witnessed civilian deaths and executions shatter public trust.
-* **Heat System:** High infamy causes police to attack on sight and civilians to flee your presence.
-* **Moral Choice:** Forces a decision between being a respected mercenary or a feared butcher.
+** **Reputation Loss:** Witnessed civilian deaths and executions shatter public trust.
+** **Heat System:** High infamy causes police to attack on sight and civilians to flee your presence.
+** **Moral Choice:** Forces a decision between being a respected mercenary or a feared butcher.
 
 ---
 
