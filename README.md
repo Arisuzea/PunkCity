@@ -157,8 +157,7 @@ These are the pillars that define how PunkCity plays. They are designed to work 
 
 ---
 
-## Immersion
-
+## Immersion Mods
 ### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
 
 The foundation of everything. Dark Future turns Night City into an environment you have to actively survive in.
