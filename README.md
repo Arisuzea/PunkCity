@@ -2,7 +2,7 @@
 
 > *Night City doesn't respect you. It doesn't see you as anybody.*
 >
-> *Survival is not a right—it's a privilege. Earn your place, or become another body on the street.*
+> *Survival is not a right it's a privilege. Earn your place, or become another body on the street.*
 
 ---
 
