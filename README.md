@@ -153,7 +153,7 @@ Disable all overlays — Steam, Discord, GPU software, Xbox Game Bar — before 
 
 ## Core Mods
 
-These are the pillars that define how PunkCity plays. They are designed to work together. Removing or replacing any of them will break the intended experience.
+These are the pillars that define how PunkCity plays. They are designed to work together. Removing or replacing any of them will break the intended experience. To get more information, please click the hyperlinks to their mod pages.
 
 ---
 
