@@ -16,12 +16,12 @@
 
 ## Table of Contents
 
-- [About](#what-is-this)
+- [About](#about)
 - [System Requirements](#system-requirements)
 - [Preinstallation](#preinstallation)
 - [Installation](#installation)
 - [Post-Installation](#post-installation)
-- [Core Mods](#core-mods)
+- [Gameplay Info](#gameplay-info)
 - [Updating the Modlist](#updating-the-modlist)
 - [Known Issues](#known-issues)
 
@@ -151,36 +151,32 @@ Disable all overlays from Steam, Discord, GPU software, and Xbox Game Bar before
 
 ---
 
-# Core Mods
+# Gameplay Info
 
 These are the pillars that define how **PunkCity** plays. They are designed to work together; removing or replacing any of them will break the intended experience.
 
-## • Immersion Mods
+For the full list, please click [here](https://loadorderlibrary.com/lists/punkcity-2)
 
-* ### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
+### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
 
 The foundation of the survival experience. It reminds you that no matter how chromed up you are, you’re still human.
 ** **Survival Mechanics:** Active requirements for eating, drinking, and sleeping.
 ** **Nerve System:** A dynamic meter that drains over time (faster in combat), applying escalating debuffs.
 ** **Quest Integration:** Certain story beats lock your Nerve meter, forcing you to endure high-pressure situations.
 
-* ### [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
+### [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
 
 Reframes the game from a frantic sprint to a calculated climb by pacing the narrative.
 ** **Social Pass System:** Services, Ripperdocs, and apartments are gated behind your Street Cred.
 ** **Narrative Pacing:** Quests "breathe" with realistic delays, giving you time to build your reputation between major jobs.
 ** **Living World:** Forces you to actually exist in Night City rather than just teleporting between waypoints.
 
-* ### [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
+### [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
 
 A consequence system that tracks the "monster" you become.
 ** **Reputation Loss:** Witnessed civilian deaths and executions shatter public trust.
 ** **Heat System:** High infamy causes police to attack on sight and civilians to flee your presence.
 ** **Moral Choice:** Forces a decision between being a respected mercenary or a feared butcher.
-
----
-
-*More mods will be documented here as the list grows.*
 
 ---
 
