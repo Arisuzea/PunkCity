@@ -1,7 +1,8 @@
 ![PunkCity Header](PunkCity_header.png)
 
 > *Night City doesn't respect you. It doesn't see you as anybody.*
-> *Survival is not a right it's a privilege. Earn your place, or become another body on the street.*
+>
+> *Survival is not a right—it's a privilege. Earn your place, or become another body on the street.*
 
 ---
 
@@ -27,29 +28,31 @@
 
 ---
 
-## About
+# About
 
-**PunkCity** is a Wabbajack modlist for *Cyberpunk 2077* built around one idea: **the city owes you nothing**.
+**PunkCity** is a Wabbajack modlist for *Cyberpunk 2077* built around one idea:
 
-Most playthroughs let you become a legend overnight. PunkCity pushes back. Your body has needs. Your reputation has weight. The story won't drag you along, it waits for you to earn the right to be part of it. The city is indifferent, the streets are dangerous, and every cold decision you make will follow you.
+**the city owes you nothing.**
 
-This is no power fantasy, you'll create no montage nor any highlight reels. You'll suffer and you'll be content.
+You won’t become a Night City legend overnight. Your body has needs, your reputation matters, and progression takes time. The story won’t carry you—you need to earn your place in it.
+
+This list is built for players who want slower progression, harsher consequences, and a version of Night City that feels far less forgiving.
 
 **What you're getting into:**
 
-- **Survival mechanics** that makes your body a resource you have to manage
-- A **paced experience** that rewards immersion over rushing
-- True **reputation system** where senseless violence has real costs
-- *(More systems being added, check back as the list develops)*
+- **Survival systems** that force you to manage your needs
+- A **slower progression curve** built around immersion
+- A **reputation system** where violence has consequences
+- *(More systems are being added as development continues)*
 
 ---
 
-## System Requirements
+# System Requirements
 
 > [!WARNING]
-> - You need an **official, fully updated** copy of *Cyberpunk 2077*.
-> - An **SSD is required.** Do not attempt to run this from an HDD.
-> - Only **Windows 10/11** is supported.
+> - You need an **official, fully updated** copy of *Cyberpunk 2077*
+> - An **SSD is required.** Do not attempt to run this from an HDD
+> - Only **Windows 10/11** is supported
 
 *Minimum specs and recommended hardware will be listed here as the list is finalized.*
 
@@ -66,142 +69,297 @@ This is no power fantasy, you'll create no montage nor any highlight reels. You'
 
 ---
 
-## Preinstallation
+# Preinstallation
 
 > The steps below assume you're using the **Steam** version of the game.
 
-1. Perform a [clean install](https://support.cdprojektred.com/en/cyberpunk/pc/sp-technical/issue/2233/how-do-i-perform-a-clean-install-of-the-game) of *Cyberpunk 2077*. Install it **outside of `Program Files`**.
+### 1. Clean Install Cyberpunk 2077
 
-2. Install the [Visual C++ Redistributables (All-in-One)](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/), extract and run `install_all.bat` as administrator (for full automation).
+Perform a [clean install](https://support.cdprojektred.com/en/cyberpunk/pc/sp-technical/issue/2233/how-do-i-perform-a-clean-install-of-the-game) of *Cyberpunk 2077*.
 
-3. Disable Steam auto-updates for Cyberpunk 2077:
-   <details>
-   <summary>How to disable auto-updates</summary>
-
-   1. Right-click *Cyberpunk 2077* in your Steam Library → **Properties**
-   2. Go to the **Updates** tab
-   3. Set Automatic Updates to **"Only update this game when I launch it"**
-   4. From now on, **only launch through Mod Organizer 2**
-
-   </details>
-
-4. Make sure all official DLC is installed.
-
-5. Install [REDmod](https://store.steampowered.com/app/2060310/Cyberpunk_2077_REDmod/) if you haven't already.
-
-6. Update your GPU drivers [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) or [AMD Adrenalin](https://www.amd.com/en/support/download/drivers.html).
-
-7. Install the [.NET Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) (latest version).
-
-8. Install the [DirectX End-User Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=35).
+Install it **outside of `Program Files`.**
 
 ---
 
-**Before moving on**, confirm that Steam shows both **Cyberpunk 2077: REDmod** and **Cyberpunk 2077: Phantom Liberty** as installed.
+### 2. Install Visual C++ Redistributables
+
+Install the [Visual C++ Redistributables (All-in-One)](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
+
+Extract the archive and run:
+
+`install_all.bat`
+
+Run it as administrator for full automation.
 
 ---
 
-## Installation
+### 3. Disable Steam Auto Updates
 
-*Wabbajack gallery listing coming soon. Installation steps will be filled in here once the list is published.*
+Right-click *Cyberpunk 2077* in your Steam Library → **Properties**
 
-### Quick Overview
+Go to the **Updates** tab
 
-1. Download [Wabbajack](https://www.wabbajack.org) and place it somewhere outside your Cyberpunk folder and outside `Program Files`.
-   > Example: `D:\Wabbajack`
+Set Automatic Updates to:
 
-2. Launch Wabbajack, go to **Browse Modlists**, and search for **PunkCity**.
+`Only update this game when I launch it`
 
-3. Set your install paths:
-   - **Installation:** e.g. `D:\Wabbajack\PunkCity`
-   - **Downloads:** e.g. `D:\Wabbajack\downloads`
+From now on:
 
-   > ⚠️ Both paths must be on the **same drive** as your Cyberpunk install, and **not** inside the game directory or `Program Files`.
-
-4. Hit **Install** and let Wabbajack handle the rest.
-
-5. Once complete, open the install folder and launch `ModOrganizer.exe`.
-
-6. Confirm the profile is set to **PunkCity**, then hit **Run**.
-
----
-
-## Post-Installation
-
-### Antivirus
-
-> [!WARNING]
-> Third-party antivirus software (BitDefender, Norton, Webroot, etc.) can interfere with MO2's Virtual File System. If you're experiencing issues, you may need to disable or remove it. Windows Defender with sensible browsing habits is sufficient.
-
-If you're using Windows Defender, add your PunkCity install folder as an exclusion:
+**Only launch through Mod Organizer 2**
 
 <details>
-<summary>How to add a Windows Defender exclusion</summary>
+<summary>Need help?</summary>
+
+1. Right-click Cyberpunk 2077 in Steam
+2. Select **Properties**
+3. Open **Updates**
+4. Change automatic updates
+
+</details>
+
+---
+
+### 4. Install All Official DLC
+
+Make sure all official DLC is installed.
+
+---
+
+### 5. Install REDmod
+
+Install [REDmod](https://store.steampowered.com/app/2060310/Cyberpunk_2077_REDmod/) if you haven't already.
+
+---
+
+### 6. Update GPU Drivers
+
+- [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/)
+- [AMD Adrenalin](https://www.amd.com/en/support/download/drivers.html)
+
+---
+
+### 7. Install .NET Runtime
+
+Install the latest [.NET Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+
+---
+
+### 8. Install DirectX Runtime
+
+Install the [DirectX End-User Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=35)
+
+---
+
+Before continuing, confirm that Steam shows both:
+
+- **Cyberpunk 2077: Phantom Liberty**
+- **Cyberpunk 2077: REDmod**
+
+as installed.
+
+---
+
+# Installation
+
+*Wabbajack gallery listing coming soon. Full installation instructions will be added once the list is published.*
+
+## Quick Overview
+
+### 1. Download Wabbajack
+
+Download [Wabbajack](https://www.wabbajack.org)
+
+Place it somewhere outside:
+
+- Your Cyberpunk folder
+- `Program Files`
+
+Example:
+
+`D:\Wabbajack`
+
+---
+
+### 2. Search for PunkCity
+
+Launch Wabbajack
+
+Go to:
+
+**Browse Modlists**
+
+Search for:
+
+**PunkCity**
+
+---
+
+### 3. Set Install Paths
+
+Set your install paths:
+
+- **Installation:** `D:\Wabbajack\PunkCity`
+- **Downloads:** `D:\Wabbajack\downloads`
+
+> ⚠️ Both paths must be on the **same drive** as your Cyberpunk install.
+>
+> Do **not** place them inside:
+> - your game folder
+> - `Program Files`
+
+---
+
+### 4. Install
+
+Click:
+
+**Install**
+
+Let Wabbajack finish the process.
+
+---
+
+### 5. Launch MO2
+
+Open your install folder and launch:
+
+`ModOrganizer.exe`
+
+---
+
+### 6. Launch the Game
+
+Confirm the profile is set to:
+
+**PunkCity**
+
+Click:
+
+**Run**
+
+---
+
+# Post-Installation
+
+## Antivirus
+
+> [!WARNING]
+> Third-party antivirus software (BitDefender, Norton, Webroot, etc.) can interfere with MO2’s Virtual File System.
+
+If you run into issues:
+
+- disable it temporarily
+- or whitelist your install folder
+
+Windows Defender is usually enough.
+
+### Windows Defender Exclusion
+
+<details>
+<summary>How to add an exclusion</summary>
 
 1. Open **Windows Security**
 2. Go to **Virus & threat protection**
 3. Click **Manage settings**
-4. Scroll to **Exclusions** → **Add or remove exclusions**
-5. Add your PunkCity installation folder
-6. Optionally also exclude `ModOrganizer.exe` and `Cyberpunk2077.exe`
+4. Scroll to **Exclusions**
+5. Select **Add or remove exclusions**
+6. Add your PunkCity installation folder
+
+Optional:
+- `ModOrganizer.exe`
+- `Cyberpunk2077.exe`
 
 </details>
 
-Disable all overlays from Steam, Discord, GPU software, and Xbox Game Bar before launching.
+---
+
+## Disable Overlays
+
+Disable overlays before launching:
+
+- Steam Overlay
+- Discord Overlay
+- GPU software overlays
+- Xbox Game Bar
 
 ---
 
 # Gameplay
 
-These are the pillars that define how **PunkCity** plays. They are designed to work together; removing or replacing any of them will break the intended experience.
+These systems define how **PunkCity** plays.
 
-For the full list, please click [here](https://loadorderlibrary.com/lists/punkcity-2)
+They’re designed to work together, so removing major components will change the intended experience.
 
-### [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
+For the full mod list:
 
-The foundation of everything. Dark Future turns Night City into an environment you have to actively survive in.
-
-- You must **eat, drink, and sleep** to stay functional
-- A **Nerve meter** drains based on your needs state and drains over time faster in combat, applying escalating debuffs as it falls
-- Some quest stages **lock the Nerve meter**, trapping you in situations you can't simply walk away from
-- The lower your Nerve, the more your body betrays you
-
-No matter how cromed up, your character is a person not a machine. Treat yourself like one.
-
-### [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
-
-Night City rewards those who actually live in it.
-
-Under the weight of corporate "urban control," the city has implemented the Social Pass, a system designed to gatekeep services from the unworthy. In this world, you are a nobody until your Street Cred says otherwise. Ripperdocs will turn you away, clubs will demand exorbitant entry fees, and even apartments are locked behind the reputation you’ve yet to earn.
-
-This overhaul changes the journey from a speedrun to a calculated climb. Main jobs and side quests no longer pile up; instead, they breathe. You’ll wait for texts while characters handle their own lives, giving you the time and the necessity to build your name in the streets before the next door opens.
-
-Do not rush. 
-The story will wait. 
-Use that time.
-
-### [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
-
-Night City is a meat grinder, but being a butcher has consequences.
-
-If Take a Breather makes your reputation hard to earn, Pariah makes it easy to lose. This isn't just about losing Street Cred; it’s about how the city perceives a monster. Every witnessed civilian death—and especially every cold-blooded execution shatters the public's trust. If you aren't careful, the fear will spread until the police attack on sight and the streets clear at the mere sound of your boots.
-
-Choose your path: be respected, or be feared.
+https://loadorderlibrary.com/lists/punkcity-2
 
 ---
 
-## Updating the Modlist
+## [Dark Future](https://www.nexusmods.com/cyberpunk2077/mods/16300)
 
-1. Download the latest `.wabbajack` file.
-2. Follow the installation steps from step 2 onward.
-3. **Check the `Overwrite` box** before installing so updated files are properly replaced.
+The backbone of PunkCity’s survival systems.
+
+- Eat, drink, and sleep to stay functional
+- Manage your **Nerve meter**
+- Nerve drains faster during combat
+- Low Nerve causes escalating debuffs
+- Some quests lock your Nerve meter, forcing you to push through bad situations
+
+Chrome won’t save you from burnout.
+
+---
+
+## [Take a Breather](https://www.nexusmods.com/cyberpunk2077/mods/23290)
+
+Night City expects you to earn your place.
+
+Your Street Cred now gates major services and opportunities.
+
+That includes:
+
+- Ripperdocs
+- Clubs
+- Apartments
+- Other city services
+
+Main jobs and side quests are also paced more naturally.
+
+Calls and texts take time, giving you space to explore, run gigs, and actually live in Night City between major story moments.
+
+---
+
+## [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014)
+
+Violence has consequences.
+
+- Witnessed civilian deaths hurt your reputation
+- Executions carry heavier penalties
+- Civilians may panic
+- Police can become immediately hostile
+
+Build respect—or become someone Night City fears.
+
+---
+
+# Updating the Modlist
+
+1. Download the latest `.wabbajack` file
+2. Follow installation steps from step 2 onward
+3. Check the `Overwrite` box before installing so updated files replace old ones properly
 
 > [!WARNING]
-> If you've added your own mods, tag them with `[NoDelete]` in MO2 to protect them across updates.
+> If you've added your own mods:
+>
+> Tag them with:
+>
+> `[NoDelete]`
+>
+> in MO2 to protect them during updates.
 
 ---
 
-## Known Issues
+# Known Issues
 
 > This section will be updated as the list develops.
 
@@ -209,4 +367,4 @@ Choose your path: be respected, or be feared.
 
 ---
 
-*PunkCity is an unofficial Wabbajack modlist and is not affiliated with CD Projekt Red or any individual mod authors. All credit for included mods belongs to their respective creators.*
+*PunkCity is an unofficial Wabbajack modlist and is not affiliated with CD Projekt Red. Full credit goes to the original mod authors.*
