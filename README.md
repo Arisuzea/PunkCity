@@ -29,16 +29,16 @@
 
 ## What Is This?
 
-**PunkCity** is a Wabbajack modlist for *Cyberpunk 2077* built around one idea: the city owes you nothing.
+**PunkCity** is a Wabbajack modlist for *Cyberpunk 2077* built around one idea: **the city owes you nothing**.
 
-Most playthroughs let you become a legend overnight. PunkCity pushes back. Your body has needs. Your reputation has weight. The story won't drag you along — it waits for you to earn the right to be part of it. The city is indifferent, the streets are dangerous, and every cold decision you make will follow you.
+Most playthroughs let you become a legend overnight. PunkCity pushes back. Your body has needs. Your reputation has weight. The story won't drag you along, it waits for you to earn the right to be part of it. The city is indifferent, the streets are dangerous, and every cold decision you make will follow you.
 
 This is not a power fantasy. It's a survival story. Slow down, feel the world, and grow with it.
 
 **What you're getting into:**
 
 - A **survival layer** that makes your body a resource you have to manage
-- A **paced main quest** that rewards immersion over rushing
+- A **paced experience** that rewards immersion over rushing
 - A **reputation system** where senseless violence has real costs
 - *(More systems being added — check back as the list develops)*
 
@@ -162,13 +162,11 @@ These are the pillars that define how PunkCity plays. They are designed to work 
 The foundation of everything. Dark Future turns Night City into an environment you have to actively survive in.
 
 - You must **eat, drink, and sleep** to stay functional
-- A **Nerve meter** drains over time — faster in combat — applying escalating debuffs as it falls
+- A **Nerve meter** drains based on your needs state and drains over time faster in combat, applying escalating debuffs as it falls
 - Some quest stages **lock the Nerve meter**, trapping you in situations you can't simply walk away from
 - The lower your Nerve, the more your body betrays you
 
-Your character is a person, not a machine. Treat yourself like one.
-
-→ [Full mechanics and configuration on the mod page](https://www.nexusmods.com/cyberpunk2077/mods/16300)
+No matter how cromed up, your character is a person not a machine. Treat yourself like one.
 
 ---
 
@@ -176,21 +174,21 @@ Your character is a person, not a machine. Treat yourself like one.
 
 Night City rewards those who actually live in it.
 
-Take a Breather reframes the main quest — instead of a sprint from one story beat to the next, it weaves in meaningful side tasks during natural wait periods. You have time to explore, to build a name for yourself, to become someone the city knows.
+Under the weight of corporate "urban control," the city has implemented the Social Pass, a system designed to gatekeep services from the unworthy. In this world, you are a nobody until your Street Cred says otherwise. Ripperdocs will turn you away, clubs will demand exorbitant entry fees, and even apartments are locked behind the reputation you’ve yet to earn.
+
+This overhaul reframes the journey from a frantic sprint to a calculated climb. Main jobs and side quests no longer pile up; instead, they breathe. You’ll wait for texts while characters handle their own lives, giving you the time and the necessity to build your name in the streets before the next door opens.
 
 There is no rush. The story will wait. Use that time.
-
-→ [Mod page](https://www.nexusmods.com/cyberpunk2077/mods/23290)
 
 ---
 
 ### ⚠️ [Pariah](https://www.nexusmods.com/cyberpunk2077/mods/15014) — Reputation Has Teeth
 
-Take a Breather makes your reputation matter. Pariah makes *protecting* it cost something.
+Night City is a meat grinder, but being a butcher has consequences.
 
-Gunning down civilians isn't a neutral act here. Every cold-blooded killing chips away at your **Street Cred** — and the city remembers. Play like a reckless murderer, and Night City will treat you like one.
+If Take a Breather makes your reputation hard to earn, Pariah makes it easy to lose. This isn't just about losing Street Cred; it’s about how the city perceives a monster. Every witnessed civilian death—and especially every cold-blooded execution shatters the public's trust. If you aren't careful, the fear will spread until the police attack on sight and the streets clear at the mere sound of your boots.
 
-→ [Mod page](https://www.nexusmods.com/cyberpunk2077/mods/15014)
+Choose your path: be respected, or be feared.
 
 ---
 
@@ -200,7 +198,7 @@ Gunning down civilians isn't a neutral act here. Every cold-blooded killing chip
 
 ## Updating the Modlist
 
-1. Download the latest `.wabbajack` file or find the updated listing in the Wabbajack gallery.
+1. Download the latest `.wabbajack` file.
 2. Follow the installation steps from step 2 onward.
 3. **Check the `Overwrite` box** before installing so updated files are properly replaced.
 
