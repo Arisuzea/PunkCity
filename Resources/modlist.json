@@ -7,9 +7,11 @@
       "github/Arisuzea"
     ],
     "game": "cyberpunk2077",
-    "official": true,
+    "official": false,
     "tags": [
-      "Official",
+      "Hardcore",
+      "Total Overhaul",
+      "DLC Required",
       "Gameplay",
       "Clothing",
       "Immersive",
@@ -21,12 +23,12 @@
     "DisplayVersionOnlyInInstallerView": false,
     "force_down": false,
     "links": {
-      "image": "https://raw.githubusercontent.com/Arisuzea/PunkCity/refs/heads/main/Resources/PunkCity.webp",
-      "readme": "",
+      "image": "https://raw.githubusercontent.com/Arisuzea/PunkCity/main/Resources/PunkCity.webp",
+      "readme": "https://github.com/Arisuzea/PunkCity/blob/main/README.md",
       "download": "https://authored-files.wabbajack.org/PunkCity.wabbajack_c2f28b49-85bf-4851-8287-d7a215169948",
-      "machineURL": "",
+      "machineURL": "PunkCity",
       "discordURL": "https://discord.gg/qQebydDHFz",
-      "websiteURL": ""
+      "websiteURL": "https://arisuzea.github.io/PunkCity"
     },
     "download_metadata": {
       "Hash": "Cq/p1wkLDvc=",
