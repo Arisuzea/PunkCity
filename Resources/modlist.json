@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Chrome and Blood",
+    "description": "Chrome \u0026 Blood transforms Cyberpunk 2077 into a relentless, high-stakes experience where every fight hits harder and every choice cuts deeper. Overhauled combat, immersive UI, enhanced visuals, and hundreds of new pieces of gear which includes cyberware, weapons, vehicles, and cosmetics, Chrome \u0026 Blood redefines what it means to survive Night City.",
+    "author": "Q",
+    "maintainers": [
+      "github/qcargile"
+    ],
+    "game": "cyberpunk2077",
+    "official": true,
+    "tags": [
+      "Official",
+      "Gameplay",
+      "Clothing",
+      "Immersive",
+      "Graphics"
+    ],
+    "nsfw": false,
+    "utility_list": false,
+    "image_contains_title": true,
+    "DisplayVersionOnlyInInstallerView": false,
+    "force_down": false,
+    "links": {
+      "image": "https://raw.githubusercontent.com/qcargile/Chrome-Blood/main/Modlist/cover.webp",
+      "readme": "https://github.com/qcargile/Chrome-Blood/blob/main/README.md",
+      "download": "https://authored-files.wabbajack.org/Chrome \u0026 Blood.wabbajack_09d91f4c-a9e3-4739-bbd1-9591b57974a6",
+      "machineURL": "SchoolBoyQ",
+      "discordURL": "https://discord.gg/U65Nhdcns8",
+      "websiteURL": ""
+    },
+    "download_metadata": {
+      "Hash": "L4e1xud4PXU=",
+      "Size": 3916569,
+      "NumberOfArchives": 541,
+      "SizeOfArchives": 11834984261,
+      "NumberOfInstalledFiles": 7598,
+      "SizeOfInstalledFiles": 10803601138,
+      "TotalSize": 22638585399
+    },
+    "version": "3.32",
+    "dateCreated": "1970-01-01T00:00:00Z",
+    "dateUpdated": "2026-02-16T20:12:36.8647477Z",
+    "repositoryName": ""
+  }
+]
