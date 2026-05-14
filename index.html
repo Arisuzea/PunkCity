@@ -117,6 +117,32 @@
       <li><em>More systems being added — check back as the list develops</em></li>
     </ul>
 
+    <div class="ss-section">
+      <h2>In-Game Showcase</h2>
+      <div class="slideshow-wrap" id="ssWrap">
+        <div
+          class="slideshow"
+          id="slideshow"
+          role="region"
+          aria-label="In-game screenshot gallery"
+          tabindex="0"
+          aria-roledescription="carousel"
+        >
+          <!-- Slides are injected here by JS — see SS_SLIDES array below -->
+          <button class="slide-arrow slide-prev" id="ssPrev" aria-label="Previous screenshot">&#8592;</button>
+          <button class="slide-arrow slide-next" id="ssNext" aria-label="Next screenshot">&#8594;</button>
+          <div class="slideshow-progress">
+            <div class="slideshow-progress-bar" id="ssProgressBar"></div>
+          </div>
+        </div>
+        <div class="slideshow-footer">
+          <div class="slide-dots" id="ssDots" role="tablist" aria-label="Screenshot navigation"></div>
+          <span class="slide-counter" id="ssCounter" aria-live="polite" aria-atomic="true">— / —</span>
+        </div>
+        <p class="ss-hint">Hover to pause &nbsp;·&nbsp; ← → to navigate &nbsp;·&nbsp; Swipe on mobile</p>
+      </div>
+    </div>
+
     <h2>Character Creation</h2>
 
     <p>
@@ -702,13 +728,32 @@
   </div>
   <div class="content">
 
-    <p>This section will be updated as the list develops.</p>
+    <p>This section contains the issues that I am aware of and will try to fix. 
+      However there are cases that its an engine issue and I cannot do anything about it.
+    </p>
 
-    <div class="issues-placeholder">
-      <p>NO KNOWN ISSUES AT THIS TIME</p>
-      <p style="margin-top:0.5rem;color:var(--text3);font-size:0.7rem;">CHECK BACK AFTER UPDATES</p>
-    </div>
+    <ol class="steps">
+        <li>
+          <div>
+            <p><strong>Duplicate cars</strong></p>
+            <p>This is most likely caused by Nova Traffic. However, it’s currently required to populate modded vehicles for NPC traffic, so it will remain until I figure out how to properly configure NCTO.</p>
+          </div>
+        </li>
 
+        <li>
+          <div>
+            <p><strong>Missing textures for bikes</strong></p>
+            <p>At high speeds, you may occasionally encounter bikes with white/missing textures that take a moment to load in. This is likely caused by Nova Traffic as well, as I haven’t encountered the issue outside of it.</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <p><strong>Stolen vehicles get swapped when loading</strong></p>
+            <p>Sometimes when loading into a save, if you had a stolen vehicle prior to loading, that vehicle would be swapped to anything random. This is caused by yet again Nova Traffic, which should be fixed once I figure out how to add modded cars to NCTO</p>
+          </div>
+        </li>
+    </ol>
   </div>
   <footer>
     <p>PunkCity — Cyberpunk 2077 Modlist</p>
