@@ -1,1 +1,1 @@
-# THE README IS NOW ABANDONED, FOR MODLIST INFORMATION PLEASE REFER TO THE GITHUB PAGE
+[![Website](https://img.shields.io/badge/Official_Website-PunkCity-blueviolet?style=for-the-badge)](https://arisuzea.github.io/PunkCity)
