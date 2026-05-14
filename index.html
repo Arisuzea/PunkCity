@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PunkCity</title>
+<link rel="icon" type="image/x-icon" href="Resources/PunkCity_icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Resources/index.css">
+</head>
+
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav role="navigation" aria-label="Main navigation">
+  <span class="nav-logo" onclick="navigate('home')">
+    <img src="Resources/PunkCity_header.png" alt="PunkCity" class="nav-logo-img">
+  </span>
+  <div class="nav-divider" aria-hidden="true"></div>
+  <ul class="nav-links" role="list">
+    <li><a onclick="navigate('home')"         data-page="home"         href="#home">About</a></li>
+    <li><a onclick="navigate('requirements')" data-page="requirements" href="#requirements">Requirements</a></li>
+    <li><a onclick="navigate('preinstall')"   data-page="preinstall"   href="#preinstall">Pre-Installation</a></li>
+    <li><a onclick="navigate('installation')" data-page="installation" href="#installation">Installation</a></li>
+    <li><a onclick="navigate('postinstall')"  data-page="postinstall"  href="#postinstall">Post-Installation</a></li>
+    <li><a onclick="navigate('gameplay')"     data-page="gameplay"     href="#gameplay">Gameplay</a></li>
+    <li><a onclick="navigate('updating')"     data-page="updating"     href="#updating">Updating</a></li>
+    <li><a onclick="navigate('issues')"       data-page="issues"       href="#issues">Known Issues</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-menu" id="mobileMenu" role="menu">
+  <a onclick="navigate('home');closeMobile()"         data-page="home">About</a>
+  <a onclick="navigate('requirements');closeMobile()" data-page="requirements">Requirements</a>
+  <a onclick="navigate('preinstall');closeMobile()"   data-page="preinstall">Pre-Installation</a>
+  <a onclick="navigate('installation');closeMobile()" data-page="installation">Installation</a>
+  <a onclick="navigate('postinstall');closeMobile()"  data-page="postinstall">Post-Installation</a>
+  <a onclick="navigate('gameplay');closeMobile()"     data-page="gameplay">Gameplay</a>
+  <a onclick="navigate('updating');closeMobile()"     data-page="updating">Updating</a>
+  <a onclick="navigate('issues');closeMobile()"       data-page="issues">Known Issues</a>
+</div>
+
+<main id="main">
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: ABOUT
+═══════════════════════════════════════════════════════════════ -->
+<section class="page active" id="page-home" aria-label="About PunkCity">
+
+  <div class="hero" aria-hidden="false">
+    <div class="hero-fallback"></div>
+    <img
+      class="hero-img"
+      src="Resources/PunkCity_header.png"
+      alt="PunkCity banner"
+      onerror="this.style.display='none'"
+    >
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Wabbajack Modlist · Cyberpunk 2077</p>
+      <img src="Resources/PunkCity_header.png" alt="PunkCity" class="hero-logo">
+      <p class="hero-tagline">
+        Night City doesn't respect you. It doesn't see you as anybody.<br>
+        Survival is not a right, it's a privilege. Earn your place.
+      </p>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="callout callout-important">
+      <p class="callout-title">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zM8 6a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 6zm0-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+        Important
+      </p>
+      <ul>
+        <li>PunkCity is built for <strong>Cyberpunk 2077 2.31</strong>.</li>
+        <li>Phantom Liberty DLC is <span class="badge badge-mandatory">Mandatory</span></li>
+        <li>This list is currently in active development. Expect additions and changes between versions.</li>
+      </ul>
+    </div>
+
+    <div class="callout callout-warning">
+      <p class="callout-title">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+        Warning
+      </p>
+      <p>Always launch the game through <strong>Mod Organizer 2</strong>. Launching through Steam directly will bypass the mod setup and break the list.</p>
+    </div>
+
+    <h2>About the List</h2>
+
+    <p>
+      <strong>PunkCity</strong> is a Wabbajack modlist for Cyberpunk 2077 built around one idea:
+      <em>the city owes you nothing.</em>
+    </p>
+
+    <p>
+      Most playthroughs let you become a legend overnight. PunkCity pushes back. Your body has needs.
+      Your reputation has weight. The story won't drag you along, it waits for you to earn the right to be
+      part of it. The city is indifferent, the streets are dangerous, and every cold decision you make will follow you.
+    </p>
+
+    <p>This is no power fantasy. You'll suffer, and you'll be content.</p>
+
+    <h3>What You're Getting Into</h3>
+    <ul>
+      <li><strong>Survival mechanics</strong> that make your body a resource you have to manage</li>
+      <li>A <strong>paced experience</strong> that rewards immersion over rushing</li>
+      <li>True <strong>reputation system</strong> where senseless violence has real costs</li>
+      <li><em>More systems being added — check back as the list develops</em></li>
+    </ul>
+
+    <h2>Character Creation</h2>
+
+    <p>
+      The list gives strong emphasis to Character Creation freedom. It utilizes <strong>EBBRB</strong> as the
+      body mod for Female V and <strong>Atlas</strong> for Male V.
+    </p>
+
+    <blockquote>
+      <em>Valerie has at least 5–20× more accessories, hairs, and clothes than Vincent. Unfortunately modders
+      favor feminine body mods — nothing I can do about it.</em>
+    </blockquote>
+
+    <div class="stat-row">
+      <div class="stat-pill">
+        <span class="stat-pill-label">Total Mods</span>
+        <span class="stat-pill-value">~1,000</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-pill-label">Without Cosmetics</span>
+        <span class="stat-pill-value">~600</span>
+      </div>
+    </div>
+
+    <p>For the full modlist, visit the <a href="https://loadorderlibrary.com/lists/punkcity-2" target="_blank">Load Order Library</a>.</p>
+
+    <h2>A Note from the Author</h2>
+
+    <p>
+      This is my first modlist. I am primarily a Skyrim modder (5 years), however I became so fixated
+      with Cyberpunk 2077 that I released a list for it before my favourite fantasy game.
+    </p>
+
+    <p>
+      I did my best but the list is far from perfect. If you find bugs or bad clipping, please let me know.
+      I plan to use user experiences as the basis for whether something is performing well or poorly —
+      the gameplay is refined, but the cosmetics may not be. Please bear with me.
+    </p>
+
+  </div>
+
+  <footer>
+    <p>PunkCity is an unofficial Wabbajack modlist and is not affiliated with CD Projekt Red.</p>
+    <p style="margin-top:0.5rem">Full credit goes to the original mod authors.</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: SYSTEM REQUIREMENTS
+═══════════════════════════════════════════════════════════════ -->
+<section class="page" id="page-requirements" aria-label="System Requirements">
+  <div class="page-header">
+    <span class="page-label">System Requirements</span>
+    <h1>Can You Run It?</h1>
+  </div>
+  <div class="content">
+
+    <div class="callout callout-warning">
+      <p class="callout-title">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+        Requirements
+      </p>
+      <ul>
+        <li>You need an <strong>official, fully updated</strong> copy of Cyberpunk 2077.</li>
+        <li>An <strong>SSD is required</strong>. Do not attempt to run this from an HDD.</li>
+        <li>Only <strong>Windows 10/11</strong> is supported.</li>
+      </ul>
+    </div>
+
+    <h2>Platform &amp; OS</h2>
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Requirement</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Operating System</td>
+          <td>Windows 10 / 11</td>
+          <td>Linux is not supported</td>
+        </tr>
+        <tr>
+          <td>Storage Type</td>
+          <td>SSD <span class="badge badge-mandatory">Required</span></td>
+          <td>HDD will cause severe load issues</td>
+        </tr>
+        <tr>
+          <td>Game Version</td>
+          <td>Cyberpunk 2077 v2.31</td>
+          <td>Must be official &amp; updated</td>
+        </tr>
+        <tr>
+          <td>DLC</td>
+          <td>Phantom Liberty <span class="badge badge-mandatory">Mandatory</span></td>
+          <td>List will not function without it</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Hardware</h2>
+
+    <p>Minimum specs and recommended hardware will be listed here as the list is finalized. Check back for updates.</p>
+
+    <details>
+      <summary>Estimated Size Breakdown</summary>
+      <div>
+        <p style="font-size:0.85rem;color:var(--text3);margin-bottom:1rem;font-family:var(--font-mono);">
+          Exact figures will be updated as the list grows.
+        </p>
+        <div class="size-row">
+          <span class="size-label">Base Game + DLC</span>
+          <span class="size-value">~84.6 GB</span>
+        </div>
+        <div class="size-row">
+          <span class="size-label">Downloads</span>
+          <span class="size-value">~19.4 GB</span>
+        </div>
+        <div class="size-row">
+          <span class="size-label">Install Size</span>
+          <span class="size-value">~20.0 GB</span>
+        </div>
+        <div class="size-row">
+          <span class="size-label">Final Size</span>
+          <span class="size-value">~39.4GB</span>
+        </div>
+
+        <P style="font-size:0.85rem;color:var(--text3);margin-top:1rem;font-family:var(--font-mono);">
+          Do allocate atleast 70GB for the temporary wabbajack files.
+        </P>
+      </div>      
+    </details>
+
+  </div>
+  <footer>
+    <p>PunkCity — Cyberpunk 2077 Modlist</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: PRE-INSTALLATION
+═══════════════════════════════════════════════════════════════ -->
+<section class="page" id="page-preinstall" aria-label="Pre-Installation">
+  <div class="page-header">
+    <span class="page-label">Pre-Installation</span>
+    <h1>Before You Begin</h1>
+  </div>
+  <div class="content">
+
+    <p>The steps below assume you're using the <strong>Steam</strong> version of the game. Complete every step before moving on to Installation.</p>
+
+    <h2>Setup Steps</h2>
+
+    <ol class="steps">
+      <li>
+        <div>
+          <p>Perform a <a href="https://support.cdprojektred.com/en/cyberpunk/pc/sp-technical/issue/2233/how-do-i-perform-a-clean-install-of-the-game" target="_blank">clean install</a> of Cyberpunk 2077. Install it <strong>outside of <code>Program Files</code></strong>.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Install the <a href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" target="_blank">Visual C++ Redistributables (All-in-One)</a>. Extract and run <code>install_all.bat</code> as administrator.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Disable Steam auto-updates for Cyberpunk 2077.</p>
+          <details>
+            <summary>How to disable auto-updates</summary>
+            <div>
+              <ol style="margin:0;padding-left:1.25rem;font-size:0.9rem;">
+                <li>Right-click Cyberpunk 2077 in your Steam Library → <strong>Properties</strong></li>
+                <li>Go to the <strong>Updates</strong> tab</li>
+                <li>Set Automatic Updates to <strong>"Only update this game when I launch it"</strong></li>
+                <li>From now on, <strong>only launch through Mod Organizer 2</strong></li>
+              </ol>
+            </div>
+          </details>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Make sure all official DLC is installed.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Install <a href="https://store.steampowered.com/app/2060310/Cyberpunk_2077_REDmod/" target="_blank">REDmod</a> if you haven't already.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Update your GPU drivers — <a href="https://www.nvidia.com/en-us/software/nvidia-app/" target="_blank">NVIDIA App</a> or <a href="https://www.amd.com/en/support/download/drivers.html" target="_blank">AMD Adrenalin</a>.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Install the <a href="https://dotnet.microsoft.com/en-us/download/dotnet/9.0" target="_blank">.NET Runtime</a> (latest version).</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Install the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=35" target="_blank">DirectX End-User Runtime</a>.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="callout callout-important">
+      <p class="callout-title">Before Moving On</p>
+      <p>Confirm that Steam shows both <strong>Cyberpunk 2077: REDmod</strong> and <strong>Cyberpunk 2077: Phantom Liberty</strong> as installed before continuing to the Installation page.</p>
+    </div>
+
+  </div>
+  <footer>
+    <p>PunkCity — Cyberpunk 2077 Modlist</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: INSTALLATION
+═══════════════════════════════════════════════════════════════ -->
+<section class="page" id="page-installation" aria-label="Installation">
+  <div class="page-header">
+    <span class="page-label">Installation</span>
+    <h1>Installing PunkCity</h1>
+  </div>
+  <div class="content">
+
+    <p>Wabbajack gallery listing coming soon. Installation steps will be filled in here once the list is published.</p>
+
+    <h2>Quick Overview</h2>
+
+    <ol class="steps">
+      <li>
+        <div>
+          <p>Download <a href="https://www.wabbajack.org" target="_blank">Wabbajack</a> and place it somewhere <strong>outside</strong> your Cyberpunk folder and outside <code>Program Files</code>.</p>
+          <div class="path-example">Example: <span>D:\Wabbajack</span></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Launch Wabbajack, go to <strong>Browse Modlists</strong>, and search for <strong>PunkCity</strong>.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Set your install paths:</p>
+          <div class="path-example"><span>Installation:</span>  D:\Modlists\PunkCity</div>
+          <div class="path-example"><span>Downloads:</span>     D:\Modlists\downloads</div>
+          <div class="callout callout-warning" style="margin-top:0.75rem">
+            <p class="callout-title">Path Rules</p>
+            <p>Both paths must be on the <strong>same drive</strong> as your Cyberpunk install, and <strong>not</strong> inside the game directory or <code>Program Files</code>.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Hit <strong>Install</strong> and let Wabbajack handle the rest.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Once complete, open the install folder and launch <code>PunkCity.exe</code>.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Confirm the profile is set to <strong>PunkCity</strong>, then hit <strong>Run</strong>.</p>
+        </div>
+      </li>
+    </ol>
+
+  </div>
+  <footer>
+    <p>PunkCity — Cyberpunk 2077 Modlist</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: POST-INSTALLATION
+═══════════════════════════════════════════════════════════════ -->
+<section class="page" id="page-postinstall" aria-label="Post-Installation">
+  <div class="page-header">
+    <span class="page-label">Post-Installation</span>
+    <h1>Final Setup</h1>
+  </div>
+  <div class="content">
+
+    <h2>Antivirus</h2>
+
+    <div class="callout callout-warning">
+      <p class="callout-title">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+        Antivirus Warning
+      </p>
+      <p>Third-party antivirus software (BitDefender, Norton, Webroot, etc.) can interfere with MO2's Virtual File System. If you're experiencing issues, you may need to disable or remove it.</p>
+      <p>Windows Defender with sensible browsing habits is sufficient.</p>
+    </div>
+
+    <p>If you're using Windows Defender, add your PunkCity install folder as an exclusion:</p>
+
+    <details>
+      <summary>How to Add a Windows Defender Exclusion</summary>
+      <div>
+        <ol style="margin:0;padding-left:1.25rem;font-size:0.9rem;">
+          <li>Open <strong>Windows Security</strong></li>
+          <li>Go to <strong>Virus &amp; threat protection</strong></li>
+          <li>Click <strong>Manage settings</strong></li>
+          <li>Scroll to <strong>Exclusions</strong> → <strong>Add or remove exclusions</strong></li>
+          <li>Add your PunkCity installation folder</li>
+          <li>Optionally also exclude <code>PunkCity.exe</code> and <code>Cyberpunk2077.exe</code></li>
+        </ol>
+      </div>
+    </details>
+
+    <h2>Overlays</h2>
+
+    <p>Disable all overlays before launching:</p>
+    <ul>
+      <li>Steam overlay</li>
+      <li>Discord overlay</li>
+      <li>GPU software overlay (GeForce Experience, Radeon Overlay)</li>
+      <li>Xbox Game Bar</li>
+    </ul>
+
+  </div>
+  <footer>
+    <p>PunkCity — Cyberpunk 2077 Modlist</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: GAMEPLAY
+═══════════════════════════════════════════════════════════════ -->
+<section class="page" id="page-gameplay" aria-label="Gameplay Systems">
+  <div class="page-header">
+    <span class="page-label">Gameplay</span>
+    <h1>Core</h1>
+    <p style="margin-bottom:0;font-family:var(--font-mono);font-size:0.75rem;color:var(--text3);">
+      Full modlist →
+      <a href="https://loadorderlibrary.com/lists/punkcity-2" target="_blank">Load Order Library</a>
+    </p>
+  </div>
+
+  <div class="content-wide">
+
+    <p style="max-width:680px;margin:0 0 0.5rem 0;">
+      These systems define how PunkCity plays. They're designed to work together,
+      removing major components will change the intended experience.
+    </p>
+
+    
+
+    <div class="gameplay-grid">
+
+      <!-- DARK FUTURE -->
+      <div class="gameplay-card">
+        <span class="gameplay-card-tag">Core · Surival</span>
+        <h3>Dark Future</h3>
+        <p>The backbone of PunkCity's survival systems. Chrome won't save you from burnout.</p>
+        <ul>
+          <li>Eat, drink, and sleep to stay functional</li>
+          <li>Manage your <strong>Nerve meter</strong></li>
+          <li>Nerve drains faster during combat</li>
+          <li>Low Nerve causes escalating debuffs</li>
+          <li>Some quests lock your Nerve meter, forcing you through bad situations</li>
+        </ul>
+        <a class="gameplay-card-link" href="https://www.nexusmods.com/cyberpunk2077/mods/16300" target="_blank">View on Nexus Mods →</a>
+      </div>
+
+      <!-- TAKE A BREATHER -->
+      <div class="gameplay-card">
+        <span class="gameplay-card-tag">Core · Street Cred</span>
+        <h3>Take a Breather</h3>
+        <p>Night City expects you to earn your place. Your Street Cred now gates major services and opportunities.</p>
+        <ul>
+          <li>Ripperdocs</li>
+          <li>Clubs</li>
+          <li>Apartments</li>
+          <li>Other city services</li>
+        </ul>
+        <p>Main jobs and side quests are paced more naturally. Calls and texts take time, giving you space to explore and actually live in Night City.</p>
+        <a class="gameplay-card-link" href="https://www.nexusmods.com/cyberpunk2077/mods/23290" target="_blank">View on Nexus Mods →</a>
+      </div>
+
+      <!-- PARIAH -->
+      <div class="gameplay-card">
+        <span class="gameplay-card-tag">Core · Consequences</span>
+        <h3>Pariah</h3>
+        <p>Violence has consequences. Build respect or become someone Night City fears.</p>
+        <ul>
+          <li>Witnessed civilian deaths hurt your reputation</li>
+          <li>Executions carry heavier penalties</li>
+          <li>Civilians may panic</li>
+          <li>Police can become immediately hostile</li>
+        </ul>
+        <a class="gameplay-card-link" href="https://www.nexusmods.com/cyberpunk2077/mods/15014" target="_blank">View on Nexus Mods →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <span class="page-label">Gameplay</span>
+    <h1>Combat</h1>
+  </div>
+  
+  <div class="content-wide">
+
+    <p style="max-width:680px;margin:0 0 1.5rem 0;">
+      Combat in PunkCity is slower, harsher, and far less forgiving. 
+      Enemies think better, healing is limited, and netrunning requires actual planning.
+    </p>
+
+
+    <div class="gameplay-grid">
+
+      <!-- COMBAT EVOLVED -->
+      <div class="gameplay-card">
+        <span class="gameplay-card-tag">Combat · AI</span>
+        <h3>Combat Evolved</h3>
+        <p>Every faction fights differently. A random gang shootout can spiral into a tactical nightmare.</p>
+        <ul>
+          <li>15 factions with unique combat behaviors</li>
+          <li>Real ballistic hit calculations</li>
+          <li>Ablatable armor system</li>
+          <li>Enemy morale and panic mechanics</li>
+          <li>Aggressive enemy pursuit</li>
+        </ul>
+        <a class="gameplay-card-link" href="https://www.nexusmods.com/cyberpunk2077/mods/15114" target="_blank">View on Nexus Mods →</a>
+      </div>
+
+      <!-- MUCH BETTER NETRUNNING -->
+      <div class="gameplay-card">
+        <span class="gameplay-card-tag">Combat · Hacking</span>
+        <h3>Much Better Netrunning</h3>
+        <p>Quickhacking now requires physical access and proper infiltration.</p>
+        <ul>
+          <li>Breach networks to unlock hacks</li>
+          <li>Enemy netrunners fight back with ICE</li>
+          <li>Bosses require protocol matching</li>
+          <li>No ping abuse</li>
+          <li>Range scales with skill progression</li>
+        </ul>
+        <a class="gameplay-card-link" href="https://www.nexusmods.com/cyberpunk2077/mods/14713" target="_blank">View on Nexus Mods →</a>
+      </div>
+
+      <!-- IMMERSIVE HEALING -->
+      <div class="gameplay-card">
+        <span class="gameplay-card-tag">Combat · Healing</span>
+        <h3>Immersive Healing</h3>
+        <p>Healing items are finite resources again.</p>
+        <ul>
+          <li>Consumable healing items</li>
+          <li>No cooldown healing</li>
+          <li>No medicine crafting</li>
+          <li>Inventory weight limits</li>
+          <li>Blood Pump emergency healing</li>
+        </ul>
+        <a class="gameplay-card-link" href="https://www.nexusmods.com/cyberpunk2077/mods/14954" target="_blank">View on Nexus Mods →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <span class="page-label">Gameplay</span>
+    <h1>Cyberware</h1>
+  </div>
+
+  <div class="content-wide">
+
+    <p style="max-width:680px;margin:0 0 1.5rem 0;">
+      Chrome is powerful, but no longer consequence-free. 
+      Your implants break, vendors specialize, and reaching full borg status takes actual investment.
+    </p>
+
+    <div class="gameplay-grid">
+
+      <!-- RIPPERDOC SPECIALIZATIONS -->
+      <div class="gameplay-card">
+        <span class="gameplay-card-tag">Cyberware · Economy</span>
+        <h3>Ripperdoc Specializations</h3>
+        <p>Ripperdocs are specialists now, not one-stop cyberware supermarkets.</p>
+        <ul>
+          <li>Each ripper sells only specific implant categories</li>
+          <li>Modded cyberware is sorted properly</li>
+          <li>Iconic implants are tied to specific vendors</li>
+          <li>Previously unavailable Iconics are restored</li>
+          <li>Specializations appear on your map</li>
+        </ul>
+        <p>General practitioners don't exist in Night City anymore.</p>
+        <a class="gameplay-card-link" href="https://www.nexusmods.com/cyberpunk2077/mods/23399" target="_blank">View on Nexus Mods →</a>
+      </div>
+
+      <!-- SHATTERED CHROME -->
+      <div class="gameplay-card">
+        <span class="gameplay-card-tag">Cyberware · Durability</span>
+        <h3>Shattered Chrome</h3>
+        <p>Yikes, cheap chromes choom?</p>
+        <ul>
+          <li>Cyberware health across 10 body regions</li>
+          <li>Damage degrades implant integrity</li>
+          <li>Higher-tier implants last longer</li>
+          <li>Broken implants become unusable</li>
+          <li>Physical penalties from damaged chrome</li>
+        </ul>
+        <p>Repair at ripperdocs or survive long enough to heal naturally.</p>
+        <a class="gameplay-card-link" href="https://www.google.com/search?q=LINK" target="_blank">View on Nexus Mods →</a>
+      </div>
+
+      <!-- CYBERWARE EX -->
+      <div class="gameplay-card">
+        <span class="gameplay-card-tag">Cyberware · Expansions</span>
+        <h3>Cyberware-EX</h3>
+        <p>Push your body beyond vanilla implant limits.</p>
+        <ul>
+          <li>Unlock extra slots through perks</li>
+          <li>Equip multiple implants per category</li>
+          <li>Run multiple operating systems</li>
+          <li>Combine jump mods and arm weapons</li>
+          <li>Requires real build investment</li>
+        </ul>
+        <p>It's your time to be the ultimate cyberpsycho.</p>
+        <a class="gameplay-card-link" href="https://www.google.com/search?q=LINK"target="_blank">View on Nexus Mods →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>PunkCity — Cyberpunk 2077 Modlist</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: UPDATING
+═══════════════════════════════════════════════════════════════ -->
+<section class="page" id="page-updating" aria-label="Updating the Modlist">
+  <div class="page-header">
+    <span class="page-label">Updating</span>
+    <h1>Updating the Modlist</h1>
+  </div>
+  <div class="content">
+
+    <div class="update-step">
+      <span class="update-num">01</span>
+      <div>
+        <p>Download the latest <code>.wabbajack</code> file.</p>
+      </div>
+    </div>
+    <div class="update-step">
+      <span class="update-num">02</span>
+      <div>
+        <p>Follow the <a href="#installation" onclick="navigate('installation')">Installation steps</a> from step 2 onward.</p>
+      </div>
+    </div>
+    <div class="update-step">
+      <span class="update-num">03</span>
+      <div>
+        <p>Check the <strong>Overwrite</strong> box before installing so updated files replace old ones properly.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-warning" style="margin-top:2.5rem">
+      <p class="callout-title">Custom Mods</p>
+      <p>If you've added your own mods, tag them in MO2 to protect them during updates:</p>
+      <pre style="margin:0.75rem 0 0"><code>[NoDelete]</code></pre>
+    </div>
+
+  </div>
+  <footer>
+    <p>PunkCity — Cyberpunk 2077 Modlist</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: KNOWN ISSUES
+═══════════════════════════════════════════════════════════════ -->
+<section class="page" id="page-issues" aria-label="Known Issues">
+  <div class="page-header">
+    <span class="page-label">Known Issues</span>
+    <h1>Known Issues</h1>
+  </div>
+  <div class="content">
+
+    <p>This section will be updated as the list develops.</p>
+
+    <div class="issues-placeholder">
+      <p>NO KNOWN ISSUES AT THIS TIME</p>
+      <p style="margin-top:0.5rem;color:var(--text3);font-size:0.7rem;">CHECK BACK AFTER UPDATES</p>
+    </div>
+
+  </div>
+  <footer>
+    <p>PunkCity — Cyberpunk 2077 Modlist</p>
+  </footer>
+</section>
+
+</main>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+<script src="Resources/index.js"></script>
+
+</body>
+</html>
