@@ -19,7 +19,7 @@
     "DisplayVersionOnlyInInstallerView": false,
     "force_down": false,
     "links": {
-      "image": "https://raw.githubusercontent.com/Arisuzea/PunkCity/main/Resources/PunkCity.webp",
+      "image": "https://raw.githubusercontent.com/Arisuzea/PunkCity/refs/heads/main/Resources/PunkCity.webp",
       "readme": "https://arisuzea.github.io/PunkCity",
       "download": "https://authored-files.wabbajack.org/PunkCity.wabbajack_c2f28b49-85bf-4851-8287-d7a215169948",
       "machineURL": "PunkCity",
