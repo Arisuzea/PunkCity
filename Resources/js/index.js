@@ -1,4 +1,4 @@
-  const PAGES = ['home','requirements','preinstall','installation','postinstall','gameplay','updating','issues'];
+  const PAGES = ['home','requirements','preinstall','installation','postinstall','gameplay','updating', 'changelogs', 'issues'];
   let current = 'home';
 
   function navigate(page) {
