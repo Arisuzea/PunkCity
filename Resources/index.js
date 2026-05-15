@@ -53,6 +53,18 @@
   document.querySelectorAll('[data-page]').forEach(a => {
     a.addEventListener('click', function(e) { e.preventDefault(); });
   });
+  
+  // Installation tab switching
+  function switchTab(id) {
+    document.querySelectorAll('.method-tab').forEach(btn => {
+      const active = btn.id === 'tab-' + id;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-selected', String(active));
+    });
+    document.querySelectorAll('.method-panel').forEach(panel => {
+      panel.classList.toggle('active', panel.id === 'panel-' + id);
+    });
+  }
 
   // Slideshows
   const SS_SLIDES = [

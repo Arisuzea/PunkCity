@@ -371,51 +371,152 @@
     <h1>Installing PunkCity</h1>
   </div>
   <div class="content">
-
-    <p>Wabbajack gallery listing coming soon. Installation steps will be filled in here once the list is published.</p>
-
-    <h2>Quick Overview</h2>
-
-    <ol class="steps">
-      <li>
-        <div>
-          <p>Download <a href="https://www.wabbajack.org" target="_blank">Wabbajack</a> and place it somewhere <strong>outside</strong> your Cyberpunk folder and outside <code>Program Files</code>.</p>
-          <div class="path-example">Example: <span>D:\Wabbajack</span></div>
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>Launch Wabbajack, go to <strong>Browse Modlists</strong>, and search for <strong>PunkCity</strong>.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>Set your install paths:</p>
-          <div class="path-example"><span>Installation:</span>  D:\Modlists\PunkCity</div>
-          <div class="path-example"><span>Downloads:</span>     D:\Modlists\downloads</div>
-          <div class="callout callout-warning" style="margin-top:0.75rem">
-            <p class="callout-title">Path Rules</p>
-            <p>Both paths must be on the <strong>same drive</strong> as your Cyberpunk install, and <strong>not</strong> inside the game directory or <code>Program Files</code>.</p>
+ 
+    <p>Choose the method that applies to you. Both paths end at the same place — pick whichever is available.</p>
+ 
+    <!-- ── METHOD TABS ── -->
+    <div class="method-tabs" role="tablist" aria-label="Installation method">
+      <button
+        class="method-tab active"
+        role="tab"
+        id="tab-gallery"
+        aria-controls="panel-gallery"
+        aria-selected="true"
+        onclick="switchTab('gallery')"
+      >Via Wabbajack Gallery</button>
+      <button
+        class="method-tab"
+        role="tab"
+        id="tab-nexus"
+        aria-controls="panel-nexus"
+        aria-selected="false"
+        onclick="switchTab('nexus')"
+      >Via Nexus Mods Download</button>
+    </div>
+ 
+    <!-- ══ METHOD A: WABBAJACK GALLERY ══ -->
+    <div class="method-panel active" id="panel-gallery" role="tabpanel" aria-labelledby="tab-gallery">
+ 
+      <div class="callout callout-important">
+        <p class="callout-title">Availability</p>
+        <p>The gallery listing is not yet live. This method will be available once PunkCity is submitted to the Wabbajack modlist repository.</p>
+      </div>
+ 
+      <ol class="steps">
+        <li>
+          <div>
+            <p>Download <a href="https://www.wabbajack.org" target="_blank">Wabbajack</a> and place it somewhere <strong>outside</strong> your Cyberpunk folder and outside <code>Program Files</code>.</p>
+            <div class="path-example">Example: <span>D:\Wabbajack</span></div>
           </div>
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>Hit <strong>Install</strong> and let Wabbajack handle the rest.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>Once complete, open the install folder and launch <code>PunkCity.exe</code>.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>Confirm the profile is set to <strong>PunkCity</strong>, then hit <strong>Run</strong>.</p>
-        </div>
-      </li>
-    </ol>
+        </li>
+        <li>
+          <div>
+            <p>Launch Wabbajack. On the main screen, click <strong>Browse Modlists</strong>.</p>
+            <div class="callout callout-warning">
+              <p class="callout-title">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zM8 6a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 6zm0-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                Note
+              </p>
+              <p>Please make sure to tick <strong>Non-featured</strong> otherwise the list may not show up.</p>
+              <img src="Resources/Browse-modlists2_instructions.png" alt="Wabbajack Browse Modlists screen highlighting the Install from Disk button" class="step-img">
+            </div>
 
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Search for <strong>PunkCity</strong> in the gallery and click the download arrow to begin.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Set your install paths:</p>
+            <div class="path-example"><span>Installation:</span>  D:\Modlists\PunkCity</div>
+            <div class="path-example"><span>Downloads:</span>     D:\Modlists\downloads</div>
+            <div class="callout callout-warning" style="margin-top:0.75rem">
+              <p class="callout-title">Path Rules</p>
+              <p>Both paths must be on the <strong>same drive</strong> as your Cyberpunk install, and <strong>not</strong> inside the game directory or <code>Program Files</code>.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Click <strong>Install</strong> and let Wabbajack handle the rest. This will take a while depending on your connection speed.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Once complete, open your install folder and launch <code>ModOrganizer.exe</code>.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Confirm the active profile is set to <strong>PunkCity</strong>, then click <strong>Run</strong>.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+ 
+    <!-- ══ METHOD B: NEXUS MODS ══ -->
+    <div class="method-panel" id="panel-nexus" role="tabpanel" aria-labelledby="tab-nexus">
+ 
+      <div class="callout callout-important">
+        <p class="callout-title">When to use this</p>
+        <p>Use this method if the Wabbajack gallery listing isn't live yet, or if you prefer to download the <code>.wabbajack</code> file manually from the Nexus page.</p>
+      </div>
+ 
+      <ol class="steps">
+        <li>
+          <div>
+            <p>Download <a href="https://www.wabbajack.org" target="_blank">Wabbajack</a> and place it somewhere <strong>outside</strong> your Cyberpunk folder and outside <code>Program Files</code>.</p>
+            <div class="path-example">Example: <span>D:\Wabbajack</span></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Go to the <strong><a href="https://www.nexusmods.com/cyberpunk2077/mods/29640">PunkCity</a></strong> Nexus Mods page and download the main file, it contains <code>.wabbajack</code> to install file manually. Save it anywhere convenient.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Launch Wabbajack. Navigate to <strong>Browse Modlists</strong>, on the top right click <strong>Install from Disk</strong>.</p>
+            <img src="Resources/Browse-modlists_instructions.png" alt="Wabbajack Browse Modlists screen highlighting the Install from Disk button" class="step-img">
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>In the file picker, navigate to and select the <code>PunkCity.wabbajack</code> file you just downloaded.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Set your install paths:</p>
+            <div class="path-example"><span>Installation:</span>  D:\Modlists\PunkCity</div>
+            <div class="path-example"><span>Downloads:</span>     D:\Modlists\downloads</div>
+            <div class="callout callout-warning" style="margin-top:0.75rem">
+              <p class="callout-title">Path Rules</p>
+              <p>Both paths must be on the <strong>same drive</strong> as your Cyberpunk install, and <strong>not</strong> inside the game directory or <code>Program Files</code>.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Click <strong>Install</strong> and let Wabbajack handle the rest.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Once complete, open your install folder and launch <code>ModOrganizer.exe</code>.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Confirm the active profile is set to <strong>PunkCity</strong>, then click <strong>Run</strong>.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+ 
   </div>
   <footer>
     <p>PunkCity — Cyberpunk 2077 Modlist</p>

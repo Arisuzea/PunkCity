@@ -1,4 +1,4 @@
-  /* ─── RESET & BASE ─── */
+/* ─── RESET & BASE ─── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
  
   :root {
@@ -666,9 +666,59 @@
     min-width: 24px;
     padding-top: 0.2rem;
   }
+
+    /* ─── METHOD TABS ─── */
+  .method-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2.25rem;
+    gap: 0;
+  }
+ 
+  .method-tab {
+    padding: 0.65rem 1.4rem;
+    font-family: var(--font-head);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text2);
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    white-space: nowrap;
+  }
+ 
+  .method-tab:hover { color: var(--white); background: rgba(255,255,255,0.02); }
+  .method-tab.active { color: var(--yellow); border-bottom-color: var(--yellow); }
+ 
+  .method-panel { display: none; }
+  .method-panel.active { display: block; }
+ 
+  /* ─── STEP IMAGES ───*/
+  .step-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    margin-top: 0.85rem;
+    max-height: 340px;
+    object-fit: cover;
+    object-position: top;
+  }
+ 
+  .step-img.step-img-sm {
+    max-width: 420px;
+    max-height: 200px;
+  }
  
   /* ─── KNOWN ISSUES ─── */
-  .issues-placeholder {
+  /* .issues-placeholder {
     border: 1px dashed var(--border2);
     border-radius: 4px;
     padding: 3rem;
@@ -677,7 +727,8 @@
     font-family: var(--font-mono);
     font-size: 0.8rem;
     letter-spacing: 0.1em;
-  }
+  } */
+  /* Known issues has been filled, this is depreciated but will still be included incase it can be used somewhere else */
  
   /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
