@@ -1,0 +1,48 @@
+/* ─────────────────────────────────────────────
+   details.css
+   Base styles for the native <details>/<summary>
+   disclosure pattern. Component-specific overrides
+   (e.g. .cl-block > summary) live in their own
+   files and use higher specificity to override here.
+───────────────────────────────────────────── */
+
+details {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+summary {
+  padding: 0.85rem 1.25rem;
+  cursor: pointer;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text2);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg1);
+  transition: color 0.15s, background 0.15s;
+}
+summary::-webkit-details-marker { display: none; }
+
+summary::after {
+  content: '+';
+  font-size: 1rem;
+  color: var(--yellow);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+details[open] summary::after { transform: rotate(45deg); }
+summary:hover { color: var(--white); background: var(--bg2); }
+
+details > *:not(summary) {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}

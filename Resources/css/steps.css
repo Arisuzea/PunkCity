@@ -1,0 +1,87 @@
+/* ─────────────────────────────────────────────
+   steps.css
+   Numbered instruction steps (.steps), path
+   display blocks (.path-example), the simpler
+   updating-page step rows (.update-step), and
+   inline step screenshot images (.step-img).
+   All relate to sequential instructional content.
+───────────────────────────────────────────── */
+
+/* ─── NUMBERED STEPS ─── */
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 1.75rem 0; }
+
+.steps li {
+  counter-increment: step;
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.steps li:last-child { border-bottom: none; margin-bottom: 0; }
+
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--yellow);
+  min-width: 28px;
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.steps li > div { flex: 1; }
+.steps li p { margin-bottom: 0.5rem; }
+.steps li p:last-child { margin-bottom: 0; }
+
+/* ─── PATH EXAMPLE ─── */
+.path-example {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-dim);
+  border-radius: 0 4px 4px 0;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text2);
+  margin: 0.5rem 0 1rem;
+}
+.path-example span { color: var(--accent); }
+
+/* ─── UPDATE STEPS ─── */
+.update-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.update-step:last-child { border-bottom: none; }
+
+.update-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--yellow);
+  min-width: 24px;
+  padding-top: 0.2rem;
+}
+
+/* ─── STEP IMAGES ─── */
+.step-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  margin-top: 0.85rem;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.step-img.step-img-sm {
+  max-width: 420px;
+  max-height: 200px;
+}

@@ -1,0 +1,80 @@
+/* ─────────────────────────────────────────────
+   typography.css
+   All text-level styles: headings, body copy,
+   links, lists, inline code, code blocks, and
+   blockquotes. No layout or component rules here.
+───────────────────────────────────────────── */
+
+/* ─── HEADINGS ─── */
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white);
+}
+
+h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 2rem; line-height: 1; }
+h2 { font-size: 1.6rem; font-weight: 600; margin-bottom: 1.25rem; margin-top: 3.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.75rem; margin-top: 2rem; color: var(--accent); }
+h4 { font-size: 0.9rem; font-weight: 500; color: var(--text2); margin-bottom: 0.5rem; margin-top: 1.5rem; }
+
+/* ─── BODY TEXT ─── */
+p { margin-bottom: 1.1rem; color: var(--text); }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+strong { color: var(--white); font-weight: 500; }
+
+/* ─── LISTS ─── */
+ul, ol { padding-left: 1.4rem; margin-bottom: 1.1rem; }
+li { margin-bottom: 0.35rem; color: var(--text); line-height: 1.7; }
+li::marker { color: var(--yellow); }
+
+/* ─── INLINE CODE ─── */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  color: var(--accent);
+  background: rgba(46,158,142,0.1);
+  border: 1px solid var(--accent-dim);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+}
+
+/* ─── CODE BLOCKS ─── */
+pre {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  position: relative;
+}
+pre code {
+  font-size: 0.83rem;
+  color: var(--text);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* ─── BLOCKQUOTE ─── */
+blockquote {
+  border-left: 2px solid var(--border2);
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--text2);
+  font-size: 0.95rem;
+}
+blockquote em { font-style: normal; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.35rem; }
+  pre { padding: 1rem; font-size: 0.78rem; }
+}

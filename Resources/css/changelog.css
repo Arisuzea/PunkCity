@@ -1,0 +1,85 @@
+/* ─────────────────────────────────────────────
+   changelog.css
+   Collapsible version history blocks. Uses
+   .cl-block > summary to override details.css
+   base styles without affecting other <details>
+   elements elsewhere on the site.
+
+   NOTE — DRY opportunity: .cl-cat-label shares
+   base structure with .badge in badges.css.
+   To consolidate: add class="badge" to .cl-cat-label
+   elements in HTML, then remove the duplicated
+   base properties below, keeping only color variants.
+───────────────────────────────────────────── */
+
+/* ─── BLOCK ─── */
+.cl-block {
+  margin-bottom: 0.75rem;
+  border-color: var(--border2);
+}
+
+/* ─── SUMMARY OVERRIDE ─── */
+/* Higher specificity than details.css's `summary` rule */
+.cl-block > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+/* Restore the + icon to the right edge */
+.cl-block > summary::after {
+  margin-left: auto;
+}
+
+/* ─── VERSION & DATE ─── */
+.cl-version {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--white);
+}
+
+.cl-date {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: var(--text3);
+  text-transform: uppercase;
+}
+
+/* ─── BODY ─── */
+.cl-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cl-category ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.cl-category li {
+  font-size: 0.92rem;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+/* ─── CATEGORY LABELS ─── */
+.cl-cat-label {
+  letter-spacing: 0.22em;
+  font-weight: 600;
+}
+
+.cl-added-label   { color: var(--accent); background: var(--accent-dim); border: 1px solid rgba(0,204,238,0.2); }
+.cl-removed-label { color: var(--danger); background: var(--danger-dim); border: 1px solid rgba(255,92,122,0.2); }
+.cl-fixed-label   { color: var(--yellow); background: var(--yellow-dim); border: 1px solid rgba(255,229,0,0.2); }
+
+/* ─── WHY ANNOTATION ─── */
+.cl-why {
+  font-style: italic;
+  color: var(--text3);
+  font-size: 0.88em;
+}

@@ -1,0 +1,40 @@
+/* ─────────────────────────────────────────────
+   callout.css
+   Callout/alert boxes: base structure and the
+   three semantic variants (important, warning,
+   danger). Scoped entirely to .callout.
+───────────────────────────────────────────── */
+
+/* ─── BASE ─── */
+.callout {
+  border-left: 3px solid;
+  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.callout-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.callout p  { margin-bottom: 0.4rem; font-size: 0.93rem; }
+.callout ul { margin: 0.25rem 0 0 1rem; font-size: 0.93rem; }
+.callout li { margin-bottom: 0.25rem; }
+
+/* ─── VARIANTS ─── */
+.callout-important { border-color: var(--accent); background: rgba(0,204,238,0.05); }
+.callout-important .callout-title { color: var(--accent); }
+
+.callout-warning { border-color: var(--yellow); background: var(--yellow-dim); }
+.callout-warning .callout-title { color: var(--yellow); }
+
+.callout-danger { border-color: var(--danger); background: var(--danger-dim); }
+.callout-danger .callout-title { color: var(--danger); }

@@ -1,0 +1,94 @@
+/* ─────────────────────────────────────────────
+   tables.css
+   Data display components: .spec-table for the
+   requirements page, .size-row for the breakdown
+   list, and .stat-pill for at-a-glance numbers.
+───────────────────────────────────────────── */
+
+/* ─── SPEC TABLE ─── */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  display: block;
+}
+
+.spec-table th {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text3);
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.spec-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: top;
+}
+.spec-table tr:last-child td { border-bottom: none; }
+.spec-table tr:hover td { background: rgba(255,255,255,0.02); }
+.spec-table td:first-child { color: var(--text2); font-size: 0.85rem; white-space: nowrap; }
+
+/* ─── SIZE BREAKDOWN ─── */
+.size-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.size-row:last-child { border-bottom: none; }
+.size-label { color: var(--text2); }
+.size-value { font-family: var(--font-mono); font-size: 0.82rem; color: var(--white); }
+
+/* ─── STAT PILLS ─── */
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.stat-pill {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.75rem 1.25rem;
+  min-width: 140px;
+}
+
+.stat-pill-label {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 0.35rem;
+}
+
+.stat-pill-value {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .spec-table { font-size: 0.85rem; }
+  .stat-row { flex-direction: column; }
+  .stat-pill { min-width: auto; }
+}

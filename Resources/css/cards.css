@@ -1,0 +1,79 @@
+/* ─────────────────────────────────────────────
+   cards.css
+   Gameplay feature cards displayed in an
+   auto-fit CSS grid. Scoped entirely to
+   .gameplay-grid and .gameplay-card.
+───────────────────────────────────────────── */
+
+/* ─── GRID ─── */
+.gameplay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+/* ─── CARD ─── */
+.gameplay-card {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.gameplay-card:hover { border-color: var(--border2); }
+
+.gameplay-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--yellow);
+}
+
+.gameplay-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.gameplay-card h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--white);
+}
+
+.gameplay-card p  { font-size: 0.93rem; color: var(--text2); margin-bottom: 0.6rem; }
+.gameplay-card ul { padding-left: 1.1rem; margin: 0.75rem 0 0; font-size: 0.88rem; }
+.gameplay-card li { color: var(--text2); margin-bottom: 0.2rem; }
+
+.gameplay-card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--accent-dim);
+  padding-bottom: 1px;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+.gameplay-card-link:hover {
+  color: var(--white);
+  border-color: var(--white);
+  text-decoration: none;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .gameplay-grid { grid-template-columns: 1fr; }
+}

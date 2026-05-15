@@ -1,0 +1,38 @@
+/* ─────────────────────────────────────────────
+   tabs.css
+   Horizontal tab switcher used on the Installation
+   page for the two install methods. If tabs are
+   reused elsewhere in future, this file covers them.
+───────────────────────────────────────────── */
+
+/* ─── TAB BAR ─── */
+.method-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.25rem;
+  gap: 0;
+}
+
+/* ─── TAB BUTTON ─── */
+.method-tab {
+  padding: 0.65rem 1.4rem;
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text2);
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.method-tab:hover { color: var(--white); background: rgba(255,255,255,0.02); }
+.method-tab.active { color: var(--yellow); border-bottom-color: var(--yellow); }
+
+/* ─── PANEL VISIBILITY ─── */
+.method-panel { display: none; }
+.method-panel.active { display: block; }

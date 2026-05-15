@@ -1,0 +1,86 @@
+/* ─────────────────────────────────────────────
+   base.css
+   Design tokens, box-model reset, body defaults,
+   and the scanline texture overlay.
+   Nothing component-specific lives here.
+───────────────────────────────────────────── */
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── DESIGN TOKENS ─── */
+:root {
+  /* Backgrounds */
+  --bg:        #050505;
+  --bg1:       #0c0c0c;
+  --bg2:       #111111;
+  --bg3:       #1a1a1a;
+
+  /* Borders */
+  --border:    #1e1e1e;
+  --border2:   #2a2a2a;
+
+  /* Text */
+  --text:      #c2c2c2;
+  --text2:     #7a7a7a;
+  --text3:     #484848;
+  --white:     #f0f0f0;
+
+  /* Cyan — interactive accent, links, code */
+  --accent:    #00ccee;
+  --accent2:   #008fb0;
+  --accent-dim:#001e2a;
+
+  /* Yellow — brand accent, hero, labels */
+  --yellow:    #ffe500;
+  --yellow2:   #ccb800;
+  --yellow-dim:#242000;
+
+  /* Pink — danger */
+  --danger:    #ff5c7a;
+  --danger-dim:#280010;
+
+  /* Aliases kept for callout compatibility */
+  --warn:      #ffe500;
+  --warn-dim:  #242000;
+
+  /* Layout */
+  --nav-h: 56px;
+
+  /* Typography */
+  --font-head: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* ─── HTML & BODY ─── */
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── SCANLINE TEXTURE ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.07) 2px,
+    rgba(0,0,0,0.07) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}

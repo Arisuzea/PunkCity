@@ -1,0 +1,31 @@
+/* ─────────────────────────────────────────────
+   badges.css
+   Inline status/label badges used in tables and
+   callouts. The base .badge class defines shared
+   structure; variants add color only.
+
+   NOTE — DRY opportunity: .cl-cat-label in
+   changelog.css shares the same base structure
+   (display, font-family, font-size, letter-spacing,
+   text-transform, padding, border-radius).
+   To consolidate, add class="badge" to .cl-cat-label
+   elements in the HTML and remove the duplicated
+   base properties from changelog.css.
+───────────────────────────────────────────── */
+
+/* ─── BASE ─── */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.2em 0.6em;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+/* ─── VARIANTS ─── */
+.badge-mandatory { background: var(--danger-dim); color: var(--danger); border: 1px solid rgba(255,92,122,0.3); }
+.badge-required  { background: var(--yellow-dim); color: var(--yellow); border: 1px solid rgba(255,229,0,0.25); }
+.badge-info      { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(0,204,238,0.25); }
