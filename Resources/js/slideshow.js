@@ -3,7 +3,7 @@
  * ─────────────────────────────────────────────────────────────
  * Reusable auto-advancing slideshow engine.
  * Features: dot navigation, progress bar, keyboard, touch swipe.
- * Depends on: domHelpers.js
+ * Depends on: domHelpers.js                                    
  *
  * ── Basic Usage ───────────────────────────────────────────────
  *   Slideshow.init('slideshow', MY_SLIDES_ARRAY);

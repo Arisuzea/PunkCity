@@ -35,6 +35,7 @@ var DOMHelpers = (function () {
    *     'aria-selected'
    *   );
    */
+
   function setActive(items, matchFn, ariaAttr) {
     items.forEach(function (el) {
       var active = matchFn(el);
@@ -55,6 +56,7 @@ var DOMHelpers = (function () {
    *   DOMHelpers.setAriaAttr(hamburger, 'aria-expanded', true);
    *   // → hamburger.setAttribute('aria-expanded', 'true')
    */
+  
   function setAriaAttr(el, attr, value) {
     el.setAttribute(attr, String(value));
   }

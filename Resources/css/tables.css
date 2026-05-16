@@ -1,12 +1,12 @@
 /* ─────────────────────────────────────────────
    tables.css
-   Data display components: .spec-table for the
+   Data display components: .table for the
    requirements page, .size-row for the breakdown
    list, and .stat-pill for at-a-glance numbers.
 ───────────────────────────────────────────── */
 
 /* ─── SPEC TABLE ─── */
-.spec-table {
+.table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
@@ -14,7 +14,7 @@
   display: block;
 }
 
-.spec-table th {
+.table th {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
@@ -27,16 +27,16 @@
   white-space: nowrap;
 }
 
-.spec-table td {
+.table td {
   padding: 0.75rem 1rem;
   font-size: 0.9rem;
   border-bottom: 1px solid var(--border);
   color: var(--text);
   vertical-align: top;
 }
-.spec-table tr:last-child td { border-bottom: none; }
-.spec-table tr:hover td { background: rgba(255,255,255,0.02); }
-.spec-table td:first-child { color: var(--text2); font-size: 0.85rem; white-space: nowrap; }
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: rgba(255,255,255,0.02); }
+.table td:first-child { color: var(--text2); font-size: 0.85rem; white-space: nowrap; }
 
 /* ─── SIZE BREAKDOWN ─── */
 .size-row {
@@ -88,7 +88,7 @@
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
-  .spec-table { font-size: 0.85rem; }
+  .table { font-size: 0.85rem; }
   .stat-row { flex-direction: column; }
   .stat-pill { min-width: auto; }
 }
