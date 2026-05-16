@@ -1,7 +1,7 @@
 [
   {
     "title": "PunkCity",
-    "description": "Night City doesn't respect you. It doesn't see you as anybody. Survival is not a right it's a privilege. Earn your place, or become another body on the street.",
+    "description": "Night City doesn\u0027t respect you. It doesn\u0027t see you as anybody. Survival is not a right it\u0027s a privilege. Earn your place, or become another body on the street.",
     "author": "ReiiXz",
     "maintainers": [
       "github/Arisuzea"
@@ -21,23 +21,24 @@
     "links": {
       "image": "https://raw.githubusercontent.com/Arisuzea/PunkCity/refs/heads/main/Resources/PunkCity.webp",
       "readme": "https://arisuzea.github.io/PunkCity",
-      "download": "https://authored-files.wabbajack.org/PunkCity.wabbajack_c2f28b49-85bf-4851-8287-d7a215169948",
+      "download": "https://authored-files.wabbajack.org/PunkCity.wabbajack_c6ffd995-22b2-4860-a60b-64e0ff409667",
       "machineURL": "PunkCity",
       "discordURL": "https://discord.gg/qQebydDHFz",
-      "websiteURL": "https://arisuzea.github.io/PunkCity"
+      "websiteURL": "https://arisuzea.github.io/PunkCity",
+      "nexusCollection": null
     },
     "download_metadata": {
-      "Hash": "Cq/p1wkLDvc=",
-      "Size": 42590095,
-      "NumberOfArchives": 1036,
-      "SizeOfArchives": 20729784174,
-      "NumberOfInstalledFiles": 11298,
-      "SizeOfInstalledFiles": 20981647112,
-      "TotalSize": 41711431286
+      "Hash": "pkjv+IAZPjU=",
+      "Size": 20919614,
+      "NumberOfArchives": 1050,
+      "SizeOfArchives": 21232916343,
+      "NumberOfInstalledFiles": 11546,
+      "SizeOfInstalledFiles": 21467614610,
+      "TotalSize": 42700530953
     },
-    "version": "1.1.0",
+    "version": "1.1.1",
     "dateCreated": "1970-01-01T00:00:00Z",
-    "dateUpdated": "2026-05-15T20:12:36.8647477Z",
+    "dateUpdated": "2026-05-16T13:27:46.869797Z",
     "repositoryName": ""
   }
 ]
