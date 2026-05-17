@@ -1,65 +1,143 @@
-    (function () {
-      'use strict';
+/**
+ * wiki.js
+ * ─────────────────────────────────────────────────────────────
+ * Wiki-specific SPA routing. Does NOT load navigation.js —
+ * that file's PAGES array is scoped to index.html routes.
+ *
+ * Place at: Resources/js/wiki/wiki.js
+ * Load after: domHelpers.js
+ *
+ * Exposes to window (for HTML onclick attributes):
+ *   navigate(page)
+ *   navigateTo(page, anchor)
+ * ─────────────────────────────────────────────────────────────
+ */
 
-      var PAGES = ['home', 'perf', 'combat', 'ui', 'city', 'content', 'closet', 'stability'];
+(function () {
+  'use strict';
 
-      function navigate(page) {
-        if (!PAGES.includes(page)) page = 'home';
+  var PAGES      = ['home', 'basics', 'combat', 'ui', 'city', 'content', 'closet', 'stability'];
+  var SCROLL_PAD = 28;
 
-        document.querySelectorAll('.page').forEach(function (p) {
-          p.classList.remove('active');
-        });
-        document.getElementById('page-' + page).classList.add('active');
+  var sidenav   = document.getElementById('sidenav');
+  var overlay   = document.getElementById('sidenavOverlay');
+  var hamburger = document.getElementById('hamburger'); // null when no navbar
 
-        document.querySelectorAll('[data-page]').forEach(function (a) {
-          a.classList.toggle('active', a.getAttribute('data-page') === page);
-        });
+  // ── Sidenav active state ────────────────────────────────────
 
-        window.scrollTo({ top: 0, behavior: 'instant' });
-        history.pushState(null, '', '#' + page);
-      }
+  function syncCategoryActive(page) {
+    document.querySelectorAll('.sidenav-cat[data-page]').forEach(function (el) {
+      el.classList.toggle('active', el.getAttribute('data-page') === page);
+    });
+    var overview = document.querySelector('.sidenav-overview');
+    if (overview) overview.classList.toggle('active', page === 'home');
+  }
 
-      function closeMobile() {
-        var hamburger = document.getElementById('hamburger');
-        document.getElementById('mobileMenu').classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
+  function clearSubActive() {
+    document.querySelectorAll('.sidenav-items li a').forEach(function (a) {
+      a.classList.remove('active');
+    });
+  }
 
-      // Expose for HTML onclick attributes
-      window.navigate    = navigate;
-      window.closeMobile = closeMobile;
+  function setSubActive(anchor) {
+    clearSubActive();
+    var el = document.querySelector('.sidenav-items li a[data-sub="' + anchor + '"]');
+    if (el) el.classList.add('active');
+  }
 
-      // Hamburger toggle
-      document.getElementById('hamburger').addEventListener('click', function () {
-        var open = this.classList.toggle('open');
-        document.getElementById('mobileMenu').classList.toggle('open', open);
-        this.setAttribute('aria-expanded', String(open));
-      });
+  // ── Mobile sidenav ──────────────────────────────────────────
 
-      // Block href default — navigation driven by onclick
-      document.querySelectorAll('[data-page]').forEach(function (a) {
-        a.addEventListener('click', function (e) { e.preventDefault(); });
-      });
+  function openSidenav() {
+    if (sidenav)   sidenav.classList.add('open');
+    if (overlay)   overlay.classList.add('open');
+    if (hamburger) { hamburger.classList.add('open'); hamburger.setAttribute('aria-expanded', 'true'); }
+  }
 
-      // Browser back / forward
-      window.addEventListener('popstate', function () {
-        var hash = window.location.hash.replace('#', '');
-        navigate(PAGES.includes(hash) ? hash : 'home');
-      });
+  function closeSidenav() {
+    if (sidenav)   sidenav.classList.remove('open');
+    if (overlay)   overlay.classList.remove('open');
+    if (hamburger) { hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', 'false'); }
+  }
 
-      // Wiki card keyboard activation (Enter / Space)
-      document.querySelectorAll('.wiki-card[role="button"]').forEach(function (card) {
-        card.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            card.click();
-          }
-        });
-      });
+  // ── Page navigation ─────────────────────────────────────────
 
-      // Initial route from hash
-      var hash = window.location.hash.replace('#', '');
-      navigate(PAGES.includes(hash) ? hash : 'home');
+  function navigate(page) {
+    if (!PAGES.includes(page)) page = 'home';
 
-    })();
+    document.querySelectorAll('.page').forEach(function (p) {
+      p.classList.remove('active');
+    });
+    document.getElementById('page-' + page).classList.add('active');
+
+    syncCategoryActive(page);
+    clearSubActive();
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    history.pushState(null, '', '#' + page);
+    closeSidenav();
+  }
+
+  // ── Anchor navigation ───────────────────────────────────────
+
+  function navigateTo(page, anchor) {
+    if (!PAGES.includes(page)) page = 'home';
+
+    document.querySelectorAll('.page').forEach(function (p) {
+      p.classList.remove('active');
+    });
+    document.getElementById('page-' + page).classList.add('active');
+
+    syncCategoryActive(page);
+    setSubActive(anchor);
+    history.pushState(null, '', '#' + page);
+    closeSidenav();
+
+    requestAnimationFrame(function () {
+      var target = document.getElementById(anchor);
+      if (!target) return;
+      // navH is 0 when no navbar present
+      var navH = parseInt(
+        getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
+      ) || 0;
+      var top = target.getBoundingClientRect().top + window.scrollY - navH - SCROLL_PAD;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  }
+
+  // ── Expose BEFORE initial route so onclick attrs work immediately ──
+
+  window.navigate   = navigate;
+  window.navigateTo = navigateTo;
+
+  // ── Event listeners ─────────────────────────────────────────
+
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      sidenav.classList.contains('open') ? closeSidenav() : openSidenav();
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', closeSidenav);
+  }
+
+  document.querySelectorAll('.sidenav-overview, .sidenav-items li a').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); });
+  });
+
+  document.querySelectorAll('.wiki-card[role="button"]').forEach(function (card) {
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+    });
+  });
+
+  window.addEventListener('popstate', function () {
+    var hash = window.location.hash.replace('#', '');
+    navigate(PAGES.includes(hash) ? hash : 'home');
+  });
+
+  // ── Initial route ───────────────────────────────────────────
+
+  var hash = window.location.hash.replace('#', '');
+  navigate(PAGES.includes(hash) ? hash : 'home');
+
+})();
