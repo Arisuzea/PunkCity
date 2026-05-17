@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Resources/css/base.css">
-    <link rel="stylesheet" href="Resources/css/nav.css">
     <link rel="stylesheet" href="Resources/css/layout.css">
     <link rel="stylesheet" href="Resources/css/typography.css">
     <link rel="stylesheet" href="Resources/css/callout.css">
@@ -20,169 +19,154 @@
     <link rel="stylesheet" href="Resources/css/tables.css">
     <link rel="stylesheet" href="Resources/css/tabs.css">
     <link rel="stylesheet" href="Resources/css/changelog.css">
+    <link rel="stylesheet" href="Resources/css/wiki/sidenav.css">
+    <link rel="stylesheet" href="Resources/css/wiki/placeholders.css">
+    <link rel="stylesheet" href="Resources/css/wiki/cards.css">
     <style>
-      /* ── Wiki overview card grid ─────────────────────────────── */
-      .wiki-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.25rem;
-        margin-top: 2rem;
-      }
+      /* ── Layout ─────────────────────────────────────────────── */
+      :root { --sidenav-w: 224px; }
 
-      .wiki-card {
-        background: var(--bg1);
-        border: 1px solid var(--border);
-        border-radius: 4px;
-        padding: 1.5rem 1.75rem;
-        cursor: pointer;
-        transition: border-color 0.2s, background 0.2s;
-        position: relative;
-        overflow: hidden;
-        display: block;
-        user-select: none;
-      }
-      .wiki-card:hover {
-        border-color: var(--border2);
-        background: var(--bg2);
-      }
-      .wiki-card::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 2px;
-        background: var(--accent);
-      }
-      .wiki-card-num {
-        font-family: var(--font-mono);
-        font-size: 0.6rem;
-        letter-spacing: 0.28em;
-        text-transform: uppercase;
-        color: var(--text3);
-        display: block;
-        margin-bottom: 0.5rem;
-      }
-      .wiki-card h3 {
-        font-size: 1.05rem;
-        margin: 0 0 0.5rem;
-        color: var(--white);
-      }
-      .wiki-card p {
-        font-size: 0.875rem;
-        color: var(--text2);
-        margin: 0;
-        line-height: 1.65;
-      }
-      .wiki-card-arrow {
-        display: inline-block;
-        margin-top: 1rem;
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--accent);
-      }
-
-      /* ── Placeholder block (WIP sections) ────────────────────── */
-      .wiki-placeholder {
-        border: 1px dashed var(--border2);
-        border-radius: 4px;
-        padding: 1.1rem 1.4rem;
-        margin: 0.85rem 0 2.5rem;
-        font-family: var(--font-mono);
-        font-size: 0.8rem;
-        color: var(--text3);
-        line-height: 1.75;
-        background: var(--bg1);
-      }
-      .wiki-placeholder-label {
-        font-size: 0.6rem;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: var(--text3);
-        opacity: 0.55;
-        display: block;
-        margin-bottom: 0.4rem;
-      }
-
-      /* ── Wiki page nav breadcrumb ────────────────────────────── */
-      .wiki-back {
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--text3);
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        margin-bottom: 0.4rem;
-        transition: color 0.15s;
-      }
-      .wiki-back:hover { color: var(--text2); text-decoration: none; }
-
-      /* ── Subsection spacing ──────────────────────────────────── */
-      .wiki-sub { margin-top: 0; }
-      .wiki-sub + .wiki-sub { margin-top: 0.5rem; }
+      #main { margin-top: 0; }
 
       /* ── Responsive ──────────────────────────────────────────── */
+      @media (max-width: 900px) {
+        :root { --sidenav-w: 264px; }
+
+        .sidenav {
+          transform: translateX(-100%);
+          transition: transform 0.25s ease;
+        }
+        .sidenav.open {
+          transform: translateX(0);
+          box-shadow: 4px 0 24px rgba(0,0,0,0.5);
+        }
+
+        #main { margin-left: 0; }
+
+        .hamburger     { display: flex !important; }
+        .nav-wiki-tag  { display: none; }
+        .nav-guide-back { display: none; }
+      }
+
       @media (max-width: 768px) {
         .wiki-grid { grid-template-columns: 1fr; }
       }
     </style>
   </head>
-
   <body>
+    <!-- ═══ SIDENAV ═══════════════════════════════════════════════ -->
+    <div class="sidenav-overlay" id="sidenavOverlay"></div>
 
-    <!-- ═══ NAVBAR ═══════════════════════════════════════════════
-         Logo links back to index.html — navigate() is scoped
-         to wiki pages only and does not know about index pages.
-    ═════════════════════════════════════════════════════════════ -->
-    <nav role="navigation" aria-label="Wiki navigation">
-      <a class="nav-logo" href="index.html" aria-label="PunkCity — back to guide">
-        <img src="Resources/PunkCity_header.png" alt="PunkCity" class="nav-logo-img">
+    <aside class="sidenav" id="sidenav" aria-label="Wiki sections">
+
+      <a class="sidenav-overview active" data-page="home" onclick="navigate('home')" href="#home">
+        Wiki Overview
       </a>
-      <div class="nav-divider" aria-hidden="true"></div>
-      <ul class="nav-links" role="list">
-        <li><a onclick="navigate('home')"      data-page="home"      href="#home">Wiki</a></li>
-        <li><a onclick="navigate('perf')"      data-page="perf"      href="#perf">Performance</a></li>
-        <li><a onclick="navigate('combat')"    data-page="combat"    href="#combat">Combat</a></li>
-        <li><a onclick="navigate('ui')"        data-page="ui"        href="#ui">Interface</a></li>
-        <li><a onclick="navigate('city')"      data-page="city"      href="#city">Night City</a></li>
-        <li><a onclick="navigate('content')"   data-page="content"   href="#content">Content</a></li>
-        <li><a onclick="navigate('closet')"    data-page="closet"    href="#closet">Cosmetics</a></li>
-        <li><a onclick="navigate('stability')" data-page="stability" href="#stability">Stability</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
+      <hr class="sidenav-hr">
 
-    <!-- Mobile drawer -->
-    <div class="mobile-menu" id="mobileMenu" role="menu">
-      <a onclick="navigate('home');closeMobile()"      data-page="home">Wiki Overview</a>
-      <a onclick="navigate('perf');closeMobile()"      data-page="perf">01 · Performance</a>
-      <a onclick="navigate('combat');closeMobile()"    data-page="combat">02 · Combat</a>
-      <a onclick="navigate('ui');closeMobile()"        data-page="ui">03 · Interface</a>
-      <a onclick="navigate('city');closeMobile()"      data-page="city">04 · Night City</a>
-      <a onclick="navigate('content');closeMobile()"   data-page="content">05 · Content</a>
-      <a onclick="navigate('closet');closeMobile()"    data-page="closet">06 · Cosmetics</a>
-      <a onclick="navigate('stability');closeMobile()" data-page="stability">07 · Stability</a>
-    </div>
+      <div class="sidenav-group">
+        <div class="sidenav-cat" data-page="basics" onclick="navigate('basics')">
+          <span class="sidenav-num">01</span>
+          <span class="sidenav-cat-label">Basics &amp; Overview</span>
+        </div>
+        <ul class="sidenav-items">
+          <li><a onclick="navigateTo('basics','basics-of-the-list')"  data-sub="basics-of-the-list">Vanilla vs PunkCity</a></li>
+          <li><a onclick="navigateTo('basics','weather-lighting')"  data-sub="weather-lighting">The Weather &amp; Lighting Meta</a></li>
+          <li><a onclick="navigateTo('basics','graphics-profiles')" data-sub="graphics-profiles">Graphics &amp; Optimization Profiles</a></li>
+        </ul>
+      </div>
 
+      <div class="sidenav-group">
+        <div class="sidenav-cat" data-page="combat" onclick="navigate('combat')">
+          <span class="sidenav-num">02</span>
+          <span class="sidenav-cat-label">Combat &amp; Cyberware</span>
+        </div>
+        <ul class="sidenav-items">
+          <li><a onclick="navigateTo('combat','tactical-ai')"       data-sub="tactical-ai">The Aggressive Tactical AI</a></li>
+          <li><a onclick="navigateTo('combat','cyberware-limits')"  data-sub="cyberware-limits">Breaking Cyberware Limits</a></li>
+          <li><a onclick="navigateTo('combat','firearm-mechanics')" data-sub="firearm-mechanics">Firearm Mechanics &amp; Realism</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-group">
+        <div class="sidenav-cat" data-page="ui" onclick="navigate('ui')">
+          <span class="sidenav-num">03</span>
+          <span class="sidenav-cat-label">Interface &amp; QoL</span>
+        </div>
+        <ul class="sidenav-items">
+          <li><a onclick="navigateTo('ui','hud-menus')"           data-sub="hud-menus">Streamlined HUD &amp; Menus</a></li>
+          <li><a onclick="navigateTo('ui','looting-qol')"         data-sub="looting-qol">Smarter Looting &amp; QoL</a></li>
+          <li><a onclick="navigateTo('ui','progression-freedom')" data-sub="progression-freedom">Progression &amp; Attribute Freedom</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-group">
+        <div class="sidenav-cat" data-page="city" onclick="navigate('city')">
+          <span class="sidenav-num">04</span>
+          <span class="sidenav-cat-label">Night City</span>
+        </div>
+        <ul class="sidenav-items">
+          <li><a onclick="navigateTo('city','vendors')"       data-sub="vendors">Immersive Open-World Vendors</a></li>
+          <li><a onclick="navigateTo('city','underground')"   data-sub="underground">The Underground</a></li>
+          <li><a onclick="navigateTo('city','district-laws')" data-sub="district-laws">District Laws &amp; Repeated Gigs</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-group">
+        <div class="sidenav-cat" data-page="content" onclick="navigate('content')">
+          <span class="sidenav-num">05</span>
+          <span class="sidenav-cat-label">Content &amp; Story</span>
+        </div>
+        <ul class="sidenav-items">
+          <li><a onclick="navigateTo('content','questlines')" data-sub="questlines">Brand New Questlines</a></li>
+          <li><a onclick="navigateTo('content','romances')"   data-sub="romances">Deepened Romances &amp; Social Life</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-group">
+        <div class="sidenav-cat" data-page="closet" onclick="navigate('closet')">
+          <span class="sidenav-num">06</span>
+          <span class="sidenav-cat-label">The Closet</span>
+        </div>
+        <ul class="sidenav-items">
+          <li><a onclick="navigateTo('closet','body-skin')" data-sub="body-skin">Custom Body &amp; Skin Frameworks</a></li>
+          <li><a onclick="navigateTo('closet','ateliers')"  data-sub="ateliers">Virtual Ateliers &amp; Wardrobe</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-group">
+        <div class="sidenav-cat" data-page="stability" onclick="navigate('stability')">
+          <span class="sidenav-num">07</span>
+          <span class="sidenav-cat-label">Stability</span>
+        </div>
+        <ul class="sidenav-items">
+          <li><a onclick="navigateTo('stability','core-deps')"         data-sub="core-deps">Core Dependencies</a></li>
+          <li><a onclick="navigateTo('stability','conflict-hotspots')" data-sub="conflict-hotspots">Known Conflict Hotspots</a></li>
+        </ul>
+      </div>
+
+      <hr class="sidenav-hr" style="margin-top:1.5rem;">
+      <a href="index.html" style="
+        display:block;padding:0.4rem 1.25rem;
+        font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.14em;
+        text-transform:uppercase;color:var(--text3);text-decoration:none;">
+        ← Back to Guide
+      </a>
+
+    </aside>
+
+    <!-- ═══ MAIN CONTENT ══════════════════════════════════════════ -->
     <main id="main">
 
-    <!-- ═══════════════════════════════════════════════════════════
-        PAGE: WIKI HOME — OVERVIEW
-    ═══════════════════════════════════════════════════════════════ -->
+    <!-- PAGE: HOME ════════════════════════════════════════════════ -->
     <section class="page active" id="page-home" aria-label="Wiki Overview">
       <div class="page-header">
         <span class="page-label">PunkCity · Wiki</span>
         <h1>Gameplay Reference</h1>
-        <p style="font-size:0.93rem;color:var(--text2);max-width:540px;margin-bottom:0;">
-          Deep documentation for every system in PunkCity. Coming Soon
+        <p style="font-size:0.93rem;color:var(--text2);max-width:520px;margin-bottom:0;">
+          Deep documentation for every system in PunkCity. Coming Soon.
         </p>
       </div>
-
       <div class="content-wide">
 
         <div class="callout callout-warning">
@@ -194,308 +178,304 @@
         </div>
 
         <div class="wiki-grid">
-
-          <div class="wiki-card" onclick="navigate('perf')" role="button" tabindex="0">
+          <div class="wiki-card" onclick="navigate('basics')" role="button" tabindex="0">
             <span class="wiki-card-num">01</span>
-            <h3>Performance &amp; Visual Shifts</h3>
-            <p>Engine stability, draw distance tuning, weather and lighting overhaul, RT/PT hardware profiles.</p>
+            <h3>Basics &amp; Overview</h3>
+            <p>This will go to a general overview of what changed from vanilla to PunkCity, letting you get a grasp of what to expect.</p>
             <span class="wiki-card-arrow">Read →</span>
           </div>
-
           <div class="wiki-card" onclick="navigate('combat')" role="button" tabindex="0">
             <span class="wiki-card-num">02</span>
             <h3>Combat &amp; Cyberware Re-engineering</h3>
             <p>Tactical AI faction behaviors, cyberware slot economy, overhauled firearm and ammo mechanics.</p>
             <span class="wiki-card-arrow">Read →</span>
           </div>
-
           <div class="wiki-card" onclick="navigate('ui')" role="button" tabindex="0">
             <span class="wiki-card-num">03</span>
             <h3>Interface &amp; QoL Enhancements</h3>
             <p>HUD customization, smart looting automation, named saves, attribute gate removal.</p>
             <span class="wiki-card-arrow">Read →</span>
           </div>
-
           <div class="wiki-card" onclick="navigate('city')" role="button" tabindex="0">
             <span class="wiki-card-num">04</span>
             <h3>Living Night City</h3>
             <p>Immersive vendor interactions, gambling and BD mechanics, district threat scaling.</p>
             <span class="wiki-card-arrow">Read →</span>
           </div>
-
           <div class="wiki-card" onclick="navigate('content')" role="button" tabindex="0">
             <span class="wiki-card-num">05</span>
             <h3>Expanded Content &amp; Story Deltas</h3>
             <p>Custom questlines, dynamic romance systems, persistent relationship mechanics.</p>
             <span class="wiki-card-arrow">Read →</span>
           </div>
-
           <div class="wiki-card" onclick="navigate('closet')" role="button" tabindex="0">
             <span class="wiki-card-num">06</span>
             <h3>The Closet &amp; Character Customizer</h3>
             <p>Body framework setup, skin texture and mesh management, virtual atelier shopping.</p>
             <span class="wiki-card-arrow">Read →</span>
           </div>
-
           <div class="wiki-card" onclick="navigate('stability')" role="button" tabindex="0">
             <span class="wiki-card-num">07</span>
             <h3>Stability &amp; Troubleshooting</h3>
             <p>Dependency update workflow, known conflict resolution, load order override guidance.</p>
             <span class="wiki-card-arrow">Read →</span>
           </div>
-
         </div>
       </div>
-
       <footer>
         <p>PunkCity — Cyberpunk 2077 Modlist &nbsp;·&nbsp; <a href="index.html">Back to Guide</a></p>
       </footer>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-        PAGE: 01 — PERFORMANCE & VISUAL SHIFTS
-    ═══════════════════════════════════════════════════════════════ -->
-    <section class="page" id="page-perf" aria-label="Performance and Visual Shifts">
+    <!-- PAGE: 01 ══════════════════════════════════════════════════ -->
+    <section class="page" id="page-basics" aria-label="Basics & Overview">
       <div class="page-header">
         <span class="page-label">Wiki · 01</span>
-        <h1>Performance &amp; Visual Shifts</h1>
+        <h1>Basics &amp; Overview</h1>
       </div>
       <div class="content">
+        <h2 id="basics-of-the-list">Vanilla vs PunkCity</h2>
+        <div class="wiki-content-block">
+          <h3>What's PunkCity?</h3>
+          <p>
+            <strong>PunkCity</strong> is a harcore modlist for <em><strong>Cyberpunk 2077</strong></em>. The list changes many of the base game's arcade-style systems 
+            with survival mechanics, realistic economic constraints, and tactical combat limitations to closer align gameplay 
+            difficulty with the dystopian narrative themes of the setting.
+          </p>
 
-        <div class="wiki-sub">
-          <h2>Engine &amp; Stability Overhaul</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Explain draw distance fixes, traffic optimization, and streaming bug workarounds]
+          <h3>Survival Mode and World Hazard Changes</h3>
+          <p>
+            The mod introduces a survival framework requiring the player character, V, to actively manage physiological 
+            requirements. Players must purchase food and drink from interactive street vendors to prevent 
+            starvation. Neglecting these mechanics decreases a new core attribute called Nerve, which negatively 
+            impacts weapon stability and overall combat performance. Concurrently, environmental dangers are elevated across Night 
+            City; enemy gang presence on the streets is significantly more hostile, causing an increase in spontaneous, ambient 
+            conflicts.
+          </p>
+
+          <h3>Netrunning Restrictions and Resource Scarcity</h3>
+          <p>
+            The netrunning system is fundamentally redesigned under the PunkCity framework. Remote, line-of-sight 
+            quickhacks are entirely disabled. To hack networks or infrastructure, players must physically interact with
+            terminals or close the distance to targets, shifting netrunning into an active, tactical role. Inventory management
+            is similarly restricted; consumables such as 
+            
+             healing items and grenades are converted into finite resources that
+            require manual restocking before embarking on missions.
+          </p>
+
+          <h3>Weapon and Cyberware Systems</h3>
+          <p>
+            Permanent attachment restrictions found in the retail version of the game are dismantled. Weapon modifications and optics can be detached and swapped between compatible firearms freely without component destruction. Cybernetic enhancements are subject to mechanical wear and operational damage, requiring funds for structural repairs or complete replacements. Furthermore, medical practitioners known as ripperdocs no longer stock universal inventories, instead specializing in specific categories of cybernetics by district.
+          </p>
+
+          <h3>Vehicle Simulation and Real Estate Economy</h3>
+          <p>
+            Driving mechanics are altered via an Integrated Vehicle System subsystem. This architecture introduces manual control over vehicle functions, allowing players to independently start or kill engines and operate individual doors. The economic loop of the game is expanded by transforming safehouses into recurring financial obligations. Players must pay regular rent settlements to their apartment providers; failure to meet these deadlines results in eviction and subsequent homelessness within the game world.
+          </p>
+
+          <!-- System Comparison Table -->
+          <div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>System Mechanic</th>
+                  <th>Base Game (Vanilla)</th>
+                  <th>PunkCity Overhaul Suite</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Quickhacks</strong></td>
+                  <td>Remote, wireless activation</td>
+                  <td>Disabled; requires physical proximity</td>
+                </tr>
+                <tr>
+                  <td><strong>Weapon Mods</strong></td>
+                  <td>Permanent upon installation</td>
+                  <td>Removable and fully interchangeable</td>
+                </tr>
+                <tr>
+                  <td><strong>Cyberware</strong></td>
+                  <td>Permanent functionality</td>
+                  <td>Subject to degradation and breakage</td>
+                </tr>
+                <tr>
+                  <td><strong>Ripperdocs</strong></td>
+                  <td>Universal medical inventories</td>
+                  <td>District-specific specialization</td>
+                </tr>
+                <tr>
+                  <td><strong>Consumables</strong></td>
+                  <td>Infinite regeneration and abundance</td>
+                  <td>Finite supply; manual restocking required</td>
+                </tr>
+                <tr>
+                  <td><strong>Housing Economy</strong></td>
+                  <td>One-time purchase / perpetual access</td>
+                  <td>Recurring rent; eviction mechanics enabled</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-
-        <div class="wiki-sub">
-          <h2>The Weather &amp; Lighting Meta</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Guide on how the LUT Switcher works, Nova Rain settings, and removing vanilla bloom/blur]
-          </div>
+        <h2 id="weather-lighting">The Weather &amp; Lighting Meta</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Guide on how the LUT Switcher works, Nova Rain settings, and removing vanilla bloom/blur]
         </div>
-
-        <div class="wiki-sub">
-          <h2>Graphics &amp; Optimization Profiles</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Hardware recommendations for setting up Ray Tracing vs. Path Tracing setups]
-          </div>
+        <h2 id="graphics-profiles">Graphics &amp; Optimization Profiles</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Hardware recommendations for setting up Ray Tracing vs. Path Tracing setups]
         </div>
-
       </div>
       <footer><p>PunkCity — Cyberpunk 2077 Modlist</p></footer>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-        PAGE: 02 — COMBAT & CYBERWARE RE-ENGINEERING
-    ═══════════════════════════════════════════════════════════════ -->
+    <!-- PAGE: 02 ══════════════════════════════════════════════════ -->
     <section class="page" id="page-combat" aria-label="Combat and Cyberware Re-engineering">
       <div class="page-header">
         <span class="page-label">Wiki · 02</span>
         <h1>Combat &amp; Cyberware Re-engineering</h1>
       </div>
       <div class="content">
-
-        <div class="wiki-sub">
-          <h2>The Aggressive Tactical AI</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Detail enemy group tactics, netrunner hacks, and the NCPD reinforcement loop]
-          </div>
+        <h2 id="tactical-ai">The Aggressive Tactical AI</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Detail enemy group tactics, netrunner hacks, and the NCPD reinforcement loop]
         </div>
-
-        <div class="wiki-sub">
-          <h2>Breaking Cyberware Limits</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Breakdown of how the custom slots (Cyberware EX) work and the Black Chrome economy]
-          </div>
+        <h2 id="cyberware-limits">Breaking Cyberware Limits</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Breakdown of how the custom slots (Cyberware EX) work and the Black Chrome economy]
         </div>
-
-        <div class="wiki-sub">
-          <h2>Firearm Mechanics &amp; Realism</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Weapon handling changes, custom ammo constraints, and tactical stealth suppression rules]
-          </div>
+        <h2 id="firearm-mechanics">Firearm Mechanics &amp; Realism</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Weapon handling changes, custom ammo constraints, and tactical stealth suppression rules]
         </div>
-
       </div>
       <footer><p>PunkCity — Cyberpunk 2077 Modlist</p></footer>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-        PAGE: 03 — INTERFACE & QoL ENHANCEMENTS
-    ═══════════════════════════════════════════════════════════════ -->
+    <!-- PAGE: 03 ══════════════════════════════════════════════════ -->
     <section class="page" id="page-ui" aria-label="Interface and QoL Enhancements">
       <div class="page-header">
         <span class="page-label">Wiki · 03</span>
         <h1>Interface &amp; QoL Enhancements</h1>
       </div>
       <div class="content">
-
-        <div class="wiki-sub">
-          <h2>Streamlined HUD &amp; Menus</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: How to customize Limited HUD, search bar functionality, and managing named saves]
-          </div>
+        <h2 id="hud-menus">Streamlined HUD &amp; Menus</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: How to customize Limited HUD, search bar functionality, and managing named saves]
         </div>
-
-        <div class="wiki-sub">
-          <h2>Smarter Looting &amp; Quality of Life</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Auto-drive instructions, smart scrapper automation, and custom quickslots]
-          </div>
+        <h2 id="looting-qol">Smarter Looting &amp; Quality of Life</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Auto-drive instructions, smart scrapper automation, and custom quickslots]
         </div>
-
-        <div class="wiki-sub">
-          <h2>Progression &amp; Attribute Freedom</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Breakdown of lifepath starting bonuses and the removal of hard attribute gates]
-          </div>
+        <h2 id="progression-freedom">Progression &amp; Attribute Freedom</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Breakdown of lifepath starting bonuses and the removal of hard attribute gates]
         </div>
-
       </div>
       <footer><p>PunkCity — Cyberpunk 2077 Modlist</p></footer>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-        PAGE: 04 — LIVING NIGHT CITY
-    ═══════════════════════════════════════════════════════════════ -->
+    <!-- PAGE: 04 ══════════════════════════════════════════════════ -->
     <section class="page" id="page-city" aria-label="Living Night City">
       <div class="page-header">
         <span class="page-label">Wiki · 04</span>
         <h1>Living Night City</h1>
       </div>
       <div class="content">
-
-        <div class="wiki-sub">
-          <h2>Immersive Open-World Vendors</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Interacting directly with bartenders, ripperdocs, and food stalls instead of buying via menus]
-          </div>
+        <h2 id="vendors">Immersive Open-World Vendors</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Interacting directly with bartenders, ripperdocs, and food stalls instead of buying via menus]
         </div>
-
-        <div class="wiki-sub">
-          <h2>The Underground (Gambling &amp; BDs)</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Rules and mechanics for Blackjack, Pachinko, and accessing Lizzie's customized Braindances]
-          </div>
+        <h2 id="underground">The Underground (Gambling &amp; BDs)</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Rules and mechanics for Blackjack, Pachinko, and accessing Lizzie's customized Braindances]
         </div>
-
-        <div class="wiki-sub">
-          <h2>District Laws &amp; Repeated Gigs</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Changes to wanted star scaling, coping with district-specific threats, and infinite bounty tracking]
-          </div>
+        <h2 id="district-laws">District Laws &amp; Repeated Gigs</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Changes to wanted star scaling, coping with district-specific threats, and infinite bounty tracking]
         </div>
-
       </div>
       <footer><p>PunkCity — Cyberpunk 2077 Modlist</p></footer>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-        PAGE: 05 — EXPANDED CONTENT & STORY DELTAS
-    ═══════════════════════════════════════════════════════════════ -->
+    <!-- PAGE: 05 ══════════════════════════════════════════════════ -->
     <section class="page" id="page-content" aria-label="Expanded Content and Story Deltas">
       <div class="page-header">
         <span class="page-label">Wiki · 05</span>
         <h1>Expanded Content &amp; Story Deltas</h1>
       </div>
       <div class="content">
-
-        <div class="wiki-sub">
-          <h2>Brand New Questlines</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: List of trigger conditions and map markers for custom mission series]
-          </div>
+        <h2 id="questlines">Brand New Questlines</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: List of trigger conditions and map markers for custom mission series]
         </div>
-
-        <div class="wiki-sub">
-          <h2>Deepened Romances &amp; Social Life</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Guide to dynamic texts, new date mechanics, and permanent relationship adjustments]
-          </div>
+        <h2 id="romances">Deepened Romances &amp; Social Life</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Guide to dynamic texts, new date mechanics, and permanent relationship adjustments]
         </div>
-
       </div>
       <footer><p>PunkCity — Cyberpunk 2077 Modlist</p></footer>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-        PAGE: 06 — THE CLOSET & CHARACTER CUSTOMIZER
-    ═══════════════════════════════════════════════════════════════ -->
+    <!-- PAGE: 06 ══════════════════════════════════════════════════ -->
     <section class="page" id="page-closet" aria-label="The Closet and Character Customizer">
       <div class="page-header">
         <span class="page-label">Wiki · 06</span>
         <h1>The Closet &amp; Character Customizer</h1>
       </div>
       <div class="content">
-
-        <div class="wiki-sub">
-          <h2>Custom Body &amp; Skin Frameworks</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Setup instructions for custom body textures, meshes, and skin complexions]
-          </div>
+        <h2 id="body-skin">Custom Body &amp; Skin Frameworks</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Setup instructions for custom body textures, meshes, and skin complexions]
         </div>
-
-        <div class="wiki-sub">
-          <h2>Virtual Ateliers &amp; Wardrobe Management</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: How to use the global delivery store terminal to shop for designer and tactical gear sets]
-          </div>
+        <h2 id="ateliers">Virtual Ateliers &amp; Wardrobe Management</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: How to use the global delivery store terminal to shop for designer and tactical gear sets]
         </div>
-
       </div>
       <footer><p>PunkCity — Cyberpunk 2077 Modlist</p></footer>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-        PAGE: 07 — STABILITY & TROUBLESHOOTING
-    ═══════════════════════════════════════════════════════════════ -->
+    <!-- PAGE: 07 ══════════════════════════════════════════════════ -->
     <section class="page" id="page-stability" aria-label="Stability and Troubleshooting">
       <div class="page-header">
         <span class="page-label">Wiki · 07</span>
         <h1>Stability &amp; Troubleshooting</h1>
       </div>
       <div class="content">
-
-        <div class="wiki-sub">
-          <h2>Core Dependencies</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Quick-start on keeping CET, Redscript, and ArchiveXL updated to prevent launch crashes]
-          </div>
+        <h2 id="core-deps">Core Dependencies</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Quick-start on keeping CET, Redscript, and ArchiveXL updated to prevent launch crashes]
         </div>
-
-        <div class="wiki-sub">
-          <h2>Known Conflict Hotspots</h2>
-          <div class="wiki-placeholder">
-            <span class="wiki-placeholder-label">Pending</span>
-            [Placeholder: Common clipping issues, load order override advice, and resolving layout glitches]
-          </div>
+        <h2 id="conflict-hotspots">Known Conflict Hotspots</h2>
+        <div class="wiki-placeholder">
+          <span class="wiki-placeholder-label">Pending</span>
+          [Placeholder: Common clipping issues, load order override advice, and resolving layout glitches]
         </div>
-
       </div>
       <footer><p>PunkCity — Cyberpunk 2077 Modlist</p></footer>
     </section>
 
-    <!-- ═══ JAVASCRIPT ═══ -->
     </main>
+
     <script src="Resources/js/domHelpers.js"></script>
     <script src="Resources/js/wiki/wiki.js"></script>
   </body>
