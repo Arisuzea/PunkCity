@@ -1,0 +1,14 @@
+name: Optimize Images
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: calibreapp/image-actions@main
