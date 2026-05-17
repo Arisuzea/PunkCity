@@ -1,0 +1,105 @@
+
+      /* ── Sidenav ─────────────────────────────────────────────── */
+      .sidenav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: var(--sidenav-w);
+        background: var(--bg1);
+        border-right: 1px solid var(--border);
+        overflow-y: auto;
+        z-index: 50;
+        padding: 1.25rem 0 3rem;
+        scrollbar-width: thin;
+        scrollbar-color: var(--border2) transparent;
+      }
+      .sidenav::-webkit-scrollbar       { width: 3px; }
+      .sidenav::-webkit-scrollbar-track { background: transparent; }
+      .sidenav::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+      .sidenav-overview {
+        display: block;
+        padding: 0.35rem 1.25rem 0.5rem;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--text3);
+        text-decoration: none;
+        cursor: pointer;
+        border-left: 2px solid transparent;
+        transition: color 0.15s;
+      }
+      .sidenav-overview:hover  { color: var(--text2); text-decoration: none; }
+      .sidenav-overview.active { color: var(--yellow); border-left-color: var(--yellow); }
+
+      .sidenav-hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 0.6rem 0 0.75rem;
+      }
+
+      .sidenav-group { margin-bottom: 0.15rem; }
+
+      .sidenav-cat {
+        display: flex;
+        align-items: baseline;
+        gap: 0.55rem;
+        padding: 0.4rem 1.25rem;
+        cursor: pointer;
+        border-left: 2px solid transparent;
+        transition: border-color 0.15s;
+        user-select: none;
+      }
+      .sidenav-cat:hover .sidenav-cat-label  { color: var(--white); }
+      .sidenav-cat.active                    { border-left-color: var(--yellow); }
+      .sidenav-cat.active .sidenav-num       { color: var(--yellow2); }
+      .sidenav-cat.active .sidenav-cat-label { color: var(--yellow); }
+
+      .sidenav-num {
+        font-family: var(--font-mono);
+        font-size: 0.58rem;
+        letter-spacing: 0.15em;
+        color: var(--text3);
+        flex-shrink: 0;
+        transition: color 0.15s;
+        padding-top: 1px;
+      }
+      .sidenav-cat-label {
+        font-family: var(--font-head);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text2);
+        line-height: 1.2;
+        transition: color 0.15s;
+      }
+
+      .sidenav-items { list-style: none; padding: 0; margin: 0 0 0.35rem; }
+      .sidenav-items li a {
+        display: block;
+        padding: 0.28rem 1.25rem 0.28rem 2.7rem;
+        font-size: 0.8rem;
+        color: var(--text3);
+        text-decoration: none;
+        cursor: pointer;
+        border-left: 2px solid transparent;
+        line-height: 1.4;
+        transition: color 0.15s;
+      }
+      .sidenav-items li a:hover  { color: var(--text2); text-decoration: none; }
+      .sidenav-items li a.active { color: var(--accent); border-left-color: var(--accent); }
+
+      /* ── Mobile overlay ──────────────────────────────────────── */
+      .sidenav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.55);
+        z-index: 49;
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+      }
+      .sidenav-overlay.open { display: block; }

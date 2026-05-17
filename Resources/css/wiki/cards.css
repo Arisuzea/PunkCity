@@ -1,0 +1,47 @@
+/* ── Overview card grid ──────────────────────────────────── */
+      .wiki-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+        gap: 1.25rem;
+        margin-top: 2rem;
+      }
+      .wiki-card {
+        background: var(--bg1);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 1.5rem 1.75rem;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        display: block;
+        user-select: none;
+        transition: border-color 0.2s, background 0.2s;
+      }
+      .wiki-card:hover { border-color: var(--border2); background: var(--bg2); }
+      .wiki-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: var(--accent);
+      }
+      .wiki-card-num {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--text3);
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      .wiki-card h3 { font-size: 1.05rem; margin: 0 0 0.5rem; color: var(--white); }
+      .wiki-card p  { font-size: 0.875rem; color: var(--text2); margin: 0; line-height: 1.65; }
+      .wiki-card-arrow {
+        display: inline-block;
+        margin-top: 1rem;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
