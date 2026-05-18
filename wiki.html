@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="Resources/css/wiki/sidenav.css">
     <link rel="stylesheet" href="Resources/css/wiki/placeholders.css">
     <link rel="stylesheet" href="Resources/css/wiki/cards.css">
+    <link rel="stylesheet" href="Resources/css/wiki/keybinds.css">
     <style>
       /* ── Layout ─────────────────────────────────────────────── */
       :root { --sidenav-w: 224px; }
@@ -323,26 +324,288 @@
         <h2 id="keybinds">Keybinds</h2>
         <div class="wiki-content-block">
 
-          <div class="method-tabs" role="tablist" aria-label="Weather &amp; Lighting sections" data-group="weather">
+          <div class="method-tabs" role="tablist" aria-label="binds &amp; Lighting sections" data-group="binds">
             <button class="method-tab active" role="tab"
-              id="tab-lut" aria-controls="panel-lut" aria-selected="true"
-              onclick="switchTab('lut', 'weather')">Base</button>
+              id="tab-general" aria-controls="panel-general" aria-selected="true"
+              onclick="switchTab('general', 'binds')">General</button>
             <button class="method-tab" role="tab"
-              id="tab-rain" aria-controls="panel-rain" aria-selected="false"
-              onclick="switchTab('rain', 'weather')">Nova Rain</button>
+              id="tab-explo" aria-controls="panel-rain" aria-selected="false"
+              onclick="switchTab('explo', 'binds')">Exploration &amp; Combat</button>
             <button class="method-tab" role="tab"
-              id="tab-bloom" aria-controls="panel-bloom" aria-selected="false"
-              onclick="switchTab('bloom', 'weather')">Bloom &amp; Blur</button>
+              id="tab-vehicle" aria-controls="panel-vehicle" aria-selected="false"
+              onclick="switchTab('vehicle', 'binds')">Vehicle</button>
+              <button class="method-tab" role="tab"
+              id="tab-interact" aria-controls="panel-interact" aria-selected="false"
+              onclick="switchTab('interact', 'binds')">Interaction</button>
           </div>
 
-          <div class="method-panel active" id="panel-lut" role="tabpanel" aria-labelledby="tab-lut">
-            <!-- LUT Switcher content here -->
+          <!-- ══ PANEL: GENERAL ══ -->
+          <div class="method-panel active" id="panel-general" role="tabpanel" aria-labelledby="tab-general">
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Zoom In</td>        <td class="key-cell"><kbd>Scroll ↑</kbd></td></tr>
+                <tr><td>Zoom Out</td>       <td class="key-cell"><kbd>Scroll ↓</kbd></td></tr>
+                <tr><td>Tag</td>            <td class="key-cell"><kbd>MMB</kbd></td></tr>
+                <tr><td>Quicksave</td>      <td class="key-cell"><kbd>F5</kbd></td></tr>
+                <tr><td>Quick Load</td>     <td class="key-cell"><kbd>F9</kbd></td></tr>
+              </tbody>
+            </table>
           </div>
-          <div class="method-panel" id="panel-rain" role="tabpanel" aria-labelledby="tab-rain">
-            <!-- Nova Rain content here -->
+
+          <!-- ══ PANEL: EXPLORATION & COMBAT ══ -->
+          <div class="method-panel" id="panel-explo" role="tabpanel" aria-labelledby="tab-explo">
+
+            <h3>Movement</h3>
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Move Forward</td>                <td class="key-cell"><kbd>W</kbd></td></tr>
+                <tr><td>Move Backward</td>               <td class="key-cell"><kbd>S</kbd></td></tr>
+                <tr><td>Move Left</td>                   <td class="key-cell"><kbd>A</kbd></td></tr>
+                <tr><td>Move Right</td>                  <td class="key-cell"><kbd>D</kbd></td></tr>
+                <tr><td>Jump / Surface</td>              <td class="key-cell"><kbd>Space</kbd></td></tr>
+                <tr><td><strong>[Hold]</strong> Sprint / Fast Swim</td>   <td class="key-cell"><kbd>L.Shift</kbd></td></tr>
+                <tr><td><strong>[Toggle]</strong> Sprint / Fast Swim</td> <td class="key-cell"><kbd>R.Shift</kbd></td></tr>
+                <tr><td>Toggle Walking</td>              <td class="key-cell"><kbd>L.Ctrl</kbd></td></tr>
+                <tr><td><strong>[Hold]</strong> Crouch / Dive</td>        <td class="key-cell"><kbd>R.Ctrl</kbd></td></tr>
+                <tr><td><strong>[Toggle]</strong> Crouch / Dive</td>      <td class="key-cell"><kbd>C</kbd></td></tr>
+                <tr><td>Dodge / Dash</td>                <td class="key-cell"><kbd>Alt</kbd></td></tr>
+              </tbody>
+            </table>
+
+            <h3>Weapons</h3>
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Select First Weapon</td>        <td class="key-cell"><kbd>1</kbd></td></tr>
+                <tr><td>Select Second Weapon</td>       <td class="key-cell"><kbd>2</kbd></td></tr>
+                <tr><td>Select Third Weapon</td>        <td class="key-cell"><kbd>3</kbd></td></tr>
+                <tr><td>Fists / Melee</td>              <td class="key-cell"><kbd>4</kbd></td></tr>
+                <tr><td>Cycle Weapon</td>               <td class="key-cell"><kbd>G</kbd></td></tr>
+                <tr><td>Next Weapon</td>                <td class="key-cell"><kbd>Scroll ↑</kbd></td></tr>
+                <tr><td>Previous Weapon</td>            <td class="key-cell"><kbd>Scroll ↓</kbd></td></tr>
+                <tr><td>Holster / Unholster Weapon</td> <td class="key-cell"><kbd>B</kbd></td></tr>
+                <tr><td>Shoot</td>                      <td class="key-cell"><kbd>LMB</kbd></td></tr>
+                <tr><td>Aim</td>                        <td class="key-cell"><kbd>RMB</kbd></td></tr>
+                <tr><td>Quick Attack</td>               <td class="key-cell"><kbd>Q</kbd></td></tr>
+                <tr><td>Drop</td>                       <td class="key-cell"><kbd>Q</kbd></td></tr>
+                <tr><td>Reload</td>                     <td class="key-cell"><kbd>R</kbd></td></tr>
+                <tr><td>Cyberware Systems</td>          <td class="key-cell"><kbd>E</kbd></td></tr>
+                <tr><td>Use Combat Gadget</td>          <td class="key-cell"><kbd>MMB</kbd></td></tr>
+              </tbody>
+            </table>
+
+            <h3>Utility</h3>
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Use Consumable</td>     <td class="key-cell"><kbd>X</kbd></td></tr>
+                <tr><td>Scan (Hold)</td>        <td class="key-cell"><kbd>Tab</kbd></td></tr>
+                <tr><td>Scan (Toggle)</td>      <td class="key-cell"><kbd>Caps Lock</kbd></td></tr>
+                <tr><td>Open Phone</td>         <td class="key-cell"><kbd>T</kbd></td></tr>
+                <tr><td>Radio</td>              <td class="key-cell"><kbd>Z</kbd></td></tr>
+                <tr><td>Open Notifications</td> <td class="key-cell"><kbd>T</kbd></td></tr>
+                <tr><td>Skip Dialogue</td>      <td class="key-cell"><kbd>Y</kbd></td></tr>
+                <tr><td>Open Photo Mode</td>    <td class="key-cell"><kbd>N</kbd></td></tr>
+                <tr><td>Open Main Menu</td>     <td class="key-cell"><kbd>H</kbd></td></tr>
+                <tr><td>Open Map</td>           <td class="key-cell"><kbd>M</kbd></td></tr>
+                <tr><td>Open Journal</td>       <td class="key-cell"><kbd>J</kbd></td></tr>
+                <tr><td>Open Character Tab</td> <td class="key-cell"><kbd>P</kbd></td></tr>
+                <tr><td>Open Crafting Tab</td>  <td class="key-cell"><kbd>K</kbd></td></tr>
+                <tr><td>Open Inventory</td>     <td class="key-cell"><kbd>I</kbd></td></tr>
+                <tr><td>Primary Interaction</td><td class="key-cell"><kbd>F</kbd></td></tr>
+              </tbody>
+            </table>
+
           </div>
-          <div class="method-panel" id="panel-bloom" role="tabpanel" aria-labelledby="tab-bloom">
-            <!-- Bloom/Blur content here -->
+
+          <!-- ══ PANEL: VEHICLE ══ -->
+          <div class="method-panel" id="panel-vehicle" role="tabpanel" aria-labelledby="tab-vehicle">
+
+            <h3>Driving</h3>
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Accelerate</td>                 <td class="key-cell"><kbd>W</kbd></td></tr>
+                <tr><td>Brake / Reverse</td>            <td class="key-cell"><kbd>S</kbd></td></tr>
+                <tr><td>Turn Left</td>                  <td class="key-cell"><kbd>A</kbd></td></tr>
+                <tr><td>Turn Right</td>                 <td class="key-cell"><kbd>D</kbd></td></tr>
+                <tr><td>Accelerate (Secondary)</td>     <td class="key-cell"><kbd>↑</kbd></td></tr>
+                <tr><td>Brake (Secondary)</td>          <td class="key-cell"><kbd>↓</kbd></td></tr>
+                <tr><td>Turn Left (Secondary)</td>      <td class="key-cell"><kbd>←</kbd></td></tr>
+                <tr><td>Turn Right (Secondary)</td>     <td class="key-cell"><kbd>→</kbd></td></tr>
+                <tr><td>Handbrake</td>                  <td class="key-cell"><kbd>Space</kbd></td></tr>
+                <tr><td>Horn</td>                       <td class="key-cell"><kbd>Z</kbd></td></tr>
+                <tr><td>Flash Headlights</td>           <td class="key-cell"><kbd>T</kbd></td></tr>
+                <tr><td>Exit Vehicle</td>               <td class="key-cell"><kbd>F</kbd></td></tr>
+              </tbody>
+            </table>
+
+            <h3>Engine — <kbd>F1</kbd></h3>
+            <table class="table">
+              <thead><tr><th>Input</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Double Tap</td>           <td>Toggle power state</td></tr>
+                <tr><td>Hold</td>                 <td>Toggle engine on / off</td></tr>
+                <tr><td>Hold (engine off)</td>    <td>Trigger headlights shutoff</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Doors — <kbd>F2</kbd></h3>
+            <table class="table">
+              <thead><tr><th>Input</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Tap ×1</td>   <td>Toggle driver door</td></tr>
+                <tr><td>Tap ×2</td>   <td>Toggle front passenger door</td></tr>
+                <tr><td>Tap ×3</td>   <td>Toggle rear driver-side door</td></tr>
+                <tr><td>Tap ×4</td>   <td>Toggle rear passenger-side door</td></tr>
+                <tr><td>Hold</td>      <td>Toggle all doors</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Hood / Trunk / Spoiler — <kbd>F2</kbd> + <kbd>2</kbd></h3>
+            <table class="table">
+              <thead><tr><th>Input</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Tap ×1</td>   <td>Toggle hood</td></tr>
+                <tr><td>Tap ×2</td>   <td>Toggle trunk</td></tr>
+                <tr><td>Tap ×3</td>   <td>Toggle spoiler</td></tr>
+                <tr><td>Hold</td>      <td>Toggle hood and trunk</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Windows — <kbd>F3</kbd></h3>
+            <table class="table">
+              <thead><tr><th>Input</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Tap ×1</td>   <td>Toggle driver window</td></tr>
+                <tr><td>Tap ×2</td>   <td>Toggle front passenger window</td></tr>
+                <tr><td>Tap ×3</td>   <td>Toggle rear driver-side window</td></tr>
+                <tr><td>Tap ×4</td>   <td>Toggle rear passenger-side window</td></tr>
+                <tr><td>Hold</td>      <td>Toggle all windows</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Interior Lights — <kbd>F4</kbd></h3>
+            <table class="table">
+              <thead><tr><th>Input</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Tap ×1</td>   <td>Toggle roof light</td></tr>
+                <tr><td>Tap ×2</td>   <td>Toggle ambient lights</td></tr>
+                <tr><td>Hold</td>      <td>Toggle CrystalDome™</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Exterior Lights — <kbd>F1</kbd> + <kbd>1</kbd></h3>
+            <table class="table">
+              <thead><tr><th>Input</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Tap ×1</td>   <td>Toggle headlights</td></tr>
+                <tr><td>Tap ×2</td>   <td>Toggle tail lights</td></tr>
+                <tr><td>Tap ×3</td>   <td>Toggle utility lights</td></tr>
+                <tr><td>Tap ×4</td>   <td>Toggle blinker lights</td></tr>
+                <tr><td>Tap ×5</td>   <td>Toggle reverse lights</td></tr>
+                <tr><td>Tap ×6</td>   <td>Toggle interior lights</td></tr>
+                <tr><td>Hold</td>      <td>Toggle all light settings</td></tr>
+              </tbody>
+            </table>
+
+            <h3>CrystalCoat™</h3>
+            <table class="table">
+              <thead><tr><th>Input</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Tap ×2</td>   <td>Toggle CrystalCoat™ on / off</td></tr>
+                <tr><td>Tap ×3</td>   <td>Open color menu</td></tr>
+                <tr><td>Hold</td>      <td>Open color menu</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Police Lights</h3>
+            <table class="table">
+              <thead><tr><th>Input</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Tap ×1</td>   <td>Toggle lights mode</td></tr>
+                <tr><td>Tap ×2</td>   <td>Toggle siren mode</td></tr>
+                <tr><td>Tap ×3</td>   <td>Use siren as horn</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Motorcycle</h3>
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Lean Forward / Rock Stuck Vehicle</td> <td class="key-cell"><kbd>Shift</kbd></td></tr>
+                <tr><td>Lean Back / Rock Stuck Vehicle</td>    <td class="key-cell"><kbd>L.Ctrl</kbd></td></tr>
+              </tbody>
+            </table>
+
+            <h3>Camera &amp; Misc</h3>
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Cycle Camera</td>   <td class="key-cell"><kbd>Q</kbd></td></tr>
+                <tr><td>Reverse Camera</td> <td class="key-cell"><kbd>MMB</kbd></td></tr>
+                <tr><td>Reset Camera</td>   <td class="key-cell"><kbd>C</kbd></td></tr>
+                <tr><td>Cycle Lights</td>   <td class="key-cell"><kbd>V</kbd></td></tr>
+                <tr><td>Radio</td>          <td class="key-cell"><kbd>R</kbd></td></tr>
+                <tr><td>Call Vehicle</td>   <td class="key-cell"><kbd>V</kbd></td></tr>
+                <tr><td>CrystalCoat™</td>   <td class="key-cell"><kbd>Y</kbd></td></tr>
+                <tr><td>AutoDrive</td>      <td class="key-cell"><kbd>Alt</kbd></td></tr>
+              </tbody>
+            </table>
+
+            <h3>Panzer</h3>
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Primary Cannon</td>  <td class="key-cell"><kbd>LMB</kbd></td></tr>
+                <tr><td>Missile Launcher</td><td class="key-cell"><kbd>RMB</kbd></td></tr>
+                <tr><td>Smokescreen</td>     <td class="key-cell"><kbd>L.Ctrl</kbd></td></tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <!-- ══ PANEL: INTERACTION ══ -->
+          <div class="method-panel" id="panel-interact" role="tabpanel" aria-labelledby="tab-interact">
+
+            <h3>UI Panels</h3>
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Primary Interaction</td>       <td class="key-cell"><kbd>F</kbd></td></tr>
+                <tr><td>Secondary Interaction</td>     <td class="key-cell"><kbd>R</kbd></td></tr>
+                <tr><td>Quickhack Details</td>         <td class="key-cell"><kbd>Z</kbd></td></tr>
+                <tr><td>Previous Item</td>             <td class="key-cell"><kbd>1</kbd></td></tr>
+                <tr><td>Next Item</td>                 <td class="key-cell"><kbd>3</kbd></td></tr>
+                <tr><td>Move Up</td>                   <td class="key-cell"><kbd>W</kbd></td></tr>
+                <tr><td>Move Down</td>                 <td class="key-cell"><kbd>S</kbd></td></tr>
+                <tr><td>Move Left</td>                 <td class="key-cell"><kbd>A</kbd></td></tr>
+                <tr><td>Move Right</td>                <td class="key-cell"><kbd>D</kbd></td></tr>
+                <tr><td>Previous Item (Secondary)</td> <td class="key-cell"><kbd>Q</kbd></td></tr>
+                <tr><td>Next Item (Secondary)</td>     <td class="key-cell"><kbd>E</kbd></td></tr>
+                <tr><td>Move Up (Secondary)</td>       <td class="key-cell"><kbd>↑</kbd></td></tr>
+                <tr><td>Move Down (Secondary)</td>     <td class="key-cell"><kbd>↓</kbd></td></tr>
+                <tr><td>Move Left (Secondary)</td>     <td class="key-cell"><kbd>←</kbd></td></tr>
+                <tr><td>Move Right (Secondary)</td>    <td class="key-cell"><kbd>→</kbd></td></tr>
+              </tbody>
+            </table>
+
+            <h3>Braindance</h3>
+            <table class="table">
+              <thead><tr><th>Action</th><th>Key / Input</th></tr></thead>
+              <tbody>
+                <tr><td>Pause Braindance (Toggle)</td> <td class="key-cell"><kbd>Space</kbd></td></tr>
+                <tr><td>Fast-Forward Braindance</td>   <td class="key-cell"><kbd>E</kbd></td></tr>
+                <tr><td>Rewind Braindance</td>         <td class="key-cell"><kbd>Q</kbd></td></tr>
+                <tr><td>Change Braindance Layer</td>   <td class="key-cell"><kbd>Shift</kbd></td></tr>
+                <tr><td>Analysis Mode</td>             <td class="key-cell"><kbd>Tab</kbd></td></tr>
+                <tr><td>Restart Braindance</td>        <td class="key-cell"><kbd>R</kbd></td></tr>
+                <tr><td>Exit Braindance</td>           <td class="key-cell"><kbd>X</kbd></td></tr>
+              </tbody>
+            </table>
+
           </div>
 
         </div>

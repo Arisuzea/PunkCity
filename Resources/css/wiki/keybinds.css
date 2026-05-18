@@ -1,0 +1,19 @@
+/* ── Keybind table keys ── */
+kbd {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid #c8960c;
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #f0c040;
+  font-family: monospace;
+  font-size: 0.78em;
+  line-height: 1.5;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+.key-cell {
+  text-align: center;
+  white-space: nowrap;
+}
