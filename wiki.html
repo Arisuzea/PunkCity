@@ -51,12 +51,25 @@
 
       @media (max-width: 768px) {
         .wiki-grid { grid-template-columns: 1fr; }
-      }
+      }    
     </style>
   </head>
   <body>
     <!-- ═══ SIDENAV ═══════════════════════════════════════════════ -->
     <div class="sidenav-overlay" id="sidenavOverlay"></div>
+
+    <!-- ═══ HAMBURGER ══════════════════════════════════════════════ -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="sidenav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
     <aside class="sidenav" id="sidenav" aria-label="Wiki sections">
 

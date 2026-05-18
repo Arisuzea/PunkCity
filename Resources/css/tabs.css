@@ -11,6 +11,13 @@
   border-bottom: 1px solid var(--border);
   margin-bottom: 2.25rem;
   gap: 0;
+  /* Added to fix Wiki.html */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.method-tabs::-webkit-scrollbar { 
+  display: none; 
 }
 
 /* ─── TAB BUTTON ─── */
