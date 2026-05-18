@@ -71,7 +71,7 @@
         </div>
         <ul class="sidenav-items">
           <li><a onclick="navigateTo('basics','basics-of-the-list')"  data-sub="basics-of-the-list">Vanilla vs PunkCity</a></li>
-          <li><a onclick="navigateTo('basics','weather-lighting')"  data-sub="weather-lighting">The Weather &amp; Lighting Meta</a></li>
+          <li><a onclick="navigateTo('basics','keybinds')"  data-sub="keybinds">Keybinds</a></li>
           <li><a onclick="navigateTo('basics','graphics-profiles')" data-sub="graphics-profiles">Graphics &amp; Optimization Profiles</a></li>
         </ul>
       </div>
@@ -319,10 +319,32 @@
             </table>
           </div>
         </div>
-        <h2 id="weather-lighting">The Weather &amp; Lighting Meta</h2>
-        <div class="wiki-placeholder">
-          <span class="wiki-placeholder-label">Pending</span>
-          [Placeholder: Guide on how the LUT Switcher works, Nova Rain settings, and removing vanilla bloom/blur]
+
+        <h2 id="keybinds">Keybinds</h2>
+        <div class="wiki-content-block">
+
+          <div class="method-tabs" role="tablist" aria-label="Weather &amp; Lighting sections" data-group="weather">
+            <button class="method-tab active" role="tab"
+              id="tab-lut" aria-controls="panel-lut" aria-selected="true"
+              onclick="switchTab('lut', 'weather')">Base</button>
+            <button class="method-tab" role="tab"
+              id="tab-rain" aria-controls="panel-rain" aria-selected="false"
+              onclick="switchTab('rain', 'weather')">Nova Rain</button>
+            <button class="method-tab" role="tab"
+              id="tab-bloom" aria-controls="panel-bloom" aria-selected="false"
+              onclick="switchTab('bloom', 'weather')">Bloom &amp; Blur</button>
+          </div>
+
+          <div class="method-panel active" id="panel-lut" role="tabpanel" aria-labelledby="tab-lut">
+            <!-- LUT Switcher content here -->
+          </div>
+          <div class="method-panel" id="panel-rain" role="tabpanel" aria-labelledby="tab-rain">
+            <!-- Nova Rain content here -->
+          </div>
+          <div class="method-panel" id="panel-bloom" role="tabpanel" aria-labelledby="tab-bloom">
+            <!-- Bloom/Blur content here -->
+          </div>
+
         </div>
         <h2 id="graphics-profiles">Graphics &amp; Optimization Profiles</h2>
         <div class="wiki-placeholder">
@@ -477,6 +499,7 @@
     </main>
 
     <script src="Resources/js/domHelpers.js"></script>
-    <script src="Resources/js/wiki/wiki.js"></script>
+    <script src="Resources/js/wiki/sidenav.js"></script>
+    <script src="Resources/js/wiki/switchtab.js"></script>
   </body>
 </html>
