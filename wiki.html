@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="Resources/css/wiki/keybinds.css">
     <style>
       /* ── Layout ─────────────────────────────────────────────── */
-      :root { --sidenav-w: 224px; }
+      :root { --sidenav-w: 224px; text-align: justify }
+
 
       #main { margin-top: 0; }
 
@@ -85,20 +86,20 @@
         </div>
         <ul class="sidenav-items">
           <li><a onclick="navigateTo('basics','basics-of-the-list')"  data-sub="basics-of-the-list">Vanilla vs PunkCity</a></li>
-          <li><a onclick="navigateTo('basics','keybinds')"  data-sub="keybinds">Keybinds</a></li>
-          <li><a onclick="navigateTo('basics','quick-start')" data-sub="quick-start">Quick Start</a></li>
+          <li><a onclick="navigateTo('basics','keybinds')"            data-sub="keybinds">Keybinds</a></li>
+          <li><a onclick="navigateTo('basics','quick-start')"         data-sub="quick-start">Quick Start</a></li>
         </ul>
       </div>
 
       <div class="sidenav-group">
-        <div class="sidenav-cat" data-page="combat" onclick="navigate('combat')">
+        <div class="sidenav-cat" data-page="survival" onclick="navigate('survival')">
           <span class="sidenav-num">02</span>
-          <span class="sidenav-cat-label">Combat &amp; Cyberware</span>
+          <span class="sidenav-cat-label">Survival &amp; Economy</span>
         </div>
         <ul class="sidenav-items">
-          <li><a onclick="navigateTo('combat','tactical-ai')"       data-sub="tactical-ai">The Aggressive Tactical AI</a></li>
-          <li><a onclick="navigateTo('combat','cyberware-limits')"  data-sub="cyberware-limits">Breaking Cyberware Limits</a></li>
-          <li><a onclick="navigateTo('combat','firearm-mechanics')" data-sub="firearm-mechanics">Firearm Mechanics &amp; Realism</a></li>
+          <li><a onclick="navigateTo('survival','core-survival')"     data-sub="core-survival">Core Survival Framework</a></li>
+          <li><a onclick="navigateTo('survival','economy')"  data-sub="economy">Economy &amp; Trading</a></li>
+          <li><a onclick="navigateTo('survival','firearm-mechanics')" data-sub="firearm-mechanics">Firearm Mechanics &amp; Realism</a></li>
         </ul>
       </div>
 
@@ -198,9 +199,9 @@
             <p>This will go to a general overview of what changed from vanilla to PunkCity, letting you get a grasp of what to expect.</p>
             <span class="wiki-card-arrow">Read →</span>
           </div>
-          <div class="wiki-card" onclick="navigate('combat')" role="button" tabindex="0">
+          <div class="wiki-card" onclick="navigate('survival')" role="button" tabindex="0">
             <span class="wiki-card-num">02</span>
-            <h3>Combat &amp; Cyberware Re-engineering</h3>
+            <h3>Survival &amp; Economy</h3>
             <p>Tactical AI faction behaviors, cyberware slot economy, overhauled firearm and ammo mechanics.</p>
             <span class="wiki-card-arrow">Read →</span>
           </div>
@@ -337,7 +338,7 @@
         <h2 id="keybinds">Keybinds</h2>
         <div class="wiki-content-block">
 
-          <div class="method-tabs" role="tablist" aria-label="binds &amp; Lighting sections" data-group="binds">
+          <div class="method-tabs" role="tablist" aria-label="Keybinds Section" data-group="binds">
             <button class="method-tab active" role="tab"
               id="tab-general" aria-controls="panel-general" aria-selected="true"
               onclick="switchTab('general', 'binds')">General</button>
@@ -670,7 +671,7 @@
               <li>Deploy remote environmental distractions to pull remaining hostiles completely away from the objective link.</li>
             </ol>
           </blockquote>
-          
+
           <div class="callout callout-warning" style="margin-top: 2rem;">
             <p class="callout-title">
               <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -686,26 +687,168 @@
             </p>
           </div>
         </div>
+      </div>
       <footer><p>PunkCity — Cyberpunk 2077 Modlist</p></footer>
     </section>
 
     <!-- PAGE: 02 ══════════════════════════════════════════════════ -->
-    <section class="page" id="page-combat" aria-label="Combat and Cyberware Re-engineering">
+    <section class="page" id="page-survival" aria-label="Survival and Economy">
       <div class="page-header">
         <span class="page-label">Wiki · 02</span>
-        <h1>Combat &amp; Cyberware Re-engineering</h1>
+        <h1>Survival &amp; Economy</h1>
       </div>
       <div class="content">
-        <h2 id="tactical-ai">The Aggressive Tactical AI</h2>
-        <div class="wiki-placeholder">
-          <span class="wiki-placeholder-label">Pending</span>
-          [Placeholder: Detail enemy group tactics, netrunner hacks, and the NCPD reinforcement loop]
+
+        <h2 id="core-survival">Core Survival Framework</h2>
+        <div class="wiki-content-block">
+          <h3>Dark Future</h3>
+          <p>
+            <strong>Dark Future</strong> is the driving force behind the fundamental survival loop of PunkCity.
+            It replaces the arcade pacing of the base game with a needs system, requiring constant management of your
+            primary physiological states.
+          </p>
+
+          <div class="wiki-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+            <div>
+              <h4>Primary Metabolic Needs</h4>
+              <p>
+                You must actively manage your <strong>Hunger</strong>, <strong>Thirst</strong>, and <strong>Energy</strong> levels.
+                When interacting with street vendors or scanning your inventory, every consumable explicitly displays its nutritional
+                stats and the exact need it satisfies.
+              </p>
+            </div>
+            <div>
+              <h4 style="color: var(--accent);">The Core Variable: Nerve</h4>
+              <p>
+                <strong>Nerve</strong> represents your physiological composure and psychological stability.
+                Neglecting your needs drops your Nerve score, triggering aggressive, worsening status debuffs.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout callout-warning">
+            <p class="callout-title">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+              Lethal System State: Nerve Failure
+            </p>
+            <p>
+              Unlike hunger or thirst, <strong>running entirely out of Nerve is fatal.</strong> Furthermore, crashing into a low-Nerve
+              state triggers systemic panic, physically preventing your character from eating, drinking, or sleeping.
+            </p>
+          </div>
+
+          <blockquote style="margin-top: 2rem;">
+            I'd hate to reinvent the wheel so I only dabbled in the basics — more details and changes from the mod are hosted on the
+            <a href="https://wiki.darkfuture2077.com" target="_blank" rel="noopener noreferrer">Dark Future Documentation Wiki</a>.
+          </blockquote>
         </div>
-        <h2 id="cyberware-limits">Breaking Cyberware Limits</h2>
-        <div class="wiki-placeholder">
-          <span class="wiki-placeholder-label">Pending</span>
-          [Placeholder: Breakdown of how the custom slots (Cyberware EX) work and the Black Chrome economy]
-        </div>
+
+        <h2 id="economy">Economy &amp; Trading</h2>
+        <div class="wiki-content-block">
+
+          <h3 style="margin-bottom: -10px;">The Corpo World</h3>
+          <div class="wiki-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 0; margin-bottom: 2rem;">
+            <div>
+              <h4>Banking System</h4>
+              <p>
+                This system introduces an interactive banking infrastructure allowing you to manage liquid capital through standard deposits
+                and withdrawals. If you choose to take out a cash loan, the system enforces a strict <strong>daily repayment schedule</strong>
+                where a portion of your principal balance plus compounding interest is needed to be repaid every 24 hours, requiring a steady
+                local cash flow to service your debt.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text2); font-style: italic; margin-top: 0.75rem;">
+                <strong>System Note:</strong> This mechanic functions as an experimental sandbox. Its true punitive weight remains
+                incomplete until dynamically linked to the upcoming <em>Trauma Team System</em> death-alternative overhaul.
+              </p>
+            </div>
+            <div>
+              <h4>Stock Trading</h4>
+              <p>
+                An organic pairing with the central bank, allowing you to leverage your savings or risk your borrowed loan
+                capital to speculate on corporate assets.
+              </p>
+              <p>
+                The stock market is completely simulated and <strong>dynamically reacts to your physical actions within the world.</strong>
+                Purchasing high-volume NCPD shares and subsequently going on a district-wide spree wiping out law enforcement squads
+                will cause their corporate valuation to instantly plummet. The arena is volatile, unpredictable, and a massive gamble.
+              </p>
+            </div>
+          </div>
+
+          <hr class="sidenav-hr" style="margin: 2rem 0;">
+
+          <h3>Economy Punk</h3>
+          <p>
+            The baseline economic ecosystem of Night City has been completely re-engineered from scratch to eradicate vanilla design
+            oversights and establish a satisfying, long-term character progression loop. In the vanilla game, accumulating absurd wealth
+            was trivialized by hoarding and selling basic street firearms. Economy Punk completely dismantles this behavior, introducing
+            immersive adjustments to every financial transaction across the world.
+          </p>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>System</th>
+                <th>Category</th>
+                <th>Effect</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Market Export Realignment</strong></td>
+                <td>Value Shifts</td>
+                <td>Harvesting premium cyberware and high-tier clothing has become your primary high-volume revenue source. Common weapon-running loops are sharply restricted — enemy-dropped firearms carry an inherent broken status chance, minimizing their baseline salvage viability.</td>
+              </tr>
+              <tr>
+                <td><strong>The Financial Cost of Power</strong></td>
+                <td>Premium Tax</td>
+                <td>High-tier cyberware packages and advanced Quickhacks carry significantly inflated retail pricing. Because Netrunning subroutines and advanced cybernetic chrome provide overwhelming tactical advantages in this list, your financial overhead reflects that tier of power.</td>
+              </tr>
+              <tr>
+                <td><strong>Schematic Repricing</strong></td>
+                <td>Engineering</td>
+                <td>Blueprint and schematic purchase costs have been heavily reduced to directly incentivize the custom crafting system over retail dependency. Sourcing raw components and fabricating your own loadout serves as a highly cost-effective alternative.</td>
+              </tr>
+              <tr>
+                <td><strong>Resource &amp; Liquidity Controls</strong></td>
+                <td>Scarcity</td>
+                <td>Raw currency found on enemy bodies, in world containers, or siphoned from access points has been strictly curtailed. Money shard drops are meticulously throttled to prevent immersion-breaking wealth scaling at advanced character levels.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="sidenav-hr" style="margin: 2rem 0;">
+
+          <h3>Contextual Reward &amp; Pricing Scaling</h3>
+          <p>
+            Contracts, automotive assets, and event distributions no longer rely on flat, arbitrary baseline rewards.
+            All financial generation algorithms dynamically weigh explicit situational criteria.
+          </p>
+
+          <div class="wiki-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+            <div>
+              <h4>Dynamic Quest &amp; Activity Payouts</h4>
+              <p>
+                Every financial payout, main quests, gigs, NCPD scanner bounties, street racing payouts, fistfight wagers, 
+                and access point data siphoning is structurally mapped to four core modifiers: <strong>Fixer Personality</strong>,
+                <strong>Mission Risk Factor</strong>, <strong>Client Wealth</strong>, and <strong>Client Desperation</strong>. 
+                Desperate clients hiding out in slums yield marginal capital, while high-risk corporate contracts award major funding.
+                Local fixers will strictly lock away premium operations until your Street Cred thresholds and district reputation scores mature.
+              </p>
+            </div>
+            <div>
+              <h4>The Autofixer Vehicle Index</h4>
+              <p>
+                The digital vehicle purchasing market has been completely overhauled to create a realistic progression trajectory.
+                Entry-tier transport hulls are heavily discounted and highly affordable early on. Premium hypercars and military-grade
+                combat platforms are exponentially more expensive, with valuation derived from <strong>Manufacturer Prestige</strong>,
+                <strong>Visual Presentation</strong>, <strong>Speed &amp; Handling Performance</strong>, <strong>Armor Protection</strong>,
+                and <strong>On-board Weaponry Systems</strong>. Autofixer discount mechanics scale predictably alongside career achievements.
+              </p>
+            </div>
+          </div>
         <h2 id="firearm-mechanics">Firearm Mechanics &amp; Realism</h2>
         <div class="wiki-placeholder">
           <span class="wiki-placeholder-label">Pending</span>

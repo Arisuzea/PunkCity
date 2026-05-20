@@ -16,7 +16,7 @@
 (function () {
   'use strict';
 
-  var PAGES      = ['home', 'basics', 'combat', 'ui', 'city', 'content', 'closet', 'stability'];
+  var PAGES      = ['home', 'basics', 'survival', 'ui', 'city', 'content', 'closet', 'stability'];
   var SCROLL_PAD = 28;
 
   var sidenav   = document.getElementById('sidenav');
