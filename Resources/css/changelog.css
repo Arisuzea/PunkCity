@@ -76,6 +76,7 @@
 .cl-added-label   { color: var(--accent); background: var(--accent-dim); border: 1px solid rgba(0,204,238,0.2); }
 .cl-removed-label { color: var(--danger); background: var(--danger-dim); border: 1px solid rgba(255,92,122,0.2); }
 .cl-fixed-label   { color: var(--yellow); background: var(--yellow-dim); border: 1px solid rgba(255,229,0,0.2); }
+.cl-updated-label { color: #22c55e; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.2); }
 
 /* ─── WHY ANNOTATION ─── */
 .cl-why {
