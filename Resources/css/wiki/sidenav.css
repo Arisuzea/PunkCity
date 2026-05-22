@@ -1,138 +1,191 @@
+/* ── Sidenav Base Container ──────────────────────────────── */
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidenav-w);
+  background: var(--bg1);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  z-index: 50;
+  padding: 1.25rem 0 3rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border2) transparent;
+}
+.sidenav::-webkit-scrollbar       { width: 3px; }
+.sidenav::-webkit-scrollbar-track { background: transparent; }
+.sidenav::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
 
-      /* ── Sidenav ─────────────────────────────────────────────── */
-      .sidenav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: var(--sidenav-w);
-        background: var(--bg1);
-        border-right: 1px solid var(--border);
-        overflow-y: auto;
-        z-index: 50;
-        padding: 1.25rem 0 3rem;
-        scrollbar-width: thin;
-        scrollbar-color: var(--border2) transparent;
-      }
-      .sidenav::-webkit-scrollbar       { width: 3px; }
-      .sidenav::-webkit-scrollbar-track { background: transparent; }
-      .sidenav::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+/* ── Sidenav Overview Link ────────────────────────────────── */
+.sidenav-overview {
+  display: block;
+  padding: 0.35rem 1.25rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text3);
+  text-decoration: none;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: color 0.15s;
+}
+.sidenav-overview:hover  { color: var(--text2); text-decoration: none; }
+.sidenav-overview.active { color: var(--yellow); border-left-color: var(--yellow); }
 
-      .sidenav-overview {
-        display: block;
-        padding: 0.35rem 1.25rem 0.5rem;
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--text3);
-        text-decoration: none;
-        cursor: pointer;
-        border-left: 2px solid transparent;
-        transition: color 0.15s;
-      }
-      .sidenav-overview:hover  { color: var(--text2); text-decoration: none; }
-      .sidenav-overview.active { color: var(--yellow); border-left-color: var(--yellow); }
+/* ── Structural Elements ─────────────────────────────────── */
+.sidenav-hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0.6rem 0 0.75rem;
+}
 
-      .sidenav-hr {
-        border: none;
-        border-top: 1px solid var(--border);
-        margin: 0.6rem 0 0.75rem;
-      }
+.sidenav-group { 
+  margin-bottom: 0.15rem; 
+}
 
-      .sidenav-group { margin-bottom: 0.15rem; }
+/* ── Tier 1: Main Category Header ───────────────────────── */
+.sidenav-cat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.4rem 1.25rem;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: border-color 0.15s;
+  user-select: none;
+}
+.sidenav-cat:hover .sidenav-cat-label  { color: var(--white); }
+.sidenav-cat.active                    { border-left-color: var(--yellow); }
+.sidenav-cat.active .sidenav-num       { color: var(--yellow2); }
+.sidenav-cat.active .sidenav-cat-label { color: var(--yellow); }
 
-      .sidenav-cat {
-        display: flex;
-        align-items: baseline;
-        gap: 0.55rem;
-        padding: 0.4rem 1.25rem;
-        cursor: pointer;
-        border-left: 2px solid transparent;
-        transition: border-color 0.15s;
-        user-select: none;
-      }
-      .sidenav-cat:hover .sidenav-cat-label  { color: var(--white); }
-      .sidenav-cat.active                    { border-left-color: var(--yellow); }
-      .sidenav-cat.active .sidenav-num       { color: var(--yellow2); }
-      .sidenav-cat.active .sidenav-cat-label { color: var(--yellow); }
+.sidenav-num {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  color: var(--text3);
+  flex-shrink: 0;
+  transition: color 0.15s;
+  padding-top: 1px;
+}
+.sidenav-cat-label {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text2);
+  line-height: 1.2;
+  transition: color 0.15s;
+}
 
-      .sidenav-num {
-        font-family: var(--font-mono);
-        font-size: 0.58rem;
-        letter-spacing: 0.15em;
-        color: var(--text3);
-        flex-shrink: 0;
-        transition: color 0.15s;
-        padding-top: 1px;
-      }
-      .sidenav-cat-label {
-        font-family: var(--font-head);
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--text2);
-        line-height: 1.2;
-        transition: color 0.15s;
-      }
+/* ── Tier 2: Standard Items List & Sub-Headers ───────────── */
+.sidenav-items { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0 0 0.35rem; 
+}
 
-      .sidenav-items { list-style: none; padding: 0; margin: 0 0 0.35rem; }
-      .sidenav-items li a {
-        display: block;
-        padding: 0.28rem 1.25rem 0.28rem 2.7rem;
-        font-size: 0.8rem;
-        color: var(--text3);
-        text-decoration: none;
-        cursor: pointer;
-        border-left: 2px solid transparent;
-        line-height: 1.4;
-        transition: color 0.15s;
-      }
-      .sidenav-items li a:hover  { color: var(--text2); text-decoration: none; }
-      .sidenav-items li a.active { color: var(--accent); border-left-color: var(--accent); }
+/* Flat/Standard Tier 2 links */
+.sidenav-items li a {
+  display: block;
+  padding: 0.28rem 1.25rem 0.28rem 2.7rem;
+  font-size: 0.8rem;
+  color: var(--text3);
+  text-decoration: none;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+.sidenav-items li a:hover  { color: var(--text2); text-decoration: none; }
+.sidenav-items li a.active { color: var(--accent); border-left-color: var(--accent); }
 
-      /* ── Mobile overlay ──────────────────────────────────────── */
-      .sidenav-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.55);
-        z-index: 49;
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(2px);
-      }
-      .sidenav-overlay.open { display: block; }
+/* Structural element wrapper for nested grouping blocks */
+.sidenav-subcat {
+  margin-top: 0.35rem;
+  margin-bottom: 0.25rem;
+}
 
-      /* ── Hamburger button ────────────────────────────────────── */
-      .hamburger {
-        display: none;           /* hidden on desktop */
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        z-index: 1000;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        width: 36px;
-        height: 36px;
-        padding: 6px;
-        background: var(--surface2, #1a1a1a);
-        border: 1px solid var(--border, rgba(255,255,255,0.1));
-        border-radius: 4px;
-        cursor: pointer;
-      }
+/* Mid-level Non-clickable Label (e.g., Survival, Combat) */
+.sidenav-subcat-label {
+  display: block;
+  padding: 0.25rem 1.25rem 0.15rem 2.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text2);
+  opacity: 0.8;
+  user-select: none;
+}
 
-      .hamburger span {
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: var(--text1, #fff);
-        border-radius: 2px;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-      }
+/* ── Tier 3: Deeply Nested Items ────────────────────────── */
+.sidenav-sub-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-      /* Animate to X when open */
-      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .hamburger.open span:nth-child(2) { opacity: 0; }
-      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+/* Deeply nested terminal item links under sub-headers */
+.sidenav-sub-items li a {
+  display: block;
+  padding: 0.2rem 1.25rem 0.2rem 3.6rem; /* Extra indentation for clear visual depth */
+  font-size: 0.76rem;                     /* Slightly tightened font size for nesting */
+  color: var(--text3);
+  text-decoration: none;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+.sidenav-sub-items li a:hover  { color: var(--text2); text-decoration: none; }
+.sidenav-sub-items li a.active { color: var(--accent); border-left-color: var(--accent); }
+
+/* ── Mobile Overlay ──────────────────────────────────────── */
+.sidenav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 49;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.sidenav-overlay.open { display: block; }
+
+/* ── Hamburger Menu Button ───────────────────────────────── */
+.hamburger {
+  display: none; /* Hidden on desktop viewports */
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: var(--surface2, #1a1a1a);
+  border: 1px solid var(--border, rgba(255,255,255,0.1));
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text1, #fff);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Animated Transform to 'X' layout configuration when active */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
