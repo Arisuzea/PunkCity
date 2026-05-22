@@ -4,7 +4,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'dev'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.vercell.app',
+    'localhost',
+    '127.0.0.1',
+]
 
 # No admin, auth, or sessions needed
 INSTALLED_APPS = [
