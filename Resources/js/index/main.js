@@ -26,10 +26,10 @@
   // To update screenshots: edit this array only. slideshow.js never changes.
 
   var SS_SLIDES = [
-    { src: '../screenshots/01.png', caption: 'Enhanced Graphics'              },
-    { src: '../screenshots/02.png', caption: 'An immersive experience'         },
-    { src: '../screenshots/03.png', caption: 'Explore Night City your way'     },
-    { src: '../screenshots/04.png', caption: 'The world reacts to your actions'},
+    { src: '../Resources/screenshots/01.png', caption: 'Enhanced Graphics'              },
+    { src: '../Resources/screenshots/02.png', caption: 'An immersive experience'         },
+    { src: '../Resources/screenshots/03.png', caption: 'Explore Night City your way'     },
+    { src: '../Resources/screenshots/04.png', caption: 'The world reacts to your actions'},
   ];
 
   // ── Boot ──────────────────────────────────────────────────────────────────────
