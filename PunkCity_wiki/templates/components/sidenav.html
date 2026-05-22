@@ -14,7 +14,7 @@
 
 <aside class="sidenav" id="sidenav" aria-label="Wiki sections">
 
-  <a class="sidenav-overview active" data-page="home" href="home.html">
+  <a class="sidenav-overview" data-page="home" href="{% url 'home' %}">
     Wiki Overview
   </a>
 
@@ -22,10 +22,11 @@
 
   <!-- 01 Basics & Overview -->
   <div class="sidenav-group">
-    <div class="sidenav-cat" data-page="basics">
+    <button class="sidenav-cat" data-cat="basics" aria-expanded="false">
       <span class="sidenav-num">01</span>
       <span class="sidenav-cat-label">Basics &amp; Overview</span>
-    </div>
+      <span class="sidenav-arrow" aria-hidden="true"></span>
+    </button>
     <ul class="sidenav-items">
       <li><a href="whats-punkcity.html">What's PunkCity</a></li>
       <li><a href="vanilla-vs-punkcity.html">Vanilla vs PunkCity</a></li>
@@ -36,25 +37,97 @@
 
   <!-- 02 Core Features -->
   <div class="sidenav-group">
-    <div class="sidenav-cat" data-page="core-features">
+    <button class="sidenav-cat" data-cat="core-features" aria-expanded="false">
       <span class="sidenav-num">02</span>
       <span class="sidenav-cat-label">Core Features</span>
+      <span class="sidenav-arrow" aria-hidden="true"></span>
+    </button>
+    <div class="sidenav-items sidenav-items--nested">
+
+      <div class="sidenav-subgroup">
+        <button class="sidenav-sub" aria-expanded="false">
+          <span class="sidenav-sub-label">Survival</span>
+          <span class="sidenav-arrow" aria-hidden="true"></span>
+        </button>
+        <ul class="sidenav-subitems">
+          <li><a href="dark-future.html">Dark Future</a></li>
+          <li><a href="resource-scarcity.html">Resource Scarcity</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-subgroup">
+        <button class="sidenav-sub" aria-expanded="false">
+          <span class="sidenav-sub-label">Combat</span>
+          <span class="sidenav-arrow" aria-hidden="true"></span>
+        </button>
+        <ul class="sidenav-subitems">
+          <li><a href="ai-changes.html">AI Changes</a></li>
+          <li><a href="damage-changes.html">Damage Changes</a></li>
+          <li><a href="weapons-cyberware.html">Weapons &amp; Cyberware</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-subgroup">
+        <button class="sidenav-sub" aria-expanded="false">
+          <span class="sidenav-sub-label">Netrunning</span>
+          <span class="sidenav-arrow" aria-hidden="true"></span>
+        </button>
+        <ul class="sidenav-subitems">
+          <li><a href="better-netrunning.html">Much Better Netrunning</a></li>
+          <li><a href="breaching-risks.html">Breaching Risks</a></li>
+          <li><a href="netrunning-chairs.html">Netrunning Chairs</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-subgroup">
+        <button class="sidenav-sub" aria-expanded="false">
+          <span class="sidenav-sub-label">The Streets</span>
+          <span class="sidenav-arrow" aria-hidden="true"></span>
+        </button>
+        <ul class="sidenav-subitems">
+          <li><a href="reputation-system.html">Reputation System</a></li>
+          <li><a href="npc-changes.html">NPC Changes</a></li>
+          <li><a href="boys-in-blue.html">The Boys in Blue</a></li>
+          <li><a href="night-city-remembers.html">Night City Remembers</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-subgroup">
+        <button class="sidenav-sub" aria-expanded="false">
+          <span class="sidenav-sub-label">Vehicles</span>
+          <span class="sidenav-arrow" aria-hidden="true"></span>
+        </button>
+        <ul class="sidenav-subitems">
+          <li><a href="additional-controls.html">Additional Controls</a></li>
+          <li><a href="stealing.html">Stealing</a></li>
+          <li><a href="security-systems.html">Security Systems</a></li>
+          <li><a href="carhacking.html">Carhacking</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-subgroup">
+        <button class="sidenav-sub" aria-expanded="false">
+          <span class="sidenav-sub-label">Economy</span>
+          <span class="sidenav-arrow" aria-hidden="true"></span>
+        </button>
+        <ul class="sidenav-subitems">
+          <li><a href="economy-punk.html">Economy Punk</a></li>
+          <li><a href="banking.html">Banking</a></li>
+          <li><a href="stock-market.html">Stock Market</a></li>
+          <li><a href="thievery.html">Thievery</a></li>
+        </ul>
+      </div>
+
     </div>
-    <ul class="sidenav-items">
-      <li><a href="dark-future.html">Dark Future</a></li>
-      <li><a href="resource-scarcity.html">Resource Scarcity</a></li>
-      <li><a href="ai-changes.html">AI Changes</a></li>
-      <li><a href="damage-changes.html">Damage Changes</a></li>
-      <li><a href="weapons-cyberware.html">Weapons & Cyberware</a></li>
-    </ul>
   </div>
 
   <!-- 03 Immersion -->
   <div class="sidenav-group">
-    <div class="sidenav-cat" data-page="immersion">
+    <button class="sidenav-cat" data-cat="immersion" aria-expanded="false">
       <span class="sidenav-num">03</span>
       <span class="sidenav-cat-label">Immersion</span>
-    </div>
+      <span class="sidenav-arrow" aria-hidden="true"></span>
+    </button>
     <ul class="sidenav-items">
       <li><a href="sitting-anywhere.html">Sitting Anywhere</a></li>
       <li><a href="idling-anywhere.html">Idling Anywhere</a></li>
@@ -63,42 +136,60 @@
     </ul>
   </div>
 
-  <!-- 04 Content -->
+  <!-- 04 Additional Content -->
   <div class="sidenav-group">
-    <div class="sidenav-cat" data-page="content">
+    <button class="sidenav-cat" data-cat="content" aria-expanded="false">
       <span class="sidenav-num">04</span>
       <span class="sidenav-cat-label">Additional Content</span>
-    </div>
+      <span class="sidenav-arrow" aria-hidden="true"></span>
+    </button>
     <ul class="sidenav-items">
       <li><a href="quests.html">Quests</a></li>
       <li><a href="romance.html">Romance</a></li>
     </ul>
   </div>
 
-  <!-- 05 Controls -->
+  <!-- 05 Control Schemes -->
   <div class="sidenav-group">
-    <div class="sidenav-cat" data-page="controls">
+    <button class="sidenav-cat" data-cat="controls" aria-expanded="false">
       <span class="sidenav-num">05</span>
       <span class="sidenav-cat-label">Control Schemes</span>
+      <span class="sidenav-arrow" aria-hidden="true"></span>
+    </button>
+    <div class="sidenav-items sidenav-items--nested">
+
+      <div class="sidenav-subgroup">
+        <button class="sidenav-sub" aria-expanded="false">
+          <span class="sidenav-sub-label">Keyboard</span>
+          <span class="sidenav-arrow" aria-hidden="true"></span>
+        </button>
+        <ul class="sidenav-subitems">
+          <li><a href="kb-general.html">General</a></li>
+          <li><a href="kb-movement.html">Movement</a></li>
+          <li><a href="kb-combat.html">Combat</a></li>
+          <li><a href="kb-utilities.html">Utilities</a></li>
+          <li><a href="kb-driving.html">Driving</a></li>
+          <li><a href="kb-ui.html">UI Controls</a></li>
+          <li><a href="kb-braindance.html">Braindance</a></li>
+        </ul>
+      </div>
+
+      <div class="sidenav-subgroup">
+        <button class="sidenav-sub" aria-expanded="false">
+          <span class="sidenav-sub-label">Controller</span>
+          <span class="sidenav-arrow" aria-hidden="true"></span>
+        </button>
+        <ul class="sidenav-subitems">
+          <li><a href="controller-tba.html" class="sidenav-tba">TBA</a></li>
+        </ul>
+      </div>
+
     </div>
-    <ul class="sidenav-items">
-      <li><a href="kb-general.html">General</a></li>
-      <li><a href="kb-movement.html">Movement</a></li>
-      <li><a href="kb-combat.html">Combat</a></li>
-      <li><a href="kb-utilities.html">Utilities</a></li>
-      <li><a href="kb-driving.html">Driving</a></li>
-      <li><a href="kb-ui.html">UI Controls</a></li>
-      <li><a href="kb-braindance.html">Braindance</a></li>
-    </ul>
   </div>
 
-  <hr class="sidenav-hr" style="margin-top:1.5rem;">
+  <hr class="sidenav-hr" style="margin-top: 1.5rem;">
 
-  <a href="index.html" style="
-    display:block;padding:0.4rem 1.25rem;
-    font-family:var(--font-mono);font-size:0.66rem;
-    letter-spacing:0.14em;text-transform:uppercase;
-    color:var(--text3);text-decoration:none;">
+  <a href="index.html" class="sidenav-back">
     ← Back to Guide
   </a>
 
