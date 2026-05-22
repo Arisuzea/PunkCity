@@ -24,6 +24,8 @@ STATICFILES_DIRS = [
     BASE_DIR.parent / 'Resources', 
 ]
 
+STATIC_ROOT = BASE_DIR / 'static'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.common.CommonMiddleware',
