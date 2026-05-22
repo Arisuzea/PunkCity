@@ -5,6 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'dev'
 DEBUG = True
 ALLOWED_HOSTS = [
+    'punk-city.vercel.app',
     '.vercel.app',
     'localhost',
     '127.0.0.1',
