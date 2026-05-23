@@ -2,6 +2,17 @@
 
 {% block content %}
 
+<style>
+  .wiki-card {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .wiki-card:hover {
+    text-decoration: none;
+  }
+</style>
+
 <section class="page active" id="page-home" aria-label="Wiki Overview">
 
   <div class="page-header">
@@ -23,7 +34,11 @@
       <a class="wiki-card" href="{% url 'whatspunkcity' %}">
         <span class="wiki-card-tag">Basics &amp; Overview</span>
         <h3>What's PunkCity</h3>
-        <p>A brutal, grounded cyberpunk experience. The city doesn't scale to you — you scale to it.</p>
+        <p>
+          A introduction to PunkCity's core vision and design, should be a
+          good starting point to 'change' your mindset to ready yourself for
+          a harsh grueling Night City.
+        </p>
       </a>
       <a class="wiki-card" href="dark-future.html">...</a>
       <a class="wiki-card" href="sitting-anywhere.html">...</a>
