@@ -62,3 +62,57 @@
         text-transform: uppercase;
         color: var(--accent);
       }
+
+      /* ── Vanilla vs PunkCity comparison blocks ───────────────── */
+      .vs-block {
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 1.5rem 0;
+      }
+
+      .vs-topic {
+        display: block;
+        padding: 0.4rem 1rem;
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--text3);
+        background: var(--bg2);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .vs-row {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 1rem;
+        padding: 0.9rem 1rem;
+        align-items: start;
+      }
+
+      .vs-row + .vs-row {
+        border-top: 1px solid var(--border);
+      }
+
+      .vs-label {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding-top: 3px;
+      }
+
+      .vs-row p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin: 0;
+        color: var(--text2);
+      }
+
+      .vs-bad { background: var(--bg1); }
+      .vs-bad .vs-label { color: var(--danger); }
+
+      .vs-good { background: var(--bg1); }
+      .vs-good .vs-label { color: var(--yellow); }
