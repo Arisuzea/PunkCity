@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/wiki/cards.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <style>
