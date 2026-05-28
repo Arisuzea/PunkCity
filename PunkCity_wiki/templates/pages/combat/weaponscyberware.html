@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PunkCity Wiki - Weapons &amp; Cyberware{% endblock %}
+
+{% block content %}
+
+<section class="page active" id="page-weapons-cyberware" aria-label="Weapons and Cyberware">
+
+  <div class="page-header">
+    <span class="page-label">Basics &amp; Overview · 01</span>
+    <h1>Weapons &amp; Cyberware</h1>
+    <p style="font-size:0.93rem;color:var(--text2);max-width:520px;margin-bottom:0;">
+      Your gear degrades. Your chrome wears down. Your HUD has to be earned.
+    </p>
+  </div>
+
+  <div class="content-wide">
+
+    <h2>Environmental Weapon Wear</h2>
+
+    <p>
+      Weapons in PunkCity are now dynamically affected by shifting weather conditions. The impact
+      is subtle, but there is a real chance your gun jams mid-firefight during a torrential downpour
+      or a blinding sandstorm. The environment around you will actively dictate how reliably your
+      gear operates.
+    </p>
+
+    <p>
+      It won't happen every fight. But it will happen at the worst possible moment. Plan for it.
+    </p>
+
+    <h2>High-Stakes Combat Balance</h2>
+
+    <p>
+      There are hidden multipliers specific to every weapon type, but the headline is this: the list
+      intentionally rewards high-risk playstyles. Shotguns and melee weapons punch well above their
+      weight class.
+    </p>
+
+    <blockquote>
+      <em>Bringing a knife to a gunfight isn't such a stupid idea anymore. If you have the skill to
+      close the gap, you will melt faces.</em>
+    </blockquote>
+
+    <h2>Volatile Cyberware</h2>
+
+    <p>
+      Your chrome is no longer a set-and-forget passive stat boost. Cyberware is now inherently
+      volatile and wears down over time. Keep a close eye on your components, either through your
+      system menus or by visiting a ripperdoc for a proper diagnosis.
+    </p>
+
+    <p>
+      Neglecting your hardware mid-campaign is the kind of mistake you only make once.
+    </p>
+
+    <h2>Earn Your HUD</h2>
+
+    <p>
+      When you first wake up in Night City, your UI is completely missing. This is not a glitch.
+      Vital HUD elements are hardlocked behind specific cyberware. Your Kiroshi optics have
+      up to 8 lens slots, and each one you purchase and install unlocks a different piece of the
+      interface. Until you do, you are flying completely blind.
+    </p>
+
+    <p>
+      Head to a ripperdoc, browse their trade menu, and start building your HUD piece by piece.
+    </p>
+
+    <!-- Kiroshi Lens Table -->
+    <div style="
+      margin: 1.75rem 0 2rem;
+      border: 1px solid var(--border, rgba(255,255,255,0.1));
+      border-radius: 8px;
+      overflow: hidden;
+    ">
+
+      <!-- Header row -->
+      <div style="
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0.5rem 1rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text2);
+        border-bottom: 1px solid var(--border, rgba(255,255,255,0.1));
+        background: var(--surface2, rgba(255,255,255,0.03));
+        opacity: 0.8;
+      ">
+        <span>Kiroshi Lens</span>
+        <span>Unlocks</span>
+      </div>
+
+      <!-- Rows -->
+      {% with lenses="Xray Lens|See highlighted targets through walls;Vehicle VR|Third-person camera while driving;Threat Detector|Enemy threat indicator when stealthed;Radar|Minimap;Health Scanner|Enemy health bars;Grenadier|Grenade trajectory, explosion radius, and incoming enemy grenades;Scanning Focus|Time dilation while scanning;Aim Assist|Aiming reticle;Cyberware Scanner|Enemy abilities when scanning;Hypno Lens|+8 to Cool Attribute checks;Cyberware Eye Casing|+50 Armor and blind immunity;Holo Display: Ads|Increased quest money rewards (with ads at top of screen)" %}
+      {% for lens in lenses.split %}
+      {% endfor %}
+      {% endwith %}
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Xray Lens</span>
+        <span style="color:var(--text2);">See highlighted targets through walls</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Vehicle VR</span>
+        <span style="color:var(--text2);">Third-person camera while driving</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Threat Detector</span>
+        <span style="color:var(--text2);">Enemy threat indicator when stealthed</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Radar</span>
+        <span style="color:var(--text2);">Minimap</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Health Scanner</span>
+        <span style="color:var(--text2);">Enemy health bars</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Grenadier</span>
+        <span style="color:var(--text2);">Grenade trajectory, blast radius, and incoming enemy grenades</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Scanning Focus</span>
+        <span style="color:var(--text2);">Time dilation while scanning</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Aim Assist</span>
+        <span style="color:var(--text2);">Aiming reticle</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Cyberware Scanner</span>
+        <span style="color:var(--text2);">Enemy abilities when scanning</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Hypno Lens</span>
+        <span style="color:var(--text2);">+8 to Cool Attribute checks</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;border-bottom:1px solid var(--border,rgba(255,255,255,0.07));font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Cyberware Eye Casing</span>
+        <span style="color:var(--text2);">+50 Armor and blind immunity</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.6rem 1rem;font-size:0.875rem;">
+        <span style="font-weight:600;color:var(--text1);">Holo Display: Ads</span>
+        <span style="color:var(--text2);">Increased quest money rewards, but ads run at the top of your screen</span>
+      </div>
+
+    </div>
+
+    <h2>Other Cyberware</h2>
+
+    <ul>
+      <li><strong>Hand Cyberware</strong> — Required to display your current ammo count</li>
+    </ul>
+
+    <p style="font-size:0.9rem;color:var(--text2);">
+      Sorry choom. Everything has to be earned.
+    </p>
+
+    <div class="callout callout-warning">
+      <p class="callout-title">Work In Progress</p>
+      <p>This page will be expanded with more detail as the wiki develops. Check back regularly.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>PunkCity — Cyberpunk 2077 Modlist</p>
+  </footer>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PunkCity Wiki - Damage Changes{% endblock %}
+
+{% block content %}
+
+<section class="page active" id="page-damage-changes" aria-label="Damage Changes">
+
+  <div class="page-header">
+    <span class="page-label">Basics &amp; Overview · 01</span>
+    <h1>Damage Changes</h1>
+    <p style="font-size:0.93rem;color:var(--text2);max-width:520px;margin-bottom:0;">
+      A fully custom damage model. Your DPS tooltip is lying to you.
+    </p>
+  </div>
+
+  <div class="content-wide">
+
+    <p>
+      The damage system has been completely overhauled, specifically utilizing a customized version
+      of the <strong>Damage Scaling &amp; Rebalance</strong> mod. A huge shout-out and thank you to
+      <strong>RMK</strong> and <strong>Q</strong> for the incredible foundation.
+    </p>
+
+    <h2>How Damage Is Calculated</h2>
+
+    <p>
+      Every hit you land passes through a chain of multipliers before final damage is applied.
+      The order matters. Each step feeds into the next.
+    </p>
+
+    <div class="damage-flow" aria-label="Damage calculation flow" style="
+      margin: 1.75rem 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      max-width: 360px;
+    ">
+
+      {% with steps="Base Damage,Level,Weapon Type,Rarity,Enemy Tier" %}
+      {% for step in steps.split %}
+      {% endfor %}
+      {% endwith %}
+
+      <!-- Steps rendered directly for reliability -->
+
+      <div style="
+        background: var(--surface2, rgba(255,255,255,0.05));
+        border: 1px solid var(--border, rgba(255,255,255,0.1));
+        border-radius: 6px;
+        padding: 0.6rem 1.1rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: var(--text1);
+        width: 100%;
+        box-sizing: border-box;
+      ">Base Damage</div>
+
+      <div style="color:var(--text2);font-size:1.1rem;padding:0.15rem 1.2rem;line-height:1;">&#8595;</div>
+
+      <div style="
+        background: var(--surface2, rgba(255,255,255,0.05));
+        border: 1px solid var(--border, rgba(255,255,255,0.1));
+        border-radius: 6px;
+        padding: 0.6rem 1.1rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: var(--text1);
+        width: 100%;
+        box-sizing: border-box;
+      ">Level</div>
+
+      <div style="color:var(--text2);font-size:1.1rem;padding:0.15rem 1.2rem;line-height:1;">&#8595;</div>
+
+      <div style="
+        background: var(--surface2, rgba(255,255,255,0.05));
+        border: 1px solid var(--border, rgba(255,255,255,0.1));
+        border-radius: 6px;
+        padding: 0.6rem 1.1rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: var(--text1);
+        width: 100%;
+        box-sizing: border-box;
+      ">Weapon Type</div>
+
+      <div style="color:var(--text2);font-size:1.1rem;padding:0.15rem 1.2rem;line-height:1;">&#8595;</div>
+
+      <div style="
+        background: var(--surface2, rgba(255,255,255,0.05));
+        border: 1px solid var(--border, rgba(255,255,255,0.1));
+        border-radius: 6px;
+        padding: 0.6rem 1.1rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: var(--text1);
+        width: 100%;
+        box-sizing: border-box;
+      ">Rarity</div>
+
+      <div style="color:var(--text2);font-size:1.1rem;padding:0.15rem 1.2rem;line-height:1;">&#8595;</div>
+
+      <div style="
+        background: var(--surface2, rgba(255,255,255,0.05));
+        border: 1px solid var(--border, rgba(255,255,255,0.1));
+        border-radius: 6px;
+        padding: 0.6rem 1.1rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: var(--text1);
+        width: 100%;
+        box-sizing: border-box;
+      ">Enemy Tier</div>
+
+      <div style="color:var(--text2);font-size:1.1rem;padding:0.15rem 1.2rem;line-height:1;">&#8595;</div>
+
+      <div style="
+        background: var(--surface2, rgba(255,255,255,0.05));
+        border: 1px solid var(--border, rgba(255,255,255,0.1));
+        border-radius: 6px;
+        padding: 0.6rem 1.1rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: var(--text2);
+        width: 100%;
+        box-sizing: border-box;
+        font-style: italic;
+      ">Enemy Faction <span style="font-size:0.78rem;font-weight:400;opacity:0.7;">— Coming Soon</span></div>
+
+      <div style="color:var(--text2);font-size:1.1rem;padding:0.15rem 1.2rem;line-height:1;">&#8595;</div>
+
+      <div style="
+        background: var(--surface2, rgba(255,255,255,0.05));
+        border: 1px solid var(--border, rgba(255,255,255,0.1));
+        border-radius: 6px;
+        padding: 0.6rem 1.1rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: var(--text2);
+        width: 100%;
+        box-sizing: border-box;
+        font-style: italic;
+      ">Headshot Modifier <span style="font-size:0.78rem;font-weight:400;opacity:0.7;">— Coming Soon</span></div>
+
+      <div style="color:var(--text2);font-size:1.1rem;padding:0.15rem 1.2rem;line-height:1;">&#8595;</div>
+
+      <div style="
+        border: 1px solid var(--accent, #e63946);
+        border-radius: 6px;
+        padding: 0.6rem 1.1rem;
+        font-size: 0.88rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--accent, #e63946);
+        width: 100%;
+        box-sizing: border-box;
+      ">Final Damage Applied</div>
+
+    </div>
+
+    <p style="font-size:0.88rem;color:var(--text2);margin-top:-0.75rem;">
+      Enemy faction scaling and category-based headshot modifiers are not fully implemented yet,
+      but both are coming in a future update.
+    </p>
+
+    <h2>A Warning About Tooltips</h2>
+
+    <p>
+      Because of how this custom model calculates damage under the hood, you can no longer trust
+      the in-game weapon tooltips. In practice, your actual performance will generally feel
+      somewhere between <strong>20% and 40% stronger</strong> than what the display screen claims.
+    </p>
+
+    <div class="callout callout-important">
+      <p class="callout-title">Don't Trust the DPS Number</p>
+      <p>The on-screen DPS figure does not account for the active multipliers in this system.
+        Treat it as a rough base damage guideline only, and trust the actual body count instead.
+        Work is underway to make the UI reflect these multipliers accurately.</p>
+    </div>
+
+    <div class="callout callout-warning">
+      <p class="callout-title">Work In Progress</p>
+      <p>This page will be expanded with more detail as the wiki develops. Check back regularly.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>PunkCity — Cyberpunk 2077 Modlist</p>
+  </footer>
+
+</section>
+
+{% endblock %}
