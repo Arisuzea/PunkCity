@@ -25,7 +25,12 @@
       "machineURL": "PunkCity",
       "discordURL": "https://discord.gg/qQebydDHFz",
       "websiteURL": "https://arisuzea.github.io/PunkCity",
-      "nexusCollection": null
+      "nexusCollection": {
+        "collectionId": "471730",
+        "slug": "2jyjes",
+        "domainName": "cyberpunk2077",
+        "lastRevisionNumber": 1
+      }
     },
     "download_metadata": {
       "Hash": "IOwbN+IXYCY=",
