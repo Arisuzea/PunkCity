@@ -21,24 +21,24 @@
     "links": {
       "image": "https://raw.githubusercontent.com/Arisuzea/PunkCity/refs/heads/main/Resources/static-images/PunkCity.webp",
       "readme": "https://arisuzea.github.io/PunkCity",
-      "download": "https://authored-files.wabbajack.org/PunkCity.wabbajack_5fba68a1-225d-46c2-b0f8-7b1a84b7c678",
+      "download": "https://authored-files.wabbajack.org/PunkCity.wabbajack_36cd918b-c82c-476e-954e-e27fa40d4f61",
       "machineURL": "PunkCity",
       "discordURL": "https://discord.gg/qQebydDHFz",
       "websiteURL": "https://arisuzea.github.io/PunkCity",
       "nexusCollection": null
     },
     "download_metadata": {
-      "Hash": "xT81d6kWH6M=",
-      "Size": 49942342,
-      "NumberOfArchives": 1234,
-      "SizeOfArchives": 23028091333,
+      "Hash": "hRIqfGolM2Q=",
+      "Size": 49943038,
+      "NumberOfArchives": 1231,
+      "SizeOfArchives": 23027791036,
       "NumberOfInstalledFiles": 14615,
-      "SizeOfInstalledFiles": 24029046081,
-      "TotalSize": 47057137414
+      "SizeOfInstalledFiles": 24029058712,
+      "TotalSize": 47056849748
     },
     "version": "2.1.0",
     "dateCreated": "1970-01-01T00:00:00Z",
-    "dateUpdated": "2026-07-04T03:45:29.2852682Z",
+    "dateUpdated": "2026-07-04T09:41:14.6793877Z",
     "repositoryName": ""
   }
 ]
