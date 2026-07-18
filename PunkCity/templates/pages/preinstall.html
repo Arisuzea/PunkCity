@@ -1,0 +1,81 @@
+{% load static %}
+<!-- ═══════════════════════════════════════════════════════════
+        PAGE: PRE-INSTALLATION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="page" id="page-preinstall" aria-label="Pre-Installation">
+      <div class="page-header">
+        <span class="page-label">Pre-Installation</span>
+        <h1>Before You Begin</h1>
+      </div>
+      <div class="content">
+
+        <p>The steps below assume you're using the <strong>Steam</strong> version of the game. Complete every step before moving on to Installation.</p>
+
+        <h2>Setup Steps</h2>
+
+        <ol class="steps">
+          <li>
+            <div>
+              <p>Perform a <a href="https://support.cdprojektred.com/en/cyberpunk/pc/sp-technical/issue/2233/how-do-i-perform-a-clean-install-of-the-game" target="_blank">clean install</a> of Cyberpunk 2077. Install it <strong>outside of <code>Program Files</code></strong>.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Install the <a href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" target="_blank">Visual C++ Redistributables (All-in-One)</a>. Extract and run <code>install_all.bat</code> as administrator.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Disable Steam auto-updates for Cyberpunk 2077.</p>
+              <details>
+                <summary>How to disable auto-updates</summary>
+                <div>
+                  <ol style="margin:0;padding-left:1.25rem;font-size:0.9rem;">
+                    <li>Right-click Cyberpunk 2077 in your Steam Library → <strong>Properties</strong></li>
+                    <li>Go to the <strong>Updates</strong> tab</li>
+                    <li>Set Automatic Updates to <strong>"Only update this game when I launch it"</strong></li>
+                    <li>From now on, <strong>only launch through Mod Organizer 2</strong></li>
+                  </ol>
+                </div>
+              </details>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Make sure all official DLC is installed.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Install <a href="https://store.steampowered.com/app/2060310/Cyberpunk_2077_REDmod/" target="_blank">REDmod</a> if you haven't already.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Update your GPU drivers — <a href="https://www.nvidia.com/en-us/software/nvidia-app/" target="_blank">NVIDIA App</a> or <a href="https://www.amd.com/en/support/download/drivers.html" target="_blank">AMD Adrenalin</a>.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Install the <a href="https://dotnet.microsoft.com/en-us/download/dotnet/9.0" target="_blank">.NET Runtime</a> (latest version).</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Install the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=35" target="_blank">DirectX End-User Runtime</a>.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="callout callout-important">
+          <p class="callout-title">Before Moving On</p>
+          <p>Confirm that Steam shows both <strong>Cyberpunk 2077: REDmod</strong> and <strong>Cyberpunk 2077: Phantom Liberty</strong> as installed before continuing to the Installation page.</p>
+          <img src="{% static 'static-images/Before-moving-on_instructions.png' %}" alt="Confirm from Steam" class="step-img">
+        </div>
+
+      </div>
+      <footer>
+        <p>PunkCity — Cyberpunk 2077 Modlist</p>
+      </footer>
+    </section>
+

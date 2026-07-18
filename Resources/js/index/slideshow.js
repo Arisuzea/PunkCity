@@ -35,20 +35,6 @@
 var Slideshow = (function () {
   'use strict';
 
-  /**
-   * Initializes a slideshow instance inside a container element.
-   *
-   * @param {string}   containerId       - ID of the slideshow root element.
-   * @param {Array<{src: string, caption?: string}>} slides - Slide data.
-   * @param {Object}   [options]
-   * @param {number}   [options.interval=5000]   - Auto-advance interval in ms.
-   * @param {Object}   [options.selectors]       - Override default element selectors.
-   * @param {string}   [options.selectors.dots]
-   * @param {string}   [options.selectors.counter]
-   * @param {string}   [options.selectors.bar]
-   * @param {string}   [options.selectors.prev]
-   * @param {string}   [options.selectors.next]
-   */
   function init(containerId, slides, options) {
     if (!slides || !slides.length) return;
     options = options || {};
@@ -58,8 +44,6 @@ var Slideshow = (function () {
 
     var INTERVAL = options.interval || 5000;
 
-    // Default selectors match the original HTML IDs.
-    // Pass options.selectors to support multiple slideshows on one page.
     var sel = Object.assign({
       dots:    '#ssDots',
       counter: '#ssCounter',
@@ -79,8 +63,6 @@ var Slideshow = (function () {
     var current = 0;
     var timer   = null;
     var paused  = false;
-
-    // ── Build Slide Elements ───────────────────────────────────────────────────
 
     var slideEls = slides.map(function (data, i) {
       var div = document.createElement('div');
@@ -102,12 +84,10 @@ var Slideshow = (function () {
         div.appendChild(cap);
       }
 
-      // Insert before the prev arrow so slides appear in DOM order
       container.insertBefore(div, el.prev);
       return div;
     });
 
-    // ── Build Dot Navigation ───────────────────────────────────────────────────
 
     var dotEls = slides.map(function (_, i) {
       var btn = document.createElement('button');
@@ -119,14 +99,11 @@ var Slideshow = (function () {
       return btn;
     });
 
-    // ── UI Sync ────────────────────────────────────────────────────────────────
 
     function updateUI() {
-      // Match by element reference — avoids index capture issues
+      // Match by element reference
       DOMHelpers.setActive(slideEls, function (s) { return s === slideEls[current]; });
       DOMHelpers.setActive(dotEls,   function (d) { return d === dotEls[current]; }, 'aria-selected');
-
-      // aria-hidden is the inverse of active — handled separately
       slideEls.forEach(function (s, i) {
         s.setAttribute('aria-hidden', String(i !== current));
       });
@@ -134,12 +111,11 @@ var Slideshow = (function () {
       el.counter.textContent = (current + 1) + ' / ' + slides.length;
     }
 
-    // ── Progress Bar ───────────────────────────────────────────────────────────
 
     function resetProgress() {
       el.bar.style.transition = 'none';
       el.bar.style.width      = '0%';
-      void el.bar.offsetWidth;                               // force reflow
+      void el.bar.offsetWidth;                             
       el.bar.style.transition = 'width ' + INTERVAL + 'ms linear';
       el.bar.style.width      = '100%';
     }
@@ -157,7 +133,6 @@ var Slideshow = (function () {
       el.bar.style.width      = '100%';
     }
 
-    // ── Slide Navigation ───────────────────────────────────────────────────────
 
     function goTo(index) {
       current = (index + slides.length) % slides.length;
@@ -171,13 +146,9 @@ var Slideshow = (function () {
       timer = setInterval(function () { goTo(current + 1); }, INTERVAL);
     }
 
-    // ── Bootstrap ──────────────────────────────────────────────────────────────
-
     updateUI();
     resetProgress();
     startTimer();
-
-    // ── Event Listeners ────────────────────────────────────────────────────────
 
     el.prev.addEventListener('click', function () { goTo(current - 1); });
     el.next.addEventListener('click', function () { goTo(current + 1); });
@@ -199,7 +170,7 @@ var Slideshow = (function () {
       if (e.key === 'ArrowRight') goTo(current + 1);
     });
 
-    // Touch swipe support
+
     var touchStartX = 0;
 
     container.addEventListener('touchstart', function (e) {

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PunkCity{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'static-images/PunkCity_icon.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+    <link rel="stylesheet" href="{% static 'css/callout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+    <link rel="stylesheet" href="{% static 'css/steps.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/badges.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tables.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tabs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slideshow.css' %}">
+    <link rel="stylesheet" href="{% static 'css/changelog.css' %}">
+    {% block extra_head %}{% endblock %}
+  </head>
+
+  <body>
+    {% include "includes/nav.html" %}
+
+    <main id="main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- ═══ JAVASCRIPT ═══ -->
+    <script src="{% static 'js/domHelpers.js' %}"></script>
+    <script src="{% static 'js/index/navigation.js' %}"></script>
+    <script src="{% static 'js/index/tabs.js' %}"></script>
+    <script src="{% static 'js/index/slideshow.js' %}"></script>
+    <script src="{% static 'js/index/main.js' %}"></script>
+    {% block extra_scripts %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,142 @@
+{% load static %}
+<!-- ═══════════════════════════════════════════════════════════
+        PAGE: ABOUT
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="page active" id="page-home" aria-label="About PunkCity">
+
+      <div class="hero" aria-hidden="false">
+        <div class="hero-fallback"></div>
+        <img
+          class="hero-img"
+          src="{% static 'static-images/PunkCity_header.png' %}"
+          alt="PunkCity banner"
+          onerror="this.style.display='none'"
+        >
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">Wabbajack Modlist · Cyberpunk 2077</p>
+          <img src="{% static 'static-images/PunkCity_header.png' %}" alt="PunkCity" class="hero-logo">
+          <p class="hero-tagline">
+            Night City doesn't respect you. It doesn't see you as anybody.<br>
+            Survival is not a right, it's a privilege. Earn your place.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+
+        <div class="callout callout-important">
+          <p class="callout-title">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zM8 6a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 6zm0-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+            Important
+          </p>
+          <ul>
+            <li>PunkCity is built for <strong>Cyberpunk 2077 2.31</strong>.</li>
+            <li>Phantom Liberty DLC is <span class="badge badge-mandatory">Mandatory</span></li>
+            <li>This list is currently in active development. Expect additions and changes between versions.</li>
+          </ul>
+        </div>
+
+        <div class="callout callout-warning">
+          <p class="callout-title">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+            Warning
+          </p>
+          <p>Always launch the game through <strong>Mod Organizer 2</strong>. Launching through Steam directly will bypass the mod setup and break the list.</p>
+        </div>
+
+        <h2>About the List</h2>
+
+        <p>
+          <strong>PunkCity</strong> is a Wabbajack modlist for Cyberpunk 2077 built around one hard truth:
+          <em>the city owes you nothing.</em>
+        </p>
+
+        <p>
+          Most playthroughs let you become a legend overnight. PunkCity pushes back. Your body has needs.
+          Your reputation has weight. The story won't drag you along, it waits for you to earn the right to be
+          part of it. The city is indifferent, the streets are dangerous, and every cold decision you make will follow you.
+        </p>
+
+        <p>This is no power fantasy. You'll suffer, and you'll be content.</p>
+
+        <h3>What You're Getting Into</h3>
+        <ul>
+          <li><strong>Survival mechanics</strong> that turn your body into a resource you'll actually have to manage</li>
+          <li>A <strong>deliberately paced experience</strong> that rewards immersion, not rushing</li>
+          <li>A <strong>reputation system with teeth;</strong> where senseless violence has real costs</li>
+          <li><em>More systems on the way—check back here as the list grows</em></li>
+        </ul>
+
+        <div class="ss-section">
+          <h2>In-Game Showcase</h2>
+          <div class="slideshow-wrap" id="ssWrap">
+            <div
+              class="slideshow"
+              id="slideshow"
+              role="region"
+              aria-label="In-game screenshot gallery"
+              tabindex="0"
+              aria-roledescription="carousel"
+            >
+              <!-- Slides are injected here by JS — see SS_SLIDES array below -->
+              <button class="slide-arrow slide-prev" id="ssPrev" aria-label="Previous screenshot">&#8592;</button>
+              <button class="slide-arrow slide-next" id="ssNext" aria-label="Next screenshot">&#8594;</button>
+              <div class="slideshow-progress">
+                <div class="slideshow-progress-bar" id="ssProgressBar"></div>
+              </div>
+            </div>
+            <div class="slideshow-footer">
+              <div class="slide-dots" id="ssDots" role="tablist" aria-label="Screenshot navigation"></div>
+              <span class="slide-counter" id="ssCounter" aria-live="polite" aria-atomic="true">— / —</span>
+            </div>
+            <p class="ss-hint">Hover to pause &nbsp;·&nbsp; ← → to navigate &nbsp;·&nbsp; Swipe on mobile</p>
+          </div>
+        </div>
+
+        <h2>Character Creation</h2>
+
+        <p>
+          The list gives strong emphasis to Character Creation freedom. It utilizes <strong>SOLO BODY 2.0</strong> as the
+          body mod for Female V and <strong>Atlas</strong> for Male V.
+        </p>
+
+        <blockquote>
+          <em>Valerie has at least 5–20× more accessories, hairs, and clothes than Vincent. Unfortunately modders
+          favor feminine body mods — nothing I can do about it.</em>
+        </blockquote>
+
+        <div class="stat-row">
+          <div class="stat-pill">
+            <span class="stat-pill-label">Total Mods</span>
+            <span class="stat-pill-value">~1,000</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-pill-label">Without Cosmetics</span>
+            <span class="stat-pill-value">~600</span>
+          </div>
+        </div>
+
+        <p>For the full modlist, visit the <a href="https://loadorderlibrary.com/lists/punkcity-2" target="_blank">Load Order Library</a>.</p>
+
+        <h2>A Note from the Author</h2>
+
+        <p>
+          This is my first modlist. I am primarily a Skyrim modder (5 years), however I became so fixated
+          with Cyberpunk 2077 that I released a list for it before my favourite fantasy game.
+        </p>
+
+        <p>
+          I did my best but the list is far from perfect. If you find bugs or bad clipping, please let me know.
+          I plan to use user experiences as the basis for whether something is performing well or poorly —
+          the gameplay is refined, but the cosmetics may not be. Please bear with me.
+        </p>
+
+      </div>
+
+      <footer>
+        <p>PunkCity is an unofficial Wabbajack modlist and is not affiliated with CD Projekt Red.</p>
+        <p style="margin-top:0.5rem">Full credit goes to the original mod authors.</p>
+      </footer>
+    </section>
+

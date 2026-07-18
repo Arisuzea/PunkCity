@@ -1,0 +1,35 @@
+{% load static %}
+<!-- ═══ NAVBAR ═══ -->
+    <nav role="navigation" aria-label="Main navigation">
+      <span class="nav-logo" onclick="navigate('home')">
+        <img src="{% static 'static-images/PunkCity_header.png' %}" alt="PunkCity" class="nav-logo-img">
+      </span>
+      <div class="nav-divider" aria-hidden="true"></div>
+      <ul class="nav-links" role="list">
+        <li><a onclick="navigate('home')"         data-page="home"         href="#home">About</a></li>
+        <li><a onclick="navigate('requirements')" data-page="requirements" href="#requirements">Requirements</a></li>
+        <li><a onclick="navigate('preinstall')"   data-page="preinstall"   href="#preinstall">Pre-Installation</a></li>
+        <li><a onclick="navigate('installation')" data-page="installation" href="#installation">Installation</a></li>
+        <li><a onclick="navigate('postinstall')"  data-page="postinstall"  href="#postinstall">Post-Installation</a></li>
+        <li><a onclick="navigate('gameplay')"     data-page="gameplay"     href="#gameplay">Gameplay</a></li>
+        <li><a onclick="navigate('updating')"     data-page="updating"     href="#updating">Updating</a></li>
+        <li><a onclick="navigate('changelogs')"   data-page="changelogs"    href="#changelogs">Changelogs</a></li>
+        <li><a onclick="navigate('issues')"       data-page="issues"       href="#issues">Known Issues</a></li>  
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobileMenu" role="menu">
+      <a onclick="navigate('home');closeMobile()"         data-page="home">About</a>
+      <a onclick="navigate('requirements');closeMobile()" data-page="requirements">Requirements</a>
+      <a onclick="navigate('preinstall');closeMobile()"   data-page="preinstall">Pre-Installation</a>
+      <a onclick="navigate('installation');closeMobile()" data-page="installation">Installation</a>
+      <a onclick="navigate('postinstall');closeMobile()"  data-page="postinstall">Post-Installation</a>
+      <a onclick="navigate('gameplay');closeMobile()"     data-page="gameplay">Gameplay</a>
+      <a onclick="navigate('updating');closeMobile()"     data-page="updating">Updating</a>
+      <a onclick="navigate('changelogs');closeMobile()"    data-page="changelogs">Changelogs</a>
+      <a onclick="navigate('issues');closeMobile()"       data-page="issues">Known Issues</a>
+    </div>
