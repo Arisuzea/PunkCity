@@ -21,24 +21,29 @@
     "links": {
       "image": "https://raw.githubusercontent.com/Arisuzea/PunkCity/refs/heads/main/Resources/static-images/PunkCity.webp",
       "readme": "https://arisuzea.github.io/PunkCity",
-      "download": "https://authored-files.wabbajack.org/PunkCity.wabbajack_408ef0f2-f5bb-4015-a554-4178380c1370",
+      "download": "https://authored-files.wabbajack.org/PunkCity.wabbajack_0ce4bf2d-46de-4748-ad09-b3b5d28ac52c",
       "machineURL": "PunkCity",
       "discordURL": "https://discord.gg/qQebydDHFz",
       "websiteURL": "https://arisuzea.github.io/PunkCity",
-      "nexusCollection": null
+      "nexusCollection": {
+        "collectionId": "471730",
+        "slug": "2jyjes",
+        "domainName": "cyberpunk2077",
+        "lastRevisionNumber": 1
+      }
     },
     "download_metadata": {
-      "Hash": "9EE90h2loEU=",
-      "Size": 54561968,
-      "NumberOfArchives": 1242,
-      "SizeOfArchives": 22490734728,
-      "NumberOfInstalledFiles": 13265,
-      "SizeOfInstalledFiles": 23361926828,
-      "TotalSize": 45852661556
+      "Hash": "IOwbN+IXYCY=",
+      "Size": 49946831,
+      "NumberOfArchives": 1231,
+      "SizeOfArchives": 23027791036,
+      "NumberOfInstalledFiles": 14625,
+      "SizeOfInstalledFiles": 24029065636,
+      "TotalSize": 47056856672
     },
-    "version": "2.0.3",
+    "version": "2.1.0",
     "dateCreated": "1970-01-01T00:00:00Z",
-    "dateUpdated": "2026-06-08T02:16:30.2752289Z",
+    "dateUpdated": "2026-07-04T09:49:04.1797692Z",
     "repositoryName": ""
   }
 ]
