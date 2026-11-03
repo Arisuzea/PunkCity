@@ -35,6 +35,19 @@ var Navigation = (function () {
   function navigate(page) {
     if (!PAGES.includes(page)) page = 'home';
 
+    // Page transition wipe (C&B style)
+    if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var gate = document.getElementById('pageGate');
+      if (!gate) {
+        gate = document.createElement('div');
+        gate.id = 'pageGate';
+        gate.className = 'page-transition';
+        document.body.appendChild(gate);
+      }
+      gate.classList.add('active');
+      setTimeout(function () { gate.classList.remove('active'); }, 200);
+    }
+
     DOMHelpers.setActive(
       document.querySelectorAll('.page'),
       function (el) { return el.id === 'page-' + page; }
@@ -48,6 +61,8 @@ var Navigation = (function () {
     window.scrollTo({ top: 0, behavior: 'instant' });
     history.pushState(null, '', '#' + page);
     currentPage = page;
+    // Re-trigger decrypt on the newly shown page
+    if (window.runDecrypt) window.runDecrypt(document);
   }
 
   function closeMobile() {

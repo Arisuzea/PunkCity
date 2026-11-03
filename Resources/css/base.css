@@ -31,6 +31,10 @@
   --accent2:   #008fb0;
   --accent-dim:#001e2a;
 
+  /* Red — secondary accent (logo) */
+  --red:       #ff3c5a;
+  --red-dim:   #2a0010;
+
   /* Yellow — brand accent, hero, labels */
   --yellow:    #ffe500;
   --yellow2:   #ccb800;

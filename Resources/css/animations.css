@@ -1,0 +1,90 @@
+/* ─────────────────────────────────────────────
+   animations.css
+   Scroll-reveal + hero entrance animations.
+───────────────────────────────────────────── */
+
+/* ─── REVEAL ON SCROLL ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── HERO SWEEP ─── */
+.hero-sweep {
+  position: absolute;
+  left: 0; right: 0; top: -4px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  animation: sweep 2.6s cubic-bezier(0.6, 0, 0.3, 1) 0.4s 1;
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes sweep {
+  0%   { top: 0;    opacity: 0.9; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* ─── HERO TITLE GLITCH-IN ─── */
+.hero-title {
+  animation: glitch-in 0.7s steps(8) 0.15s both;
+}
+@keyframes glitch-in {
+  0%   { opacity: 0; transform: translateX(-8px); clip-path: inset(0 0 70% 0); text-shadow: -4px 0 var(--red), 4px 0 var(--accent); }
+  35%  { opacity: 1; clip-path: inset(30% 0 20% 0); text-shadow: 3px 0 var(--red), -3px 0 var(--accent); }
+  70%  { clip-path: inset(0 0 0 0); transform: translateX(2px); text-shadow: -2px 0 var(--red), 2px 0 var(--accent); }
+  100% { transform: none; text-shadow: none; }
+}
+
+/* ─── SCANROLL (subtle page scan line) ─── */
+body::after {
+  content: '';
+  position: fixed;
+  left: 0; right: 0; top: 0;
+  height: 150px;
+  pointer-events: none;
+  z-index: 9998;
+  background: linear-gradient(180deg, transparent, rgba(0, 204, 238, 0.04), transparent);
+  transform: translateY(-150px);
+  will-change: transform;
+  animation: scanroll 7.5s linear infinite;
+}
+@keyframes scanroll {
+  from { transform: translateY(-150px); }
+  to   { transform: translateY(100vh); }
+}
+
+/* ─── PAGE TRANSITION (wipe) ─── */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9997;
+  pointer-events: none;
+  background: var(--bg);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+.page-transition::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent 0 2px, rgba(0, 204, 238, 0.06) 2px 4px);
+}
+.page-transition.active {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-transition { transition: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-title, .hero-sweep { animation: none !important; opacity: 1; }
+  .hero-sweep { display: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  body::after { display: none; }
+}

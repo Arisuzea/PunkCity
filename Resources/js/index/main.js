@@ -26,4 +26,43 @@
   Navigation.init();
   Slideshow.init('slideshow', SS_SLIDES);
 
+  // Scroll-reveal: add .reveal to sections, observe
+  if ('IntersectionObserver' in window) {
+    document.querySelectorAll('section, .callout, .stat-pill').forEach(function (el) {
+      el.classList.add('reveal');
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Decrypt scramble effect for .decrypt elements
+  window.runDecrypt = function (root) {
+    root = root || document;
+    var GLY = '#%&/\\<> *01■▒▓';
+    var els = root.querySelectorAll('.decrypt');
+    if (!els.length) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    els.forEach(function (el) {
+      var target = el.getAttribute('data-decrypt') || el.textContent;
+      el.setAttribute('data-decrypt', target);
+      el.textContent = target; // reset
+      var i = 0;
+      var iv = setInterval(function () {
+        el.textContent = target.split('').map(function (c, j) {
+          if (j < i) return c;
+          if (c === ' ' || c === '·' || c === '?') return c;
+          return GLY.charAt(Math.floor(Math.random() * GLY.length));
+        }).join('');
+        i++;
+        if (i > target.length) { clearInterval(iv); el.textContent = target; }
+      }, 34);
+    });
+  };
+  window.runDecrypt(document);
 })();

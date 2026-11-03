@@ -48,17 +48,29 @@ nav {
 /* ─── NAV LINKS ─── */
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 0;
   list-style: none;
   flex: 1;
   overflow-x: auto;
   scrollbar-width: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .nav-links::-webkit-scrollbar { display: none; }
 
+.nav-links li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .nav-links li a {
-  display: block;
-  padding: 0.4rem 0.85rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.85rem;
   font-family: var(--font-head);
   font-size: 0.8rem;
   font-weight: 500;
@@ -70,6 +82,7 @@ nav {
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
   cursor: pointer;
+  box-sizing: border-box;
 }
 .nav-links li a:hover { color: var(--white); }
 .nav-links li a.active {
