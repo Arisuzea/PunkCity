@@ -65,3 +65,34 @@ body::before {
 ::-webkit-scrollbar-track { background: var(--bg1); }
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 0; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+
+/* ─── PRELOADER (hollow blocks) ─── */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  animation: preloader-out 0.5s ease 1.4s forwards;
+}
+#preloader .block {
+  width: 48px;
+  height: 10px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  animation: block-pulse 0.9s ease-in-out infinite;
+}
+#preloader .block:nth-child(2) { animation-delay: 0.15s; border-color: var(--cyan); }
+#preloader .block:nth-child(3) { animation-delay: 0.3s; border-color: var(--accent); }
+#preloader .block:nth-child(4) { animation-delay: 0.45s; border-color: var(--cyan); }
+@keyframes block-pulse {
+  0%, 100% { opacity: 0.25; transform: scaleX(0.8); }
+  50% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes preloader-out {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
