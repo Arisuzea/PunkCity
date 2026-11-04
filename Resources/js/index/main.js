@@ -46,6 +46,18 @@
     el.classList.add('decrypt');
   });
 
+  var GLY = '#%&/\<> *01■▒▓';
+
+  // Hide original text immediately so it never flashes before decrypt
+  document.querySelectorAll('.decrypt').forEach(function (el) {
+    if (!el.getAttribute('data-decrypt')) el.setAttribute('data-decrypt', el.textContent);
+    var t = el.getAttribute('data-decrypt');
+    el.textContent = t.split('').map(function (c) {
+      if (c === ' ' || c === '·' || c === '?' || c === '!' || c === ':') return c;
+      return GLY.charAt(Math.floor(Math.random() * GLY.length));
+    }).join('');
+  });
+
   // Decrypt scramble effect for .decrypt elements
   window.runDecrypt = function (rootOrEl) {
     var els = [];
@@ -57,12 +69,20 @@
       els = Array.from(rootOrEl.querySelectorAll('.decrypt'));
     }
     if (!els.length) return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var GLY = '#%&/\<> *01■▒▓';
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (el) {
+        var t = el.getAttribute('data-decrypt') || el.textContent;
+        el.textContent = t;
+      });
+      return;
+    }
     els.forEach(function (el) {
       var target = el.getAttribute('data-decrypt') || el.textContent;
       el.setAttribute('data-decrypt', target);
-      el.textContent = target;
+      el.textContent = target.split('').map(function (c) {
+        if (c === ' ' || c === '·' || c === '?' || c === '!' || c === ':') return c;
+        return GLY.charAt(Math.floor(Math.random() * GLY.length));
+      }).join('');
       var i = 0;
       var iv = setInterval(function () {
         el.textContent = target.split('').map(function (c, j) {
