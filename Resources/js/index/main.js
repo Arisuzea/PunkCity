@@ -73,10 +73,12 @@
       els.forEach(function (el) {
         var t = el.getAttribute('data-decrypt') || el.textContent;
         el.textContent = t;
+        el.dataset.decrypted = '1';
       });
       return;
     }
     els.forEach(function (el) {
+      if (el.dataset.decrypted === '1') return;
       var target = el.getAttribute('data-decrypt') || el.textContent;
       el.setAttribute('data-decrypt', target);
       el.textContent = target.split('').map(function (c) {
@@ -91,8 +93,26 @@
           return GLY.charAt(Math.floor(Math.random() * GLY.length));
         }).join('');
         i++;
-        if (i > target.length) { clearInterval(iv); el.textContent = target; }
+        if (i > target.length) { clearInterval(iv); el.textContent = target; el.dataset.decrypted = '1'; }
       }, 34);
+    });
+  };
+
+  // Reset headings to scrambled so decrypt can replay (on page switch)
+  window.resetDecrypt = function (root) {
+    var els = [];
+    if (!root) root = document;
+    if (root.classList && root.classList.contains('decrypt')) els = [root];
+    if (root.querySelectorAll) els = els.concat(Array.from(root.querySelectorAll('.decrypt')));
+    els.forEach(function (el) {
+      if (!el.getAttribute('data-decrypt')) el.setAttribute('data-decrypt', el.textContent);
+      var target = el.getAttribute('data-decrypt');
+      el.textContent = target.split('').map(function (c) {
+        if (c === ' ' || c === '·' || c === '?' || c === '!' || c === ':') return c;
+        return GLY.charAt(Math.floor(Math.random() * GLY.length));
+      }).join('');
+      el.dataset.decrypted = '0';
+      if (window.__decryptIO) window.__decryptIO.observe(el);
     });
   };
 
@@ -106,6 +126,7 @@
         }
       });
     }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    window.__decryptIO = dio;
     document.querySelectorAll('.decrypt').forEach(function (el) { dio.observe(el); });
   } else {
     window.runDecrypt(document);

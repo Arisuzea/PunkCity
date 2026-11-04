@@ -62,8 +62,8 @@ var Navigation = (function () {
     history.pushState(null, '', '#' + page);
     currentPage = page;
 
-    // Decrypt headings on the newly shown page (replays on return)
-    if (window.runDecrypt) window.runDecrypt(document.querySelector('.page.active'));
+    // Reset headings to scrambled so decrypt replays on this page
+    if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active'));
 
     // Animate newly shown page content
     if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
