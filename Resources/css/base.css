@@ -1,90 +1,67 @@
-/* ─────────────────────────────────────────────
-   base.css
-   Design tokens, box-model reset, body defaults,
-   and the scanline texture overlay.
-   Nothing component-specific lives here.
-───────────────────────────────────────────── */
-
-/* ─── RESET ─── */
+/* base.css — PunkCity v2 design tokens */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ─── DESIGN TOKENS ─── */
 :root {
-  /* Backgrounds */
-  --bg:        #050505;
-  --bg1:       #0c0c0c;
-  --bg2:       #111111;
-  --bg3:       #1a1a1a;
+  --bg:        #03060a;
+  --bg1:       #070d14;
+  --bg2:       #0b1320;
+  --bg3:       #101a2b;
+  --border:    #162235;
+  --border2:   #22324d;
+  --text:      #b8c6d9;
+  --text2:     #6f8199;
+  --text3:     #4a5a72;
+  --white:     #eaf1fb;
 
-  /* Borders */
-  --border:    #1e1e1e;
-  --border2:   #2a2a2a;
-
-  /* Text */
-  --text:      #c2c2c2;
-  --text2:     #7a7a7a;
-  --text3:     #484848;
-  --white:     #f0f0f0;
-
-  /* Cyan — interactive accent, links, code */
-  --accent:    #00ccee;
-  --accent2:   #008fb0;
-  --accent-dim:#001e2a;
-
-  /* Red — secondary accent (logo) */
+  --accent:    #ffe500;
+  --accent2:   #ccb800;
+  --accent-dim:#242000;
+  --cyan:      #00ccee;
+  --cyan-dim:  #001a24;
   --red:       #ff3c5a;
-  --red-dim:   #2a0010;
-
-  /* Yellow — brand accent, hero, labels */
-  --yellow:    #ffe500;
-  --yellow2:   #ccb800;
-  --yellow-dim:#242000;
-
-  /* Pink — danger */
+  --red-dim:   #2a0510;
   --danger:    #ff5c7a;
   --danger-dim:#280010;
-
-  /* Aliases kept for callout compatibility */
   --warn:      #ffe500;
   --warn-dim:  #242000;
 
-  /* Layout */
-  --nav-h: 56px;
-
-  /* Typography */
-  --font-head: 'Barlow Condensed', sans-serif;
-  --font-body: 'Barlow', sans-serif;
+  --nav-h: 64px;
+  --font-head: 'Rajdhani', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
-/* ─── HTML & BODY ─── */
 html { scroll-behavior: smooth; }
-
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.7;
   min-height: 100vh;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* ─── SCANLINE TEXTURE ─── */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0,0,0,0.07) 2px,
-    rgba(0,0,0,0.07) 4px
-  );
   pointer-events: none;
-  z-index: 9999;
+  z-index: 0;
+  background:
+    linear-gradient(rgba(0,204,238,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,204,238,0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 30%, transparent 75%);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg1); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }

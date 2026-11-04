@@ -1,0 +1,1679 @@
+{
+ "url": "http://127.0.0.1:8000/",
+ "at": "2026-11-04T12:00:56.717Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.8,
+    0.46,
+    0.66,
+    0.33
+   ],
+   "motion": {
+    "elements": 13,
+    "css": 2,
+    "transitions": 9,
+    "scripted": 2,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3521,
+     "screens": 3.9,
+     "words": 559,
+     "img": 18,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 16,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "NIGHT CITY OWES NOTHING.",
+     "words": 4,
+     "chars": 24,
+     "lines": 2,
+     "size": 120,
+     "vw": 8.3,
+     "font": "Rajdhani",
+     "weight": 700,
+     "tracking": 0.02,
+     "leading": 0.9,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.79,
+     "top": 421,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "NIGHT CITY OWES NOTHING.",
+     "words": 4,
+     "lines": 2,
+     "size": 120,
+     "font": "Rajdhani"
+    },
+    "headings": [
+     {
+      "text": "NIGHT CITY OWES NOTHING.",
+      "words": 4,
+      "chars": 24,
+      "lines": 2,
+      "size": 120,
+      "vw": 8.3,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 421,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "ABOUT THE LIST",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 2.7,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 1354,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "IN-GAME SHOWCASE",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 2.7,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 1881,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "CHARACTER CREATION",
+      "words": 2,
+      "chars": 18,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 2.7,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 2680,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A NOTE FROM THE AUTHOR",
+      "words": 5,
+      "chars": 22,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 2.7,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 3045,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Space Grotesk",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Rajdhani",
+       "share": 0.09,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      14,
+      15,
+      16,
+      18,
+      22,
+      26,
+      38,
+      120
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Space Grotesk",
+      "size": 16,
+      "leading": 1.75,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 87,
+     "max": {
+      "size": 120,
+      "vw": 8.3,
+      "font": "Rajdhani",
+      "text": "Night Cityowes ."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.08,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#03060a",
+     "bodyBgHsl": {
+      "h": 214,
+      "s": 0.54,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#070d14",
+       "top": 1937,
+       "hsl": {
+        "h": 212,
+        "s": 0.48,
+        "l": 0.05
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b8c6d9",
+       "share": 0.49
+      },
+      {
+       "color": "#eaf1fb",
+       "share": 0.4
+      },
+      {
+       "color": "#ffe500",
+       "share": 0.05
+      },
+      {
+       "color": "#6f8199",
+       "share": 0.04
+      },
+      {
+       "color": "#00ccee",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#ffe500",
+      "hsl": {
+       "h": 54,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#03060a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 2,
+     "heroLabels": [
+      "GET THE LIST",
+      "SEE GAMEPLAY"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 16,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 16,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 0.93
+     }
+    ],
+    "nav": {
+     "links": 9,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "rajdhani",
+     "space grotesk"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3521,
+    "margins": {
+     "left": 152,
+     "right": 162
+    },
+    "sections": [
+     {
+      "sel": "div.hero",
+      "tag": "div",
+      "top": 64,
+      "height": 828,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Night City",
+       "size": 120,
+       "tag": "h1"
+      },
+      "left": 152,
+      "right": 521,
+      "textLeft": 152,
+      "textRight": 521,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.callout.callout-important",
+      "tag": "div",
+      "top": 968,
+      "height": 187,
+      "words": 36,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 207,
+      "right": 554,
+      "textLeft": 207,
+      "textRight": 554,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.callout.callout-warning",
+      "tag": "div",
+      "top": 1183,
+      "height": 123,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 186,
+      "right": 617,
+      "textLeft": 186,
+      "textRight": 617,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "ul",
+      "tag": "ul",
+      "top": 1705,
+      "height": 128,
+      "words": 43,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 182,
+      "right": 592,
+      "textLeft": 182,
+      "textRight": 592,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.ss-section",
+      "tag": "div",
+      "top": 1881,
+      "height": 751,
+      "words": 17,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 162,
+      "right": 162,
+      "textLeft": 162,
+      "textRight": 162,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 3393,
+      "height": 128,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 184,
+      "right": 707,
+      "textLeft": 184,
+      "textRight": 707,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "NIGHT CITY OWES NOTHING.",
+      "size": 120,
+      "top": 421,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 152,
+      "n": 13
+     },
+     {
+      "x": 185,
+      "n": 2
+     },
+     {
+      "x": 232,
+      "n": 1
+     },
+     {
+      "x": 476,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 17,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.79,
+    0.73,
+    0.67,
+    0.44
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 1,
+    "transitions": 8,
+    "scripted": 3,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 3245,
+     "screens": 3.2,
+     "words": 549,
+     "img": 18,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 16,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "NIGHT CITY OWES NOTHING.",
+     "words": 4,
+     "chars": 24,
+     "lines": 2,
+     "size": 69.1,
+     "vw": 9,
+     "font": "Rajdhani",
+     "weight": 700,
+     "tracking": 0.02,
+     "leading": 0.9,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.95,
+     "top": 516,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "NIGHT CITY OWES NOTHING.",
+     "words": 4,
+     "lines": 2,
+     "size": 69.1,
+     "font": "Rajdhani"
+    },
+    "headings": [
+     {
+      "text": "NIGHT CITY OWES NOTHING.",
+      "words": 4,
+      "chars": 24,
+      "lines": 2,
+      "size": 69.1,
+      "vw": 9,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 516,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Space Grotesk",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Rajdhani",
+       "share": 0.06,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      14,
+      15,
+      16,
+      18,
+      22,
+      26,
+      69
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Space Grotesk",
+      "size": 16,
+      "leading": 1.75,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 87,
+     "max": {
+      "size": 69.1,
+      "vw": 9,
+      "font": "Rajdhani",
+      "text": "Night Cityowes ."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.05,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#03060a",
+     "bodyBgHsl": {
+      "h": 214,
+      "s": 0.54,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#070d14",
+       "top": 1906,
+       "hsl": {
+        "h": 212,
+        "s": 0.48,
+        "l": 0.05
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b8c6d9",
+       "share": 0.51
+      },
+      {
+       "color": "#eaf1fb",
+       "share": 0.41
+      },
+      {
+       "color": "#ffe500",
+       "share": 0.05
+      },
+      {
+       "color": "#6f8199",
+       "share": 0.02
+      },
+      {
+       "color": "#00ccee",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#ffe500",
+      "hsl": {
+       "h": 54,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#03060a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 2,
+     "heroLabels": [
+      "GET THE LIST",
+      "SEE GAMEPLAY"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 16,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 16,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 0.79
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "rajdhani",
+     "space grotesk"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 3245,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.hero",
+      "tag": "div",
+      "top": 64,
+      "height": 799,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Night City",
+       "size": 69,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 176,
+      "textLeft": 20,
+      "textRight": 176,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.callout.callout-important",
+      "tag": "div",
+      "top": 939,
+      "height": 212,
+      "words": 36,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 65,
+      "right": 91,
+      "textLeft": 65,
+      "textRight": 91,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.callout.callout-warning",
+      "tag": "div",
+      "top": 1179,
+      "height": 123,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 44,
+      "right": 87,
+      "textLeft": 44,
+      "textRight": 87,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "ul",
+      "tag": "ul",
+      "top": 1687,
+      "height": 128,
+      "words": 43,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 40,
+      "right": 62,
+      "textLeft": 40,
+      "textRight": 62,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.ss-section",
+      "tag": "div",
+      "top": 1863,
+      "height": 519,
+      "words": 17,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 3117,
+      "height": 128,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 54,
+      "right": 165,
+      "textLeft": 54,
+      "textRight": 165,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "NIGHT CITY OWES NOTHING.",
+      "size": 69,
+      "top": 516,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 13
+     },
+     {
+      "x": 43,
+      "n": 2
+     },
+     {
+      "x": 90,
+      "n": 1
+     },
+     {
+      "x": 206,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 17,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.82,
+    0.79,
+    0.76,
+    0.56,
+    0.44
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 2,
+    "transitions": 12,
+    "scripted": 2,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 3710,
+     "screens": 4.4,
+     "words": 549,
+     "img": 18,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 16,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "NIGHT CITY OWES NOTHING.",
+     "words": 4,
+     "chars": 24,
+     "lines": 2,
+     "size": 48,
+     "vw": 12.3,
+     "font": "Rajdhani",
+     "weight": 700,
+     "tracking": 0.02,
+     "leading": 0.9,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 381,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "NIGHT CITY OWES NOTHING.",
+     "words": 4,
+     "lines": 2,
+     "size": 48,
+     "font": "Rajdhani"
+    },
+    "headings": [
+     {
+      "text": "NIGHT CITY OWES NOTHING.",
+      "words": 4,
+      "chars": 24,
+      "lines": 2,
+      "size": 48,
+      "vw": 12.3,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 381,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "ABOUT THE LIST",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1312,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "IN-GAME SHOWCASE",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2101,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "CHARACTER CREATION",
+      "words": 2,
+      "chars": 18,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2456,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "~1,000 total mods ~600 without cosmetics",
+      "words": 6,
+      "chars": 40,
+      "lines": 2,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.7,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2827,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "A NOTE FROM THE AUTHOR",
+      "words": 5,
+      "chars": 22,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3028,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Space Grotesk",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Rajdhani",
+       "share": 0.06,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      14,
+      15,
+      16,
+      18,
+      22,
+      26,
+      48
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Space Grotesk",
+      "size": 16,
+      "leading": 1.75,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 48,
+      "vw": 12.3,
+      "font": "Rajdhani",
+      "text": "Night Cityowes ."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.05,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#03060a",
+     "bodyBgHsl": {
+      "h": 214,
+      "s": 0.54,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#b8c6d9",
+       "share": 0.51
+      },
+      {
+       "color": "#eaf1fb",
+       "share": 0.41
+      },
+      {
+       "color": "#ffe500",
+       "share": 0.05
+      },
+      {
+       "color": "#6f8199",
+       "share": 0.02
+      },
+      {
+       "color": "#00ccee",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#ffe500",
+      "hsl": {
+       "h": 54,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#03060a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 2,
+     "heroLabels": [
+      "GET THE LIST",
+      "SEE GAMEPLAY"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 16,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 16,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 798
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 0.79
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "rajdhani",
+     "space grotesk"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 3710,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.hero",
+      "tag": "div",
+      "top": 64,
+      "height": 658,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Night City",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 24,
+      "textLeft": 20,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.callout.callout-important",
+      "tag": "div",
+      "top": 798,
+      "height": 263,
+      "words": 36,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 65,
+      "right": 42,
+      "textLeft": 65,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.callout.callout-warning",
+      "tag": "div",
+      "top": 1089,
+      "height": 175,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 44,
+      "right": 67,
+      "textLeft": 44,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "p",
+      "tag": "p",
+      "top": 1455,
+      "height": 196,
+      "words": 51,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 24,
+      "textLeft": 20,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "ul",
+      "tag": "ul",
+      "top": 1789,
+      "height": 264,
+      "words": 43,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 40,
+      "right": 43,
+      "textLeft": 40,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.ss-section",
+      "tag": "div",
+      "top": 2101,
+      "height": 307,
+      "words": 18,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "blockquote",
+      "tag": "blockquote",
+      "top": 2635,
+      "height": 168,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 43,
+      "right": 42,
+      "textLeft": 43,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.stat-row",
+      "tag": "div",
+      "top": 2827,
+      "height": 153,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "~1,000 total mods",
+       "size": 26,
+       "tag": "span"
+      },
+      "left": 40,
+      "right": 96,
+      "textLeft": 40,
+      "textRight": 96,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "p",
+      "tag": "p",
+      "top": 3143,
+      "height": 140,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 35,
+      "textLeft": 20,
+      "textRight": 35,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "p",
+      "tag": "p",
+      "top": 3299,
+      "height": 196,
+      "words": 49,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 31,
+      "textLeft": 20,
+      "textRight": 31,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 3559,
+      "height": 151,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "NIGHT CITY OWES NOTHING.",
+      "size": 48,
+      "top": 381,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 14
+     },
+     {
+      "x": 43,
+      "n": 2
+     },
+     {
+      "x": 149,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 17,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 13 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "D:\\Projects\\PunkCity\\PunkCity\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "D:\\Projects\\PunkCity\\PunkCity\\.taste-skill\\inspect\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "D:\\Projects\\PunkCity\\PunkCity\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "D:\\Projects\\PunkCity\\PunkCity\\.taste-skill\\inspect\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "D:\\Projects\\PunkCity\\PunkCity\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "D:\\Projects\\PunkCity\\PunkCity\\.taste-skill\\inspect\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="{% static 'static-images/PunkCity_icon.png' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"> <!-- taste-skill-ignore -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <link rel="stylesheet" href="{% static 'css/layout.css' %}">
@@ -34,11 +34,13 @@
     </main>
 
     <!-- ═══ JAVASCRIPT ═══ -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
     <script src="{% static 'js/domHelpers.js' %}"></script>
     <script src="{% static 'js/index/navigation.js' %}"></script>
     <script src="{% static 'js/index/tabs.js' %}"></script>
     <script src="{% static 'js/index/slideshow.js' %}"></script>
     <script src="{% static 'js/index/main.js' %}"></script>
+    <script src="{% static 'js/index/motion.js' %}"></script>
     {% block extra_scripts %}{% endblock %}
   </body>
 </html>

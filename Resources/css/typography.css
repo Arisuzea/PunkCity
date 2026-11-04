@@ -1,80 +1,60 @@
-/* ─────────────────────────────────────────────
-   typography.css
-   All text-level styles: headings, body copy,
-   links, lists, inline code, code blocks, and
-   blockquotes. No layout or component rules here.
-───────────────────────────────────────────── */
-
-/* ─── HEADINGS ─── */
-h1, h2, h3, h4 {
+/* typography.css — v2 */
+h1,h2,h3,h4 {
   font-family: var(--font-head);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--white);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
+h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); margin: 0 0 1.2rem; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin: 3rem 0 1rem; color: var(--accent); }
+h3 { font-size: 1.35rem; margin: 2rem 0 0.75rem; color: var(--white); }
+h4 { font-size: 1rem; margin: 1.5rem 0 0.5rem; color: var(--text2); font-weight: 600; }
 
-h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 2rem; line-height: 1; }
-h2 { font-size: 1.6rem; font-weight: 600; margin-bottom: 1.25rem; margin-top: 3.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.75rem; margin-top: 2rem; color: var(--accent); }
-h4 { font-size: 0.9rem; font-weight: 500; color: var(--text2); margin-bottom: 0.5rem; margin-top: 1.5rem; }
-
-/* ─── BODY TEXT ─── */
-p { margin-bottom: 1.1rem; color: var(--text); }
+p { margin: 0 0 1rem; color: var(--text); max-width: 68ch; line-height: 1.75; }
 p:last-child { margin-bottom: 0; }
+a { color: var(--accent); text-decoration: none; transition: color .15s; }
+a:hover { color: var(--white); text-decoration: underline; }
+strong { color: var(--white); font-weight: 600; }
+em { color: var(--accent); font-style: normal; }
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+ul, ol { padding-left: 1.25rem; margin: 0 0 1rem; }
+li { margin: 0 0 0.4rem; color: var(--text); line-height: 1.7; }
+li::marker { color: var(--red); }
 
-strong { color: var(--white); font-weight: 500; }
-
-/* ─── LISTS ─── */
-ul, ol { padding-left: 1.4rem; margin-bottom: 1.1rem; }
-li { margin-bottom: 0.35rem; color: var(--text); line-height: 1.7; }
-li::marker { color: var(--yellow); }
-
-/* ─── INLINE CODE ─── */
 code {
   font-family: var(--font-mono);
-  font-size: 0.82em;
-  color: var(--accent);
-  background: rgba(46,158,142,0.1);
-  border: 1px solid var(--accent-dim);
-  padding: 0.1em 0.4em;
-  border-radius: 3px;
+  font-size: 0.85em;
+  color: var(--cyan);
+  background: var(--cyan-dim);
+  border: 1px solid var(--border2);
+  padding: 0.1em 0.45em;
+  border-radius: 2px;
 }
-
-/* ─── CODE BLOCKS ─── */
 pre {
   background: var(--bg1);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-left: 3px solid var(--accent);
   padding: 1.25rem 1.5rem;
   overflow-x: auto;
   margin: 1.5rem 0;
-  position: relative;
+  border-radius: 2px;
 }
-pre code {
-  font-size: 0.83rem;
-  color: var(--text);
-  background: none;
-  border: none;
-  padding: 0;
-}
+pre code { font-size: 0.85rem; color: var(--text); background: none; border: none; padding: 0; }
 
-/* ─── BLOCKQUOTE ─── */
 blockquote {
-  border-left: 2px solid var(--border2);
-  padding: 0.75rem 1.25rem;
+  border-left: 3px solid var(--red);
+  padding: 1rem 1.25rem;
   margin: 1.5rem 0;
+  background: var(--red-dim);
+  color: var(--text);
   font-style: italic;
-  color: var(--text2);
-  font-size: 0.95rem;
 }
-blockquote em { font-style: normal; }
+blockquote em { font-style: normal; color: var(--white); }
 
-/* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
-  h1 { font-size: 2.1rem; }
-  h2 { font-size: 1.35rem; }
-  pre { padding: 1rem; font-size: 0.78rem; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  pre { padding: 1rem; font-size: 0.8rem; }
 }

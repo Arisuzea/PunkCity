@@ -28,7 +28,7 @@
 
   // Scroll-reveal: add .reveal to sections, observe
   if ('IntersectionObserver' in window) {
-    document.querySelectorAll('section, .callout, .stat-pill').forEach(function (el) {
+    document.querySelectorAll('section, .callout, .stat-pill, .gameplay-card').forEach(function (el) {
       el.classList.add('reveal');
     });
     var io = new IntersectionObserver(function (entries) {
@@ -41,22 +41,33 @@
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
   }
 
+  // Mark section headings for decrypt-on-scroll
+  document.querySelectorAll('h1, h2, h3, .hero-title').forEach(function (el) {
+    el.classList.add('decrypt');
+  });
+
   // Decrypt scramble effect for .decrypt elements
-  window.runDecrypt = function (root) {
-    root = root || document;
-    var GLY = '#%&/\\<> *01■▒▓';
-    var els = root.querySelectorAll('.decrypt');
+  window.runDecrypt = function (rootOrEl) {
+    var els = [];
+    if (!rootOrEl || rootOrEl === document) {
+      els = Array.from(document.querySelectorAll('.decrypt'));
+    } else if (rootOrEl.classList && rootOrEl.classList.contains('decrypt')) {
+      els = [rootOrEl];
+    } else if (rootOrEl.querySelectorAll) {
+      els = Array.from(rootOrEl.querySelectorAll('.decrypt'));
+    }
     if (!els.length) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var GLY = '#%&/\<> *01■▒▓';
     els.forEach(function (el) {
       var target = el.getAttribute('data-decrypt') || el.textContent;
       el.setAttribute('data-decrypt', target);
-      el.textContent = target; // reset
+      el.textContent = target;
       var i = 0;
       var iv = setInterval(function () {
         el.textContent = target.split('').map(function (c, j) {
           if (j < i) return c;
-          if (c === ' ' || c === '·' || c === '?') return c;
+          if (c === ' ' || c === '·' || c === '?' || c === '!' || c === ':') return c;
           return GLY.charAt(Math.floor(Math.random() * GLY.length));
         }).join('');
         i++;
@@ -64,5 +75,19 @@
       }, 34);
     });
   };
-  window.runDecrypt(document);
+
+  // Trigger decrypt when a heading scrolls into view
+  if ('IntersectionObserver' in window) {
+    var dio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          window.runDecrypt(e.target);
+          dio.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    document.querySelectorAll('.decrypt').forEach(function (el) { dio.observe(el); });
+  } else {
+    window.runDecrypt(document);
+  }
 })();

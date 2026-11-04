@@ -1,79 +1,48 @@
-/* ─────────────────────────────────────────────
-   cards.css
-   Gameplay feature cards displayed in an
-   auto-fit CSS grid. Scoped entirely to
-   .gameplay-grid and .gameplay-card.
-───────────────────────────────────────────── */
-
-/* ─── GRID ─── */
+/* cards.css — v2 */
 .gameplay-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
-
-/* ─── CARD ─── */
 .gameplay-card {
-  background: var(--bg1);
-  border: 1px solid var(--border);
-  border-radius: 4px;
+  background: var(--bg2);
   padding: 1.75rem;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.2s;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
 }
-.gameplay-card:hover { border-color: var(--border2); }
-
+.gameplay-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 40px rgba(0,204,238,0.12);
+}
 .gameplay-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: var(--yellow);
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background: linear-gradient(90deg, var(--cyan), var(--accent));
 }
-
 .gameplay-card-tag {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--yellow);
-  margin-bottom: 0.75rem;
-  display: block;
-}
-
-.gameplay-card h3 {
-  font-size: 1.3rem;
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  color: var(--white);
-}
-
-.gameplay-card p  { font-size: 0.93rem; color: var(--text2); margin-bottom: 0.6rem; }
-.gameplay-card ul { padding-left: 1.1rem; margin: 0.75rem 0 0; font-size: 0.88rem; }
-.gameplay-card li { color: var(--text2); margin-bottom: 0.2rem; }
-
-.gameplay-card-link {
-  display: inline-block;
-  margin-top: 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
   color: var(--accent);
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--accent-dim);
-  padding-bottom: 1px;
-  text-decoration: none;
-  transition: border-color 0.15s, color 0.15s;
+  letter-spacing: 0;
+  text-transform: none;
+  display:block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
-.gameplay-card-link:hover {
-  color: var(--white);
-  border-color: var(--white);
-  text-decoration: none;
+.gameplay-card h3 { font-size: 1.35rem; margin: 0 0 0.6rem; color: var(--white); }
+.gameplay-card p { font-size: 1rem; color: var(--text2); margin-bottom: 0.5rem; }
+.gameplay-card ul { padding-left: 1.1rem; margin: 0.75rem 0 0; font-size: 0.95rem; }
+.gameplay-card li { color: var(--text2); margin-bottom: 0.2rem; }
+.gameplay-card-link {
+  display:inline-block; margin-top: 1rem;
+  font-family: var(--font-head); font-size: 0.9rem;
+  color: var(--accent); text-decoration:none;
+  letter-spacing: .05em; text-transform: uppercase;
+  transition: color .15s;
 }
-
-/* ─── RESPONSIVE ─── */
-@media (max-width: 768px) {
-  .gameplay-grid { grid-template-columns: 1fr; }
-}
+.gameplay-card-link:hover { color: var(--white); }
+@media (max-width: 768px) { .gameplay-grid { grid-template-columns: 1fr; } }

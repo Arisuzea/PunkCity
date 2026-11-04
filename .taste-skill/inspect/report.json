@@ -1,0 +1,1392 @@
+{
+ "url": "http://127.0.0.1:8000/#requirements",
+ "at": "2026-11-04T11:33:26.080Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.35,
+    0.26
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 0,
+    "transitions": 3,
+    "scripted": 5,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1233,
+     "screens": 1.4,
+     "words": 118,
+     "img": 18,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "CAN YOU RUN IT?",
+     "words": 4,
+     "chars": 15,
+     "lines": 1,
+     "size": 73.6,
+     "vw": 5.1,
+     "font": "Rajdhani",
+     "weight": 700,
+     "tracking": 0.02,
+     "leading": 1.05,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.78,
+     "top": 140,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [
+     {
+      "text": "CAN YOU RUN IT?",
+      "words": 4,
+      "chars": 15,
+      "lines": 1,
+      "size": 73.6,
+      "vw": 5.1,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 140,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "PLATFORM & OS",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 2.7,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 511,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "HARDWARE",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 2.7,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 880,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Space Grotesk",
+       "share": 0.73,
+       "mono": false
+      },
+      {
+       "family": "Rajdhani",
+       "share": 0.22,
+       "mono": false
+      },
+      {
+       "family": "JetBrains Mono",
+       "share": 0.05,
+       "mono": true
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      12,
+      14,
+      15,
+      16,
+      38,
+      74
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Space Grotesk",
+      "size": 16,
+      "leading": 1.75,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 87,
+     "max": {
+      "size": 73.6,
+      "vw": 5.1,
+      "font": "Rajdhani",
+      "text": "Can You Run It?"
+     },
+     "monoShare": 0.05,
+     "monoProseShare": 0.05,
+     "monoFamilies": [
+      "JetBrains Mono"
+     ],
+     "monoSamples": [
+      "System Requirements",
+      "~84.6 GB",
+      "~19.4 GB",
+      "~20.0 GB",
+      "~39.4GB"
+     ],
+     "microLabels": 4,
+     "microLabelShare": 0.048,
+     "microSamples": [
+      "System Requirements",
+      "Component",
+      "Requirement",
+      "Notes"
+     ],
+     "upperShare": 0.28,
+     "centerShare": 0.04,
+     "smallText": 1
+    },
+    "eyebrows": [
+     {
+      "text": "System Requirements",
+      "above": "CAN YOU RUN IT?",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 12,
+      "top": 112
+     },
+     {
+      "text": "Only is supported.",
+      "above": "PLATFORM & OS",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14.9,
+      "top": 418
+     },
+     {
+      "text": "DLC",
+      "above": "HARDWARE",
+      "upper": true,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13.6,
+      "top": 777
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#03060a",
+     "bodyBgHsl": {
+      "h": 214,
+      "s": 0.54,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#b8c6d9",
+       "share": 0.47
+      },
+      {
+       "color": "#6f8199",
+       "share": 0.19
+      },
+      {
+       "color": "#4a5a72",
+       "share": 0.12
+      },
+      {
+       "color": "#eaf1fb",
+       "share": 0.11
+      },
+      {
+       "color": "#00ccee",
+       "share": 0.06
+      }
+     ],
+     "button": null,
+     "lowContrast": [
+      {
+       "text": "Exact figures will be updated as the lis",
+       "ratio": 2.9,
+       "need": 4.5,
+       "size": 13.6,
+       "fg": "#4a5a72",
+       "bg": "#03060a"
+      },
+      {
+       "text": "Do allocate atleast 70GB for the tempora",
+       "ratio": 2.9,
+       "need": 4.5,
+       "size": 13.6,
+       "fg": "#4a5a72",
+       "bg": "#03060a"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "div.page-header 1180px",
+      "div.size-row 1068px",
+      "div.size-row 1068px",
+      "div.size-row 1068px",
+      "div.size-row 1068px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 9,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "jetbrains mono",
+     "rajdhani",
+     "space grotesk"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 1233,
+    "margins": {
+     "left": 162,
+     "right": 641
+    },
+    "sections": [
+     {
+      "sel": "div.page-header",
+      "tag": "div",
+      "top": 64,
+      "height": 171,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Can You Run It?",
+       "size": 74,
+       "tag": "h1"
+      },
+      "left": 162,
+      "right": 753,
+      "textLeft": 162,
+      "textRight": 753,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.content",
+      "tag": "div",
+      "top": 235,
+      "height": 911,
+      "words": 98,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Platform & OS",
+       "size": 38,
+       "tag": "h2"
+      },
+      "left": 162,
+      "right": 626,
+      "textLeft": 162,
+      "textRight": 626,
+      "fullBleed": false,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "CAN YOU RUN IT?",
+      "size": 74,
+      "top": 140,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 162,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.36,
+    "voidBox": {
+     "x": 840,
+     "y": 120,
+     "w": 600,
+     "h": 780
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.38,
+    0.38
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 1,
+    "transitions": 2,
+    "scripted": 4,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1166,
+     "screens": 1.1,
+     "words": 108,
+     "img": 18,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "CAN YOU RUN IT?",
+     "words": 4,
+     "chars": 15,
+     "lines": 1,
+     "size": 35.2,
+     "vw": 4.6,
+     "font": "Rajdhani",
+     "weight": 700,
+     "tracking": 0.02,
+     "leading": 1.05,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.95,
+     "top": 140,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [
+     {
+      "text": "CAN YOU RUN IT?",
+      "words": 4,
+      "chars": 15,
+      "lines": 1,
+      "size": 35.2,
+      "vw": 4.6,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 140,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Space Grotesk",
+       "share": 0.82,
+       "mono": false
+      },
+      {
+       "family": "Rajdhani",
+       "share": 0.12,
+       "mono": false
+      },
+      {
+       "family": "JetBrains Mono",
+       "share": 0.06,
+       "mono": true
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      12,
+      14,
+      15,
+      16,
+      26,
+      35
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Space Grotesk",
+      "size": 16,
+      "leading": 1.75,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 87,
+     "max": {
+      "size": 35.2,
+      "vw": 4.6,
+      "font": "Rajdhani",
+      "text": "Can You Run It?"
+     },
+     "monoShare": 0.06,
+     "monoProseShare": 0.06,
+     "monoFamilies": [
+      "JetBrains Mono"
+     ],
+     "monoSamples": [
+      "System Requirements",
+      "~84.6 GB",
+      "~19.4 GB",
+      "~20.0 GB",
+      "~39.4GB"
+     ],
+     "microLabels": 4,
+     "microLabelShare": 0.054,
+     "microSamples": [
+      "System Requirements",
+      "Component",
+      "Requirement",
+      "Notes"
+     ],
+     "upperShare": 0.19,
+     "centerShare": 0.04,
+     "smallText": 1
+    },
+    "eyebrows": [
+     {
+      "text": "System Requirements",
+      "above": "CAN YOU RUN IT?",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 12,
+      "top": 112
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#03060a",
+     "bodyBgHsl": {
+      "h": 214,
+      "s": 0.54,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#b8c6d9",
+       "share": 0.53
+      },
+      {
+       "color": "#4a5a72",
+       "share": 0.13
+      },
+      {
+       "color": "#eaf1fb",
+       "share": 0.12
+      },
+      {
+       "color": "#6f8199",
+       "share": 0.11
+      },
+      {
+       "color": "#00ccee",
+       "share": 0.06
+      }
+     ],
+     "button": null,
+     "lowContrast": [
+      {
+       "text": "Exact figures will be updated as the lis",
+       "ratio": 2.9,
+       "need": 4.5,
+       "size": 13.6,
+       "fg": "#4a5a72",
+       "bg": "#03060a"
+      },
+      {
+       "text": "Do allocate atleast 70GB for the tempora",
+       "ratio": 2.9,
+       "need": 4.5,
+       "size": 13.6,
+       "fg": "#4a5a72",
+       "bg": "#03060a"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "div.page-header 768px",
+      "div.size-row 680px",
+      "div.size-row 680px",
+      "div.size-row 680px",
+      "div.size-row 680px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "jetbrains mono",
+     "rajdhani",
+     "space grotesk"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1166,
+    "margins": {
+     "left": 20,
+     "right": 111
+    },
+    "sections": [
+     {
+      "sel": "div.page-header",
+      "tag": "div",
+      "top": 64,
+      "height": 130,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Can You Run It?",
+       "size": 35,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 497,
+      "textLeft": 20,
+      "textRight": 497,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.content",
+      "tag": "div",
+      "top": 194,
+      "height": 884,
+      "words": 98,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Platform & OS",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 96,
+      "textLeft": 20,
+      "textRight": 96,
+      "fullBleed": false,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "CAN YOU RUN IT?",
+      "size": 35,
+      "top": 140,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.48,
+    0.38
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 1,
+    "transitions": 2,
+    "scripted": 4,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 1502,
+     "screens": 1.8,
+     "words": 108,
+     "img": 18,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "CAN YOU RUN IT?",
+     "words": 4,
+     "chars": 15,
+     "lines": 1,
+     "size": 35.2,
+     "vw": 9,
+     "font": "Rajdhani",
+     "weight": 700,
+     "tracking": 0.02,
+     "leading": 1.05,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 140,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [
+     {
+      "text": "CAN YOU RUN IT?",
+      "words": 4,
+      "chars": 15,
+      "lines": 1,
+      "size": 35.2,
+      "vw": 9,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 140,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "PLATFORM & OS",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 521,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "HARDWARE",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Rajdhani",
+      "weight": 700,
+      "tracking": 0.02,
+      "leading": 1.05,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1134,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Space Grotesk",
+       "share": 0.82,
+       "mono": false
+      },
+      {
+       "family": "Rajdhani",
+       "share": 0.12,
+       "mono": false
+      },
+      {
+       "family": "JetBrains Mono",
+       "share": 0.06,
+       "mono": true
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      12,
+      14,
+      15,
+      16,
+      26,
+      35
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Space Grotesk",
+      "size": 16,
+      "leading": 1.75,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.7
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 35.2,
+      "vw": 9,
+      "font": "Rajdhani",
+      "text": "Can You Run It?"
+     },
+     "monoShare": 0.06,
+     "monoProseShare": 0.06,
+     "monoFamilies": [
+      "JetBrains Mono"
+     ],
+     "monoSamples": [
+      "System Requirements",
+      "~84.6 GB",
+      "~19.4 GB",
+      "~20.0 GB",
+      "~39.4GB"
+     ],
+     "microLabels": 4,
+     "microLabelShare": 0.054,
+     "microSamples": [
+      "System Requirements",
+      "Component",
+      "Requirement",
+      "Notes"
+     ],
+     "upperShare": 0.19,
+     "centerShare": 0.04,
+     "smallText": 1
+    },
+    "eyebrows": [
+     {
+      "text": "System Requirements",
+      "above": "CAN YOU RUN IT?",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 12,
+      "top": 112
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#03060a",
+     "bodyBgHsl": {
+      "h": 214,
+      "s": 0.54,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#03060a",
+       "top": 1334,
+       "hsl": {
+        "h": 214,
+        "s": 0.54,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b8c6d9",
+       "share": 0.53
+      },
+      {
+       "color": "#4a5a72",
+       "share": 0.13
+      },
+      {
+       "color": "#eaf1fb",
+       "share": 0.12
+      },
+      {
+       "color": "#6f8199",
+       "share": 0.11
+      },
+      {
+       "color": "#00ccee",
+       "share": 0.06
+      }
+     ],
+     "button": null,
+     "lowContrast": [
+      {
+       "text": "Exact figures will be updated as the lis",
+       "ratio": 2.9,
+       "need": 4.5,
+       "size": 13.6,
+       "fg": "#4a5a72",
+       "bg": "#03060a"
+      },
+      {
+       "text": "Do allocate atleast 70GB for the tempora",
+       "ratio": 2.9,
+       "need": 4.5,
+       "size": 13.6,
+       "fg": "#4a5a72",
+       "bg": "#03060a"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "div.page-header 390px",
+      "div.size-row 302px",
+      "div.size-row 302px",
+      "div.size-row 302px",
+      "div.size-row 302px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "jetbrains mono",
+     "rajdhani",
+     "space grotesk"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 1502,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.page-header",
+      "tag": "div",
+      "top": 64,
+      "height": 130,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Can You Run It?",
+       "size": 35,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 119,
+      "textLeft": 20,
+      "textRight": 119,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.content",
+      "tag": "div",
+      "top": 194,
+      "height": 1219,
+      "words": 98,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Platform & OS",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "CAN YOU RUN IT?",
+      "size": 35,
+      "top": 140,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "3 eyebrow/kicker label(s) above headings: \"System Requirements\" above \"CAN YOU RUN IT?\"; \"Only is supported.\" above \"PLATFORM & OS\"; \"DLC\" above \"HARDWARE\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "width": 1440,
+   "message": "Monospace type outside code: JetBrains Mono — e.g. \"System Requirements\", \"~84.6 GB\", \"~19.4 GB\", \"~20.0 GB\"",
+   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "4 tiny uppercase letter-spaced labels (e.g. \"System Requirements\", \"Component\", \"Requirement\", \"Notes\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "5 thin rule(s)/divider line(s): div.page-header 1180px | div.size-row 1068px | div.size-row 1068px | div.size-row 1068px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Low-contrast text: \"Exact figures will be updated as the lis\" 2.9:1 needs 4.5:1; \"Do allocate atleast 70GB for the tempora\" 2.9:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (Space Grotesk, Rajdhani, JetBrains Mono).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 1440,
+   "message": "No visible button in the first screen.",
+   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "small-text",
+   "width": 1440,
+   "message": "1 text block(s) under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "late-title",
+   "width": 1440,
+   "message": "The title is not readable 1.2s after the page loaded (it has no size yet).",
+   "fix": "Put the headline in the HTML, painted on the first frame; the load sequence only adds arrival and is settled by 1.2s (references/motion.md, \"Load sequence in 1.2 seconds\"). No preloader, no gate, no waiting for the load event.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The page sits off-centre: its content comes to 162px from the left edge but only to 641px from the right, at 1440px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure).",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "hero-void",
+   "width": 1440,
+   "message": "36% of the first screen is one empty block (600×780px at 840,120).",
+   "fix": "Place the void on purpose or fill it: move the picture, the film or one fact into it, grow the headline to meet it, or shrink the screen to its content. A void reads as placed only when something closes it on the far side and it is the screen's one rest."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 8 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "D:\\Projects\\PunkCity\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "D:\\Projects\\PunkCity\\.taste-skill\\inspect\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "D:\\Projects\\PunkCity\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "D:\\Projects\\PunkCity\\.taste-skill\\inspect\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "D:\\Projects\\PunkCity\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "D:\\Projects\\PunkCity\\.taste-skill\\inspect\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

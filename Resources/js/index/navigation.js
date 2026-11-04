@@ -61,8 +61,27 @@ var Navigation = (function () {
     window.scrollTo({ top: 0, behavior: 'instant' });
     history.pushState(null, '', '#' + page);
     currentPage = page;
-    // Re-trigger decrypt on the newly shown page
-    if (window.runDecrypt) window.runDecrypt(document);
+
+    // Decrypt headings on the newly shown page (replays on return)
+    if (window.runDecrypt) window.runDecrypt(document.querySelector('.page.active'));
+
+    // Animate newly shown page content
+    if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (typeof anime !== 'undefined') {
+        var reveals = document.querySelectorAll('.page.active .reveal:not(.in)');
+        if (reveals.length) {
+          anime({
+            targets: reveals,
+            opacity: [0, 1],
+            translateY: [18, 0],
+            duration: 600,
+            easing: 'easeOutCubic',
+            delay: anime.stagger(60)
+          });
+          reveals.forEach(function (el) { el.classList.add('in'); });
+        }
+      }
+    }
   }
 
   function closeMobile() {
