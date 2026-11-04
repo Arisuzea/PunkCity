@@ -14,8 +14,8 @@
   margin-bottom: 0.5rem;
   display:flex; align-items:center; gap:0.5rem;
 }
-.callout p { margin-bottom: 0.4rem; font-size: 0.93rem; }
-.callout ul { margin: 0.25rem 0 0 1rem; font-size: 0.93rem; }
+.callout p { margin-bottom: 0.4rem; font-size: 0.93rem; max-width: none; }
+.callout ul { margin: 0.25rem 0 0 1rem; font-size: 0.93rem; max-width: none; }
 .callout li { margin-bottom: 0.25rem; }
 .callout-important { background: var(--cyan-dim); }
 .callout-important .callout-title { color: var(--cyan); }
