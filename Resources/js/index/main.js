@@ -56,6 +56,14 @@
       if (c === ' ' || c === '·' || c === '?' || c === '!' || c === ':') return c;
       return GLY.charAt(Math.floor(Math.random() * GLY.length));
     }).join('');
+    if (el._scrambleIv) clearInterval(el._scrambleIv);
+    el._scrambleIv = setInterval(function () {
+      var tt = el.getAttribute('data-decrypt');
+      el.textContent = tt.split('').map(function (c) {
+        if (c === ' ' || c === '·' || c === '?' || c === '!' || c === ':') return c;
+        return GLY.charAt(Math.floor(Math.random() * GLY.length));
+      }).join('');
+    }, 90);
   });
 
   // Decrypt scramble effect for .decrypt elements
@@ -79,6 +87,7 @@
     }
     els.forEach(function (el) {
       if (el.dataset.decrypted === '1') return;
+      if (el._scrambleIv) { clearInterval(el._scrambleIv); el._scrambleIv = null; }
       var target = el.getAttribute('data-decrypt') || el.textContent;
       el.setAttribute('data-decrypt', target);
       el.textContent = target.split('').map(function (c) {
@@ -107,11 +116,19 @@
     els.forEach(function (el) {
       if (!el.getAttribute('data-decrypt')) el.setAttribute('data-decrypt', el.textContent);
       var target = el.getAttribute('data-decrypt');
+      if (el._scrambleIv) { clearInterval(el._scrambleIv); el._scrambleIv = null; }
       el.textContent = target.split('').map(function (c) {
         if (c === ' ' || c === '·' || c === '?' || c === '!' || c === ':') return c;
         return GLY.charAt(Math.floor(Math.random() * GLY.length));
       }).join('');
       el.dataset.decrypted = '0';
+      el._scrambleIv = setInterval(function () {
+        var tt = el.getAttribute('data-decrypt');
+        el.textContent = tt.split('').map(function (c) {
+          if (c === ' ' || c === '·' || c === '?' || c === '!' || c === ':') return c;
+          return GLY.charAt(Math.floor(Math.random() * GLY.length));
+        }).join('');
+      }, 90);
       if (window.__decryptIO) window.__decryptIO.observe(el);
     });
   };
