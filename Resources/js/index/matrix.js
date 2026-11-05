@@ -8,7 +8,7 @@
   var w = 0, h = 0;
   var drops = [];
   var columns = 0;
-  var fontSize = 11;
+  var fontSize = 9;
   var chars = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ0123456789';
 
   function init() {
