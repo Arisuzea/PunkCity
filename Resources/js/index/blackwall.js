@@ -73,15 +73,15 @@
     // scanning light band
     t += 0.004;
     var scanY = h * 0.62 + Math.sin(t) * h * 0.05;
-    var grad = ctx.createLinearGradient(0, scanY - 50, 0, scanY + 50);
+    var grad = ctx.createLinearGradient(0, scanY - 20, 0, scanY + 20);
     grad.addColorStop(0, 'rgba(255, 60, 120, 0)');
     grad.addColorStop(0.5, 'rgba(255, 140, 190, 0.85)');
     grad.addColorStop(1, 'rgba(255, 60, 120, 0)');
     ctx.fillStyle = grad;
-    ctx.fillRect(0, scanY - 50, w, 100);
+    ctx.fillRect(0, scanY - 20, w, 40);
 
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.moveTo(0, scanY);
     ctx.lineTo(w, scanY);
