@@ -73,6 +73,9 @@ main { margin-top: var(--nav-h); min-height: 0; position:relative; z-index:1; }
   padding: 3rem 2rem 4rem;
   position: relative;
   z-index:1;
+  background: rgba(0,0,0,0.32);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .content-wide { max-width: 1320px; }
 
