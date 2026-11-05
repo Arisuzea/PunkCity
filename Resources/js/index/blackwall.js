@@ -9,7 +9,7 @@
   var vLines = [];
   var drops = [];
   var columns = 0;
-  var fontSize = 15;
+  var fontSize = 11;
   var chars = 'PUNKCITY0123456789#%&@';
 
   function init() {
