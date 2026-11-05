@@ -22,6 +22,7 @@
   window.addEventListener('resize', init);
 
   function spawn(n) {
+    if (drops.length > 1800) return;
     for (var k = 0; k < n; k++) {
       var col = Math.floor(Math.random() * columns);
       var decrypt = Math.random() < 0.3;
