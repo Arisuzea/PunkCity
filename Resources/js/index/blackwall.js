@@ -37,7 +37,7 @@
     ctx.fillRect(0, 0, w, h);
 
     // horizontal grid
-    ctx.strokeStyle = 'rgba(120, 0, 40, 0.16)';
+    ctx.strokeStyle = 'rgba(0, 80, 30, 0.18)';
     ctx.lineWidth = 1;
     var hStep = 38;
     for (var y = 0; y < h; y += hStep) {
@@ -50,7 +50,7 @@
     // vertical lines with varying height/opacity
     for (var i = 0; i < vLines.length; i++) {
       var v = vLines[i];
-      ctx.strokeStyle = 'rgba(200, 20, 70, ' + v.alpha + ')';
+      ctx.strokeStyle = 'rgba(0, 180, 60, ' + (v.alpha*0.6) + ')';
       ctx.beginPath();
       ctx.moveTo(v.x, h);
       ctx.lineTo(v.x, h - v.height);
@@ -62,30 +62,13 @@
     for (var j = 0; j < drops.length; j++) {
       var text = chars.charAt(Math.floor(Math.random() * chars.length));
       var alpha = 0.55 + Math.random() * 0.4;
-      ctx.fillStyle = 'rgba(255, 60, 90, ' + alpha + ')';
+      ctx.fillStyle = 'rgba(0, 255, 65, ' + alpha + ')';
       ctx.fillText(text, j * fontSize, drops[j] * fontSize);
       if (drops[j] * fontSize > h && Math.random() > 0.965) {
         drops[j] = 0;
       }
       drops[j] += 0.5;
     }
-
-    // scanning light band
-    t += 0.004;
-    var scanY = h * 0.62 + Math.sin(t) * h * 0.05;
-    var grad = ctx.createLinearGradient(0, scanY - 20, 0, scanY + 20);
-    grad.addColorStop(0, 'rgba(255, 60, 120, 0)');
-    grad.addColorStop(0.5, 'rgba(255, 140, 190, 0.85)');
-    grad.addColorStop(1, 'rgba(255, 60, 120, 0)');
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, scanY - 20, w, 40);
-
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(0, scanY);
-    ctx.lineTo(w, scanY);
-    ctx.stroke();
 
     requestAnimationFrame(draw);
   }
