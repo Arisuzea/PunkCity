@@ -92,3 +92,21 @@
     setTimeout(function () { animateIn(document); }, 50);
   });
 })();
+
+(function () {
+  'use strict';
+  function ready(fn) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+    else fn();
+  }
+  ready(function () {
+    var heroBg = document.querySelector('.hero-bg');
+    if (!heroBg) return;
+    function update() {
+      var y = window.scrollY || window.pageYOffset || 0;
+      heroBg.style.backgroundPosition = 'center ' + (y * 0.3) + 'px';
+    }
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+  });
+})();
