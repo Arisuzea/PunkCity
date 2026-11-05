@@ -25,7 +25,7 @@
   function draw() {
     ctx.fillStyle = 'rgba(0,0,0,0.08)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#ffe500';
+    ctx.fillStyle = '#ff3c5a';
     ctx.font = fontSize + 'px "JetBrains Mono", monospace';
     for (var i = 0; i < drops.length; i++) {
       var text = chars.charAt(Math.floor(Math.random() * chars.length));
