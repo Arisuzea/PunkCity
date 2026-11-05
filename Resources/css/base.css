@@ -45,7 +45,7 @@ body {
 }
 
 
-#matrix-bg {
+#blackwall-bg {
   position: fixed;
   inset: 0;
   width: 100%;
@@ -96,5 +96,5 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #matrix-bg { display: none; }
+  #blackwall-bg { display: none; }
 }
