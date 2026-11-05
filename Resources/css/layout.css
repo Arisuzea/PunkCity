@@ -24,7 +24,7 @@ main { margin-top: var(--nav-h); min-height: 0; position:relative; z-index:1; }
 @keyframes hero-drift { from { transform: scale(1);} to { transform: scale(1.1);} }
 .hero-grad {
   position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(3,6,10,0.3) 0%, rgba(3,6,10,0.55) 45%, var(--bg) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.55) 45%, var(--bg) 100%);
 }
 .hero-sweep { display:none; }
 .hero-content {
