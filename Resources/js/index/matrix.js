@@ -47,15 +47,15 @@
   var first = true;
   function draw(now) {
     if (!lastTime) lastTime = now;
-    var dt = Math.min((now - lastTime) / 1000, 0.1); // seconds, capped
+    var dt = Math.min((now - lastTime) / 1000, 0.05); // seconds, capped low to avoid jumps
     lastTime = now;
     var scale = dt * 60; // normalize to 60fps
 
     if (first) { ctx.fillStyle = '#000000'; first = false; }
-    else { ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; }
+    else { ctx.fillStyle = 'rgba(0, 0, 0, ' + Math.min(0.5, 0.1 * scale) + ')'; }
     ctx.fillRect(0, 0, w, h);
 
-    spawn(3);
+    spawn(Math.max(1, Math.round(3 * scale)));
 
     ctx.font = 'bold ' + fontSize + 'px "JetBrains Mono", monospace';
     for (var i = drops.length - 1; i >= 0; i--) {
