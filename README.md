@@ -1,6 +1,6 @@
 # Documentation has been moved
 
-[![Visit Website](Resources/PunkCity_header.png)](https://punkcity.vercel.app)
+[![Visit Website](Resources/static-images/PunkCity_header.png)](https://punkcity.vercel.app)
 
 > [!NOTE]
 > This GitHub README is no longer updated. All instructions, requirements, installation steps, and the modlist itself are now hosted on our dedicated site:
