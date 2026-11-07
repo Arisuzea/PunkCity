@@ -11,15 +11,20 @@
   var GLY = '#%&/\<> *01■▒▓';
   var drops = [];
   var columns = 0;
+  var lastW = 0, lastH = 0;
+  var lastTime = 0;
 
-  function init() {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-    columns = Math.floor(w / fontSize);
+  function init(force) {
+    var nw = window.innerWidth;
+    var nh = window.innerHeight;
+    if (!force && nw === lastW && Math.abs(nh - lastH) < 150) return; // ignore mobile address-bar show/hide
+    lastW = w = canvas.width = nw;
+    lastH = h = canvas.height = nh;
+    columns = Math.max(1, Math.floor(w / fontSize));
     drops = [];
   }
-  init();
-  window.addEventListener('resize', init);
+  init(true);
+  window.addEventListener('resize', function () { init(false); });
 
   function spawn(n) {
     if (drops.length > 1800) return;
@@ -40,20 +45,24 @@
   }
 
   var first = true;
-  function draw() {
+  function draw(now) {
+    if (!lastTime) lastTime = now;
+    var dt = Math.min((now - lastTime) / 1000, 0.1); // seconds, capped
+    lastTime = now;
+    var scale = dt * 60; // normalize to 60fps
+
     if (first) { ctx.fillStyle = '#000000'; first = false; }
     else { ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; }
     ctx.fillRect(0, 0, w, h);
 
-    // spawn more drops for density
     spawn(3);
 
     ctx.font = 'bold ' + fontSize + 'px "JetBrains Mono", monospace';
     for (var i = drops.length - 1; i >= 0; i--) {
       var d = drops[i];
-      d.y += d.speed;
+      d.y += d.speed * scale;
       if (d.decrypt) {
-        if (d.age < 10) {
+        if (d.age < 5) {
           d.ch = GLY.charAt(Math.floor(Math.random() * GLY.length));
           d.age++;
         } else {
@@ -71,5 +80,5 @@
 
     requestAnimationFrame(draw);
   }
-  draw();
+  requestAnimationFrame(draw);
 })();
