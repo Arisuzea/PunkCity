@@ -7,7 +7,6 @@
 
 ## Updated
 - Alt's Hand
-- Alt's Hand - VTK
 - Audible Traffic Radios
 - Aurore Romanced
 - Better HMGs
