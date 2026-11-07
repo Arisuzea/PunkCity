@@ -144,3 +144,4 @@
 - **Fixed:** NCPD kills incorrectly penalized reputation.
 - **Fixed:** Barghest kills incorrectly penalized reputation.
 - **Fixed:** The Brat quest became unfinishable when enemies died.
+- **New:** Added keybind hints for related events — you'll probably notice them.
