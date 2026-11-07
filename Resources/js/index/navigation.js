@@ -35,39 +35,31 @@ var Navigation = (function () {
   function navigate(page) {
     if (!PAGES.includes(page)) page = 'home';
 
-    // Page transition wipe (C&B style)
-    if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      var gate = document.getElementById('pageGate');
-      if (!gate) {
-        gate = document.createElement('div');
-        gate.id = 'pageGate';
-        gate.className = 'page-transition';
-        document.body.appendChild(gate);
-      }
-      gate.classList.add('active');
-      setTimeout(function () { gate.classList.remove('active'); }, 200);
+    var reduced = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+    var gate = document.getElementById('pageGate');
+    if (!gate) {
+      gate = document.createElement('div');
+      gate.id = 'pageGate';
+      gate.className = 'page-transition';
+      gate.innerHTML = '<div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>';
+      document.body.appendChild(gate);
     }
 
-    DOMHelpers.setActive(
-      document.querySelectorAll('.page'),
-      function (el) { return el.id === 'page-' + page; }
-    );
-
-    DOMHelpers.setActive(
-      document.querySelectorAll('[data-page]'),
-      function (el) { return el.getAttribute('data-page') === page; }
-    );
-
-    window.scrollTo({ top: 0, behavior: 'instant' });
-    history.pushState(null, '', '#' + page);
-    currentPage = page;
-
-    // Reset headings to scrambled so decrypt replays on this page
-    if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active'));
-
-    // Animate newly shown page content
-    if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      if (typeof anime !== 'undefined') {
+    function doSwap() {
+      DOMHelpers.setActive(
+        document.querySelectorAll('.page'),
+        function (el) { return el.id === 'page-' + page; }
+      );
+      DOMHelpers.setActive(
+        document.querySelectorAll('[data-page]'),
+        function (el) { return el.getAttribute('data-page') === page; }
+      );
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      history.pushState(null, '', '#' + page);
+      currentPage = page;
+      if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active'));
+      if (!reduced && typeof anime !== 'undefined') {
         var reveals = document.querySelectorAll('.page.active .reveal:not(.in)');
         if (reveals.length) {
           anime({
@@ -82,6 +74,14 @@ var Navigation = (function () {
         }
       }
     }
+
+    if (reduced) { doSwap(); return; }
+
+    gate.classList.add('active');
+    setTimeout(function () {
+      doSwap();
+      setTimeout(function () { gate.classList.remove('active'); }, 150);
+    }, 200);
   }
 
   function closeMobile() {
