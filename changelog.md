@@ -132,6 +132,7 @@
 
 ## Patch Notes
 - **New:** Tooltips on map pins showing their requirements. If a pin shows no requirement but has one (or the reverse), please report it.
+- **New:** Added keybind hints for related events — you'll probably notice them.
 - **Changed:** Enemy balancing pass — combat should feel fairer, with mistakes punished more harshly.
 - **Changed:** Removed breach animation and styling.
 - **Changed:** Breach made easier.
@@ -144,4 +145,3 @@
 - **Fixed:** NCPD kills incorrectly penalized reputation.
 - **Fixed:** Barghest kills incorrectly penalized reputation.
 - **Fixed:** The Brat quest became unfinishable when enemies died.
-- **New:** Added keybind hints for related events — you'll probably notice them.
