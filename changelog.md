@@ -2,8 +2,8 @@
 
 ### Summary
 - **Added:** 28 mods
-- **Removed:** 16 mods
-- **Updated:** 75 mods
+- **Removed:** 17 mods
+- **Updated:** 74 mods
 
 ## Updated
 - Alt's Hand
@@ -112,6 +112,7 @@
 - Volumetric Smoke Grenades
 
 ## Removed
+- Alt's Hand - VTK
 - Challenging Breach Minigame
 - Decorative Gorilla Hand and Arms - VTK
 - Decorative Launcher Hands and Arms - VTK
