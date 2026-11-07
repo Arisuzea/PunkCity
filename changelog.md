@@ -1,0 +1,146 @@
+# Modlist Changelog
+
+### Summary
+- **Added:** 28 mods
+- **Removed:** 16 mods
+- **Updated:** 75 mods
+
+## Updated
+- Alt's Hand
+- Alt's Hand - VTK
+- Audible Traffic Radios
+- Aurore Romanced
+- Better HMGs
+- Biotechnica Cache - New Iconic Weapons
+- Character Preset Manager
+- Choom Memory Booster
+- Chrome Plating
+- Collarless CrystalJock Bomber
+- Computer Scrolling
+- Crowd Voice Unlocked
+- Decorative Gorilla Hand and Arms
+- Decorative Launcher Hands and Arms
+- Decorative Mantis Hands and Arms
+- Decorative Monowire Hand and Arms
+- Dex's Cyber Arm Remastered
+- DigitalVixen Core
+- Enhanced Craft
+- Exploded Vehicles Smoke Overhaul
+- Fenix Rebirth
+- Fullscreen Browser
+- Gambling System - Playable Blackjack
+- Gambling System - Playable Roulette
+- Gamepad Button Hold Indicator Fix
+- General Shadows Fixes
+- Here's Brendan
+- Immersive Components
+- Immersive Explosions
+- Immersive Night City Fixes
+- Immersive Night City Fixes Core
+- Immersive Voice Distance
+- In Cold Blood
+- Informative Healthbar
+- Kills Counter Display
+- Lizzie's Braindances
+- Manual Reload
+- Marmur Bank Overhaul
+- Megingjord
+- Midnight Acquisition
+- NCPD Fixes
+- Neuralware
+- Photo Mode UI Improvements
+- PT or RT - The Nullifier
+- PT or RT - Ultra Plus
+- Punish Cruelty
+- PunkCity - Black Chrome
+- PunkCity - Clothing
+- PunkCity - Enhanced Focus
+- PunkCity - Fenix Rebirth
+- PunkCity - Healing
+- PunkCity - Immersive Crafting Access
+- PunkCity - NCTO
+- PunkCity - Neuralware
+- PunkCity - Tutorial Disabler
+- PunkCity - Weapons
+- PunkCity - Wiki
+- Re-Spec Anytime
+- RedFunctions
+- RedProfiler
+- Redscript Configuration Framework
+- RELENTLESS
+- Rent a Motel
+- Shattered Chrome
+- Songbird Hands
+- Stealthrunner
+- Street Sense
+- The RVC00N Dumpster 2
+- The RVC00N Dumpster 3
+- Trigger Mode Control
+- Untrack Quest Ultimate
+- Valentino Cyber Arms
+- Valentino Cyber Knees Legs
+- Vanguard Auto
+- Wardrobe UI Improvements
+
+## Added
+- Angel - Body Mod
+- Angel - Vanilla & Phantom Liberty
+- Angel - VTK Head
+- Attribute Refund
+- Better Phone UI
+- Black Lace Load Fix
+- Cyberware Dash Stamina Stat Fix
+- DLSS on AMD
+- Dual Wielding Fix
+- Go to Cinema - Date Night
+- GoreRunner
+- Immersive Explosion Decals
+- Impact FX
+- Instant Eye Adaptation
+- Marker Inspector
+- Minor Arcana Tarot Marker Fix
+- Much Better Saves
+- Perks And Skills Fixes
+- PunkCity - HUD Painter E3
+- PunkCity - Immersive Grenades
+- PunkCity - Keybinds
+- PunkCity - Take A Breather
+- RagdollPunk
+- RedGraph
+- Sandevistan Activation Fix
+- Sandevistan Helper
+- Volumetric Drift Smoke
+- Volumetric Smoke Grenades
+
+## Removed
+- Challenging Breach Minigame
+- Decorative Gorilla Hand and Arms - VTK
+- Decorative Launcher Hands and Arms - VTK
+- Dex's Cyber Arm Remastered - VTK
+- E3 Code Matrix
+- EBBRB - Enhanced Big Breast Big Booty
+- EBBRB - Phantom Liberty
+- EBBRB - Vanilla
+- EBBRB - VTK Head
+- Gunsensical - Combat Evolved
+- PunkCity - HUDPainter E3
+- Ragdoll Physics Overhaul
+- Sendevistan Helper
+- Songbird Hands - VTK
+- Valentino Cyber Arms - VTK
+- Valentino Cyber Knees Legs - VTK
+
+## Patch Notes
+- **New:** Tooltips on map pins showing their requirements. If a pin shows no requirement but has one (or the reverse), please report it.
+- **Changed:** Enemy balancing pass — combat should feel fairer, with mistakes punished more harshly.
+- **Changed:** Removed breach animation and styling.
+- **Changed:** Breach made easier.
+- **Fixed:** Operating System cyberwares could not be used.
+- **Fixed:** Sandevistan tooltips displayed the full duration, but the effect only lasted a fraction of it.
+- **Fixed:** Reproducible crashes at certain locations.
+- **Fixed:** Softlock caused by killing enemies too quickly on certain quests.
+- **Fixed:** Random crashes during combat.
+- **Fixed:** Losing reputation for killing a civilian with no witnesses.
+- **Fixed:** NCPD kills incorrectly penalized reputation.
+- **Fixed:** Barghest kills incorrectly penalized reputation.
+- **Fixed:** The Brat quest became unfinishable when enemies died.
