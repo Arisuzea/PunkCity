@@ -1,8 +1,8 @@
 # Modlist Changelog
 
 ### Summary
-- **Added:** 28 mods
-- **Removed:** 17 mods
+- **Added:** 26 mods
+- **Removed:** 19 mods
 - **Updated:** 74 mods
 
 ## Updated
@@ -89,7 +89,6 @@
 - Better Phone UI
 - Black Lace Load Fix
 - Cyberware Dash Stamina Stat Fix
-- DLSS on AMD
 - Dual Wielding Fix
 - Go to Cinema - Date Night
 - GoreRunner
@@ -100,7 +99,6 @@
 - Minor Arcana Tarot Marker Fix
 - Much Better Saves
 - Perks And Skills Fixes
-- PunkCity - HUD Painter E3
 - PunkCity - Immersive Grenades
 - PunkCity - Keybinds
 - PunkCity - Take A Breather
@@ -113,6 +111,8 @@
 
 ## Removed
 - Alt's Hand - VTK
+- DLSS on AMD
+- PunkCity - HUD Painter E3
 - Challenging Breach Minigame
 - Decorative Gorilla Hand and Arms - VTK
 - Decorative Launcher Hands and Arms - VTK
@@ -133,6 +133,7 @@
 ## Patch Notes
 - **New:** Tooltips on map pins showing their requirements. If a pin shows no requirement but has one (or the reverse), please report it.
 - **New:** Added keybind hints for related events — you'll probably notice them.
+- **New:** Save Scumming are now not possible — auto-save scumming still works, but manually saving is now credit-locked, similar to vehicles.
 - **Changed:** Enemy balancing pass — combat should feel fairer, with mistakes punished more harshly.
 - **Changed:** Removed breach animation and styling.
 - **Changed:** Breach made easier.
