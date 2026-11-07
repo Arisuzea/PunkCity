@@ -8,11 +8,12 @@ main { margin-top: var(--nav-h); min-height: 0; position:relative; z-index:1; }
 .hero {
   position: relative;
   width: 100%;
-  min-height: 92vh;
+  min-height: calc(100dvh - var(--nav-h));
   overflow: hidden;
   display: flex;
   align-items: flex-end;
   padding: 0 0 5rem;
+  background: var(--bg);
 }
 .hero-bg {
   position:absolute; inset:0;
@@ -135,7 +136,7 @@ footer p { text-align: center; margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 768px) {
-  .hero { min-height: 78vh; padding-bottom: 3rem; }
+  .hero { min-height: calc(100dvh - var(--nav-h)); padding-bottom: 3rem; }
   .hero-content { padding: 0 1.25rem; }
   .content, .content-wide, .page-header { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
