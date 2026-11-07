@@ -31,6 +31,7 @@ var Navigation = (function () {
   ];
 
   var currentPage = 'home';
+  var initialLoad = true;
 
   function navigate(page) {
     if (!PAGES.includes(page)) page = 'home';
@@ -74,16 +75,26 @@ var Navigation = (function () {
       }
     }
 
-    if (reduced) { doSwap(); if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active')); return; }
+    if (reduced) { doSwap(); if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active')); initialLoad = false; return; }
 
     gate.classList.add('active');
     setTimeout(function () {
       doSwap();
-      setTimeout(function () {
+      var finish = function () {
         gate.classList.remove('active');
         // Play decrypt only after the loading overlay is gone
         if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active'));
-      }, 300);
+        initialLoad = false;
+      };
+      if (initialLoad) {
+        if (document.readyState === 'complete') {
+          setTimeout(finish, 300);
+        } else {
+          window.addEventListener('load', function () { setTimeout(finish, 300); }, { once: true });
+        }
+      } else {
+        setTimeout(finish, 300);
+      }
     }, 350);
   }
 
