@@ -58,7 +58,6 @@ var Navigation = (function () {
       window.scrollTo({ top: 0, behavior: 'instant' });
       history.pushState(null, '', '#' + page);
       currentPage = page;
-      if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active'));
       if (!reduced && typeof anime !== 'undefined') {
         var reveals = document.querySelectorAll('.page.active .reveal:not(.in)');
         if (reveals.length) {
@@ -75,12 +74,16 @@ var Navigation = (function () {
       }
     }
 
-    if (reduced) { doSwap(); return; }
+    if (reduced) { doSwap(); if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active')); return; }
 
     gate.classList.add('active');
     setTimeout(function () {
       doSwap();
-      setTimeout(function () { gate.classList.remove('active'); }, 150);
+      setTimeout(function () {
+        gate.classList.remove('active');
+        // Play decrypt only after the loading overlay is gone
+        if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active'));
+      }, 150);
     }, 200);
   }
 
