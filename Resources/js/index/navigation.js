@@ -83,8 +83,8 @@ var Navigation = (function () {
         gate.classList.remove('active');
         // Play decrypt only after the loading overlay is gone
         if (window.resetDecrypt) window.resetDecrypt(document.querySelector('.page.active'));
-      }, 150);
-    }, 200);
+      }, 300);
+    }, 350);
   }
 
   function closeMobile() {

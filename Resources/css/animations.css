@@ -4,7 +4,7 @@
 .hero-bg { animation: hero-drift 22s ease-in-out infinite alternate; }
 @keyframes hero-drift { from { transform: scale(1);} to { transform: scale(1.1);} }
 body::after { display:none; }
-.page-transition { position:fixed; inset:0; z-index:9997; pointer-events:none; background: var(--bg); opacity:0; transition: opacity .2s ease; display:none; align-items:center; justify-content:center; gap:.75rem; }
+.page-transition { position:fixed; inset:0; z-index:9997; pointer-events:none; background: var(--bg); opacity:0; transition: opacity .35s ease-in-out; display:none; align-items:center; justify-content:center; gap:.75rem; }
 .page-transition.active { display:flex; opacity:1; pointer-events:auto; }
 .page-transition .block { width:48px; height:10px; border:1px solid var(--accent); background:transparent; animation: block-pulse .9s ease-in-out infinite; }
 .page-transition .block:nth-child(2) { animation-delay:.15s; border-color: var(--cyan); }
