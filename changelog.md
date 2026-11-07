@@ -2,7 +2,7 @@
 
 ### Summary
 - **Added:** 26 mods
-- **Removed:** 19 mods
+- **Removed:** 17 mods
 - **Updated:** 74 mods
 
 ## Updated
@@ -111,8 +111,6 @@
 
 ## Removed
 - Alt's Hand - VTK
-- DLSS on AMD
-- PunkCity - HUD Painter E3
 - Challenging Breach Minigame
 - Decorative Gorilla Hand and Arms - VTK
 - Decorative Launcher Hands and Arms - VTK
