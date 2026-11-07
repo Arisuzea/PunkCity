@@ -40,6 +40,19 @@ main { margin-top: var(--nav-h); min-height: 0; position:relative; z-index:1; }
   color: var(--white);
 }
 .hero-title .accent { color: var(--red); }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-title { animation: hero-glitch 5s steps(1) infinite; }
+  @keyframes hero-glitch {
+    0%, 92%, 100% { transform: none; text-shadow: none; }
+    93% { transform: translate(-3px, 1px); text-shadow: 3px 0 var(--cyan), -3px 0 var(--red); }
+    94% { transform: translate(3px, -1px); text-shadow: -3px 0 var(--cyan), 3px 0 var(--red); }
+    95% { transform: translate(-2px, 2px); text-shadow: 2px 0 var(--cyan), -2px 0 var(--red); }
+    96% { transform: translate(2px, -2px); text-shadow: -2px 0 var(--cyan), 2px 0 var(--red); }
+    97% { transform: translate(-1px, -1px); text-shadow: 4px 0 var(--cyan), -4px 0 var(--red); }
+    98% { transform: translate(1px, 1px); text-shadow: -4px 0 var(--cyan), 4px 0 var(--red); }
+    99% { transform: translate(0, 0); text-shadow: 2px 0 var(--cyan), -2px 0 var(--red); }
+  }
+}
 .hero-tagline {
   margin-top: 1.5rem;
   max-width: 52ch;
