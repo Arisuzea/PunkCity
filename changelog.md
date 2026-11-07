@@ -1,8 +1,8 @@
 # Modlist Changelog
 
 ### Summary
-- **Added:** 26 mods
-- **Removed:** 17 mods
+- **Added:** 25 mods
+- **Removed:** 16 mods
 - **Updated:** 74 mods
 
 ## Updated
@@ -105,7 +105,6 @@
 - RagdollPunk
 - RedGraph
 - Sandevistan Activation Fix
-- Sandevistan Helper
 - Volumetric Drift Smoke
 - Volumetric Smoke Grenades
 
@@ -123,7 +122,6 @@
 - Gunsensical - Combat Evolved
 - PunkCity - HUDPainter E3
 - Ragdoll Physics Overhaul
-- Sendevistan Helper
 - Songbird Hands - VTK
 - Valentino Cyber Arms - VTK
 - Valentino Cyber Knees Legs - VTK
@@ -143,4 +141,4 @@
 - **Fixed:** Losing reputation for killing a civilian with no witnesses.
 - **Fixed:** NCPD kills incorrectly penalized reputation.
 - **Fixed:** Barghest kills incorrectly penalized reputation.
-- **Fixed:** The Brat quest became unfinishable when enemies died.
+- **Fixed:** Beat on The Brat quest became unfinishable when enemies died.
