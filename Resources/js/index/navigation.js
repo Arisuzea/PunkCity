@@ -90,7 +90,10 @@ var Navigation = (function () {
         if (document.readyState === 'complete') {
           setTimeout(finish, 300);
         } else {
-          window.addEventListener('load', function () { setTimeout(finish, 300); }, { once: true });
+          var done = false;
+          var onLoad = function () { if (done) return; done = true; clearTimeout(fallback); setTimeout(finish, 300); };
+          var fallback = setTimeout(function () { if (done) return; done = true; window.removeEventListener('load', onLoad); setTimeout(finish, 300); }, 4000);
+          window.addEventListener('load', onLoad, { once: true });
         }
       } else {
         setTimeout(finish, 300);
