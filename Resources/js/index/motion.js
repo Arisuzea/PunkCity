@@ -112,28 +112,42 @@
       if (saved === null) saved = el.innerHTML;
       var text = (el.textContent || '').trim();
       if (!text) return;
-      var chars = text.split('');
-      var html = chars.map(function (c) {
-        if (c === ' ') return ' ';
-        if (Math.random() > 0.62) {
-          // partial decrypt: swap to a random glyph
-          return '<span style="display:inline-block;transform:translate(' +
-            (Math.random() * 80 - 40).toFixed(1) + 'px,' +
-            (Math.random() * 80 - 40).toFixed(1) + 'px) rotate(' +
-            (Math.random() * 24 - 12).toFixed(1) + 'deg);color:var(--cyan);text-shadow:0 0 8px var(--cyan);opacity:.9;">' +
-            GLY.charAt(Math.floor(Math.random() * GLY.length)) + '</span>';
-        }
-        if (Math.random() < 0.45) {
-          // split only
-          return '<span style="display:inline-block;transform:translate(' +
-            (Math.random() * 80 - 40).toFixed(1) + 'px,' +
-            (Math.random() * 80 - 40).toFixed(1) + 'px) rotate(' +
-            (Math.random() * 16 - 8).toFixed(1) + 'deg);text-shadow:2px 0 var(--red),-2px 0 var(--cyan);">' + c + '</span>';
-        }
-        return c;
-      }).join('');
-      el.innerHTML = html;
-      setTimeout(function () { el.innerHTML = saved || RESTORE; }, 300);
+      // Phase 1: chromatic aberration shake on the whole title
+      el.style.transform = 'translate(-3px,1px)';
+      el.style.textShadow = '3px 0 var(--cyan), -3px 0 var(--red)';
+      setTimeout(function () {
+        el.style.transform = 'translate(3px,-1px)';
+        el.style.textShadow = '-3px 0 var(--cyan), 3px 0 var(--red)';
+      }, 60);
+      setTimeout(function () {
+        el.style.transform = 'translate(-2px,2px)';
+        el.style.textShadow = '2px 0 var(--cyan), -2px 0 var(--red)';
+      }, 120);
+      // Phase 2: split chars + partial decrypt
+      setTimeout(function () {
+        var chars = text.split('');
+        var html = chars.map(function (c) {
+          if (c === ' ') return ' ';
+          if (Math.random() > 0.62) {
+            return '<span style="display:inline-block;transform:translate(' +
+              (Math.random() * 80 - 40).toFixed(1) + 'px,' +
+              (Math.random() * 80 - 40).toFixed(1) + 'px) rotate(' +
+              (Math.random() * 24 - 12).toFixed(1) + 'deg);color:var(--cyan);text-shadow:0 0 8px var(--cyan);opacity:.9;">' +
+              GLY.charAt(Math.floor(Math.random() * GLY.length)) + '</span>';
+          }
+          if (Math.random() < 0.45) {
+            return '<span style="display:inline-block;transform:translate(' +
+              (Math.random() * 80 - 40).toFixed(1) + 'px,' +
+              (Math.random() * 80 - 40).toFixed(1) + 'px) rotate(' +
+              (Math.random() * 16 - 8).toFixed(1) + 'deg);text-shadow:2px 0 var(--red),-2px 0 var(--cyan);">' + c + '</span>';
+          }
+          return c;
+        }).join('');
+        el.style.transform = '';
+        el.style.textShadow = '2px 0 var(--cyan), -2px 0 var(--red)';
+        el.innerHTML = html;
+      }, 180);
+      setTimeout(function () { el.innerHTML = saved || RESTORE; el.style.transform = ''; el.style.textShadow = ''; }, 480);
     }
     setInterval(burst, 5000);
     setTimeout(burst, 5200);
